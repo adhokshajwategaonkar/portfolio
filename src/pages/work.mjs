@@ -28,59 +28,71 @@ const PROJECTS = [
   {
     href: '../projects/weekend-conundrum/', tags: ['case'],
     badge: 'Case study · BookMyShow', title: '"The Weekend Conundrum"',
-    cover: slide({ kicker: 'Product case study', title: 'The Weekend<br />Conundrum', left: 'BookMyShow', right: 'Discovery' }),
+    cover: slide({ kicker: 'Product case study · 12 slides', title: 'The Weekend<br />Conundrum', left: 'BookMyShow', right: 'Discovery' }),
     body: `People want to go out. They just don't know what to do with the weekend — a decision problem,
-      not a catalogue problem. A ticketing app is built to solve the second one, which is why browsing
-      it doesn't help.`,
-    tagList: ['Discovery', 'Consumer', 'UX'],
+      not a catalogue problem. Persona, journey map, weighted prioritisation and a "plan your weekend"
+      feature. Full deck on the page.`,
+    tagList: ['Discovery', 'Consumer', 'UX', 'Journey mapping'],
     cta: 'Read the case study',
   },
   {
     href: '../projects/zomato/', tags: ['case'],
-    badge: 'Case study · Zomato', title: 'Ordering experience & revenue',
-    cover: slide({ kicker: 'Product case study', title: 'Ordering,<br />and revenue', left: 'Zomato', right: '20M users' }),
-    body: `Improving the food-ordering experience for 20 million users. Persona and funnel work, a
-      competitive teardown, and a prioritised intervention list scoped against what each change
-      would realistically move.`,
-    tagList: ['Growth', 'Funnel', 'Monetisation'],
+    badge: 'Case study · Zomato', title: 'Improving the food ordering experience',
+    cover: slide({ kicker: 'Product case study · 12 slides', title: 'Ordering,<br />and revenue', left: 'Zomato', right: '80M MAU' }),
+    body: `Revenue = frequency × order value × orders — which of the three you pick decides the whole
+      solution. Journey mapping, RICE scoring of four problems, and two features designed against the
+      two that survived. Full deck on the page.`,
+    tagList: ['Growth', 'RICE', 'Funnel', 'Monetisation'],
     cta: 'Read the case study',
   },
   {
     href: '../projects/youtube-music/', tags: ['case', 'prd'],
-    badge: 'Case study + PRD · YouTube Music', title: 'Increasing weekly active users',
-    cover: slide({ kicker: 'Case study + PRD', title: 'Weekly active<br />users', left: 'YouTube Music', right: 'Retention' }),
-    body: `Where WAU actually leaks in a streaming product, and which habit loop is worth building for.
-      Ships with a written PRD — goals, non-goals, success metrics and acceptance criteria.`,
-    tagList: ['Retention', 'Habit loop', 'PRD'],
+    badge: 'Growth strategy + PRD · YouTube Music', title: 'Driving engagement in YouTube Music',
+    cover: slide({ kicker: 'Growth strategy + PRD', title: 'Driving<br />engagement', left: 'YouTube Music', right: 'vs Spotify' }),
+    body: `How do you grow weekly active users against a competitor at catalogue parity? Segmentation,
+      engagement loops, social network effects and RICE prioritisation across activation, sharing and
+      retention — with a written PRD behind it.`,
+    tagList: ['Consumer', 'Growth', 'Product metrics', 'PRD'],
     cta: 'Read the case study',
   },
   {
     href: '../projects/shopsy/', tags: ['case', 'prd'],
-    badge: 'Case study + PRD · Shopsy', title: 'Increasing user growth',
-    cover: slide({ kicker: 'Case study + PRD', title: 'User<br />growth', left: 'Shopsy', right: 'Tier 2–3 India' }),
-    body: `Growth for value commerce in tier-2 and tier-3 India, where the binding constraint is trust
-      and data cost rather than selection. Segment work, acquisition loops, and a PRD for the
-      intervention that survived prioritisation.`,
-    tagList: ['Growth', 'India', 'PRD'],
+    badge: 'Growth strategy + PRD · Shopsy', title: 'Growing the next 200 million e-commerce users',
+    cover: slide({ kicker: 'Growth strategy + PRD', title: 'The next<br />200 million', left: 'Shopsy', right: 'Tier 2–3 India' }),
+    body: `Growth for India's fastest-growing social commerce platform. Segmentation, behavioural
+      analysis and experimentation aimed at acquisition, trust and referral-driven growth among
+      Tier-2 and Tier-3 consumers — with a written PRD behind it.`,
+    tagList: ['Growth PM', 'User research', 'Experimentation', 'PRD'],
     cta: 'Read the case study',
   },
   {
+    href: '../projects/beacon-deel/', tags: ['company', 'assessment'],
+    badge: 'Assessment · Beacon.li × Deel', title: 'Agentic AI for an AI-native prospect',
+    cover: slide({ kicker: 'Take-home assessment', title: 'Agentic AI for<br />an AI-native buyer', left: 'Beacon.li × Deel', right: 'Sep 2025' }),
+    body: `The brief was deliberately awkward — show how an AI orchestration platform adds value to a
+      prospect that already ships mature AI. Two gaps found in Deel from public G2 evidence, two
+      agentic solutions, each with wireframes, a north-star metric and a rollout plan.`,
+    tagList: ['Enterprise AI', 'Agentic', 'Wireframes', 'GTM'],
+    cta: 'Read the assessment',
+  },
+  {
     href: '../projects/galaxeye/', tags: ['company'],
-    badge: 'Company · GalaxEye Space', title: 'SAR analytics, concept to trials',
-    cover: slide({ kicker: 'Company work', title: 'SAR analytics<br />for defence', left: 'GalaxEye Space', right: '2024 — 2025' }),
-    body: `Drone-mounted synthetic-aperture-radar analytics taken from concept through government
-      trials as product co-owner, alongside cross-portfolio market strategy across defence and
-      commercial lines.`,
-    tagList: ['Defence', 'Geospatial', 'Market strategy'],
+    badge: 'Company · GalaxEye Space', title: 'Building a new market for satellite intelligence',
+    cover: slide({ kicker: 'Company work', title: 'A new market for<br />satellite intelligence', left: 'GalaxEye Space', right: '2024 — 2025' }),
+    body: `Can a space-tech startup sell satellite data to insurers? A 30-page product strategy on
+      multimodal imagery, disaster intelligence and geospatial analytics as a new B2B line — plus the
+      drone SAR analytics taken from concept through government trials.`,
+    tagList: ['Product strategy', 'Market research', 'B2B SaaS', 'SpaceTech'],
     cta: 'Read the case study',
   },
   {
     href: '../projects/lila-games/', tags: ['assessment'],
-    badge: 'Assessment · LILA Games', title: 'APM take-home',
-    cover: slide({ kicker: 'Take-home assessment', title: 'Mobile gaming<br />product review', left: 'LILA Games', right: 'APM' }),
-    body: `A mobile gaming product assessment — retention mechanics, monetisation shape, and the
-      player-motivation model underneath both. Written under a real deadline and kept as-is.`,
-    tagList: ['Gaming', 'Retention', 'Monetisation'],
+    badge: 'Assessment · LILA Games', title: 'Systems thinking for free-to-play games',
+    cover: slide({ kicker: 'Take-home assessment', title: 'Systems thinking<br />for free-to-play', left: 'LILA Games', right: 'Game economy' }),
+    body: `How do you design progression systems that keep millions of players engaged? Crafting
+      economies, staffing models, feature analysis and monetisation mechanics for a mobile
+      free-to-play shooter, worked through structured modelling.`,
+    tagList: ['Gaming', 'Game economy', 'Monetisation', 'Systems design'],
     cta: 'Read the assessment',
   },
 ];
@@ -123,7 +135,7 @@ export default {
   nav: 'work',
   title: `Work — Adhokshaj Wategaonkar`,
   ogTitle: `Work — Adhokshaj Wategaonkar`,
-  description: `Shipped products and product case studies: Animus, Shastra, BookMyShow, Zomato, YouTube Music, Shopsy, GalaxEye Space and a LILA Games take-home. Every case study lives on this site.`,
+  description: `Shipped products and product case studies: Animus, Shastra, BookMyShow, Zomato, YouTube Music, Shopsy, GalaxEye Space, a Beacon.li × Deel agentic-AI assessment and a LILA Games take-home. Every case study lives on this site.`,
   body: `
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
@@ -132,9 +144,9 @@ export default {
       Everything, in one place.
     </h1>
     <p class="lead rise" style="--i:2; margin-top:22px">
-      Two products I designed, built and shipped on my own, and six case studies where I worked the
-      problem from scratch. All of them are written up here rather than parked in a doc somewhere —
-      the filter is in the URL, so a filtered view is a shareable link.
+      Two products I designed, built and shipped on my own, and seven case studies where I worked
+      the problem from scratch. All of them are written up here rather than parked in a doc
+      somewhere — the filter is in the URL, so a filtered view is a shareable link.
     </p>
   </div>
 </section>
@@ -160,14 +172,14 @@ ${cards}
         <div class="kv-row">
           <span class="label">CNN · Medical imaging</span>
           <span class="v">
-            <a class="link" href="https://adhokshaj.notion.site/Brain-Tumor-Classification-Using-Convolutional-Neural-Networks-c2e860101e2a4e518b3dec6e3e81a1a5" target="_blank" rel="noopener">Brain tumour classification from MRI ↗</a><br />
+            <a class="link" href="https://drive.google.com/file/d/1Stb30stB6GQHtgPKx8a0wDO9sgmiFgcI/view" target="_blank" rel="noopener">Brain tumour classification from MRI — full report (PDF) ↗</a><br />
             <span class="faint" style="font-size:13.5px">In a clinical setting a confusion matrix is a product decision, not a metric.</span>
           </span>
         </div>
         <div class="kv-row">
           <span class="label">Optuna · Audio</span>
           <span class="v">
-            <a class="link" href="https://adhokshaj.notion.site/Music-Genre-Prediction-Using-ML-Tuned-Using-Optuna-d12e189000e64fb7895c135d9784bf71" target="_blank" rel="noopener">Music genre prediction, tuned with Optuna ↗</a><br />
+            <a class="link" href="https://drive.google.com/file/d/11M4Uv_uJGEk9LrsPGVdNbKMHawOgr4WZ/view" target="_blank" rel="noopener">Music genre prediction, tuned with Optuna — full report (PDF) ↗</a><br />
             <span class="faint" style="font-size:13.5px">Genre is a fuzzy label, which makes the labelling strategy matter more than the model.</span>
           </span>
         </div>

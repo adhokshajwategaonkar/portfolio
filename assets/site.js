@@ -293,6 +293,7 @@
       { label: 'Zomato — ordering & revenue', hint: 'Case study', href: withBase('projects/zomato/'), kind: 'page' },
       { label: 'YouTube Music — weekly active users', hint: 'Case study', href: withBase('projects/youtube-music/'), kind: 'page' },
       { label: 'Shopsy — user growth', hint: 'Case study', href: withBase('projects/shopsy/'), kind: 'page' },
+      { label: 'Beacon.li × Deel — APM assessment', hint: 'Case study', href: withBase('projects/beacon-deel/'), kind: 'page' },
       { label: 'GalaxEye Space — SAR analytics', hint: 'Case study', href: withBase('projects/galaxeye/'), kind: 'page' },
       { label: 'LILA Games — APM take-home', hint: 'Case study', href: withBase('projects/lila-games/'), kind: 'page' },
       { label: 'Download résumé (PDF)', hint: 'File', href: withBase('Adhokshaj-Wategaonkar-Resume.pdf'), kind: 'out' },
@@ -377,6 +378,93 @@
       }
     });
   }
+
+  /* ----------------------------------------------------------- lightbox ---
+     Case-study artefacts open full size. Built lazily on first click — there
+     is no reason for a page with no figures to carry the markup. */
+  const figs = $$('.fig-frame img');
+  if (figs.length) {
+    let lb;
+    const open = img => {
+      if (!lb) {
+        lb = document.createElement('div');
+        lb.className = 'lb';
+        lb.setAttribute('role', 'dialog');
+        lb.setAttribute('aria-modal', 'true');
+        lb.innerHTML = '<button class="lb-close" aria-label="Close">' +
+          '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" ' +
+          'stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>' +
+          '<img alt="" /><p class="lb-cap"></p>';
+        document.body.appendChild(lb);
+        lb.addEventListener('click', e => { if (!e.target.closest('img')) close(); });
+        addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+      }
+      $('img', lb).src = img.currentSrc || img.src;
+      $('img', lb).alt = img.alt || '';
+      $('.lb-cap', lb).textContent = img.dataset.cap || img.alt || '';
+      lb.classList.add('on');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => { if (lb) lb.classList.remove('on'); document.body.style.overflow = ''; };
+    figs.forEach(img => {
+      img.addEventListener('click', () => open(img));
+      img.setAttribute('tabindex', '0');
+      img.addEventListener('keydown', e => { if (e.key === 'Enter') open(img); });
+    });
+  }
+
+  /* --------------------------------------------------------------- deck ---
+     Slide-by-slide viewer for the original case-study decks. Only the first
+     two slides are eager; the rest load as you reach them, so a 12-slide deck
+     doesn't cost 1.6 MB on first paint. */
+  $$('[data-deck]').forEach(deck => {
+    const slides = JSON.parse(deck.dataset.deck);
+    const base   = deck.dataset.deckBase;
+    const stage  = $('.deck-stage', deck);
+    const railEl = $('.deck-rail', deck);
+    const img    = $('img', stage);
+    const prev   = $('[data-deck-prev]', deck);
+    const next   = $('[data-deck-next]', deck);
+    const cur    = $('[data-deck-cur]', deck);
+    const title  = $('.deck-title', deck);
+    let i = 0;
+
+    railEl.innerHTML = slides.map((s, n) => `
+      <button type="button" aria-label="Slide ${n + 1}: ${s.t}" aria-current="${n === 0}">
+        <img src="${base}s${String(n + 1).padStart(2, '0')}.jpg" alt="" loading="${n < 4 ? 'eager' : 'lazy'}" />
+      </button>`).join('');
+    const thumbs = $$('button', railEl);
+
+    const show = n => {
+      i = (n + slides.length) % slides.length;
+      img.src = `${base}s${String(i + 1).padStart(2, '0')}.jpg`;
+      img.alt = slides[i].t;
+      img.dataset.cap = `Slide ${i + 1} of ${slides.length} — ${slides[i].t}`;
+      cur.textContent = String(i + 1).padStart(2, '0');
+      title.textContent = slides[i].t;
+      prev.disabled = i === 0;
+      next.disabled = i === slides.length - 1;
+      thumbs.forEach((b, n2) => b.setAttribute('aria-current', String(n2 === i)));
+      const t = thumbs[i];
+      if (t) railEl.scrollTo({ left: t.offsetLeft - railEl.clientWidth / 2 + t.clientWidth / 2, behavior: 'smooth' });
+    };
+
+    prev.addEventListener('click', () => show(i - 1));
+    next.addEventListener('click', () => show(i + 1));
+    railEl.addEventListener('click', e => {
+      const b = e.target.closest('button');
+      if (b) show(thumbs.indexOf(b));
+    });
+    // Arrow keys, but only while the deck is actually on screen.
+    addEventListener('keydown', e => {
+      if (!/^Arrow(Left|Right)$/.test(e.key)) return;
+      const r = deck.getBoundingClientRect();
+      if (r.bottom < 80 || r.top > innerHeight - 80) return;
+      e.preventDefault();
+      show(i + (e.key === 'ArrowRight' ? 1 : -1));
+    });
+    show(0);
+  });
 
   /* ------------------------------------------------------- year stamp --- */
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });

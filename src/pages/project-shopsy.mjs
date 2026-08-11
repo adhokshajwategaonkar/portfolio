@@ -2,11 +2,11 @@ import { caseStudy } from '../case-template.mjs';
 
 export default caseStudy({
   "dir": "projects/shopsy",
-  "title": "Shopsy — increasing user growth | Adhokshaj Wategaonkar",
-  "ogTitle": "Shopsy — increasing user growth in tier-2 and tier-3 India",
-  "description": "A product case study and full PRD on growing Shopsy — value commerce in tier-2 and tier-3 India, where the binding constraint is trust and data cost rather than selection.",
-  "kicker": "Product case study + PRD · Shopsy",
-  "heading": "Increasing user growth",
+  "title": "Growing the next 200 million e-commerce users — Shopsy | Adhokshaj Wategaonkar",
+  "ogTitle": "Growing the next 200 million e-commerce users — a Shopsy growth strategy",
+  "description": "How do you increase user growth for India's fastest-growing social commerce platform? A Shopsy growth strategy combining user segmentation, behavioural analysis and experimentation to improve acquisition, trust and referral-driven growth in Tier-2 and Tier-3 India.",
+  "kicker": "Growth strategy + PRD · Shopsy",
+  "heading": "Growing the next 200 million e-commerce users",
   "lead": "Value commerce in tier-2 and tier-3 India. The binding constraint is not selection or price —\n    it is trust, data cost, and whether a first-time buyer believes the thing will actually arrive.",
   "badges": [
     {
@@ -33,7 +33,7 @@ export default caseStudy({
     ],
     [
       "Surface",
-      "Shopsy — Flipkart’s value-commerce app, aimed at first-time and price-sensitive online shoppers."
+      "Shopsy — India’s fastest-growing social commerce platform, aimed at first-time and price-sensitive online shoppers in Tier-2 and Tier-3 cities."
     ],
     [
       "The question",

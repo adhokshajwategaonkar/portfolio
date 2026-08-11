@@ -102,7 +102,7 @@ export default {
 
       <a class="card proj rise" style="--i:2" href="projects/weekend-conundrum/">
         ${slide({
-          kicker: 'Product case study',
+          kicker: 'Product case study · 12 slides',
           title: 'The Weekend<br />Conundrum',
           left: 'BookMyShow',
           right: 'Discovery',
@@ -115,12 +115,12 @@ export default {
             </div>
           </div>
           <p>
-            People want to go out. They just don't know what to do with the weekend — which is a
-            decision problem, not a catalogue problem, and a ticketing app is built to solve the
-            wrong one.
+            People want to go out. They just don't know what to do with the weekend — a decision
+            problem, not a catalogue problem. Persona, journey map, weighted prioritisation and a
+            "plan your weekend" feature, with the full deck on the page.
           </p>
           <div class="proj-foot">
-            <div class="tags"><span>Discovery</span><span>Consumer</span><span>UX</span></div>
+            <div class="tags"><span>Discovery</span><span>Consumer</span><span>Journey mapping</span></div>
             <span class="arrow-link">Read it here ${icon.arrow}</span>
           </div>
         </div>
@@ -128,25 +128,25 @@ export default {
 
       <a class="card proj rise" style="--i:3" href="projects/zomato/">
         ${slide({
-          kicker: 'Product case study',
+          kicker: 'Product case study · 12 slides',
           title: 'Ordering,<br />and revenue',
           left: 'Zomato',
-          right: '20M users',
+          right: '80M MAU',
         })}
         <div class="card-pad proj">
           <div class="proj-top">
             <div>
               <span class="badge">Case study · Zomato</span>
-              <h3 style="margin-top:12px">Ordering experience &amp; revenue</h3>
+              <h3 style="margin-top:12px">Improving the food ordering experience</h3>
             </div>
           </div>
           <p>
-            Improving the food-ordering experience for 20 million users, with the interventions
-            scoped against what each one would realistically move rather than against how good
-            it would look on a slide.
+            Revenue = frequency × order value × orders — which of the three you pick decides the
+            whole solution. Journey mapping, RICE scoring, and two features designed against the two
+            problems that survived it.
           </p>
           <div class="proj-foot">
-            <div class="tags"><span>Growth</span><span>Funnel</span><span>Monetisation</span></div>
+            <div class="tags"><span>Growth</span><span>RICE</span><span>Funnel</span><span>Monetisation</span></div>
             <span class="arrow-link">Read it here ${icon.arrow}</span>
           </div>
         </div>

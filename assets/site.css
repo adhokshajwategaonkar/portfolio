@@ -855,3 +855,123 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   width: 7px; height: 7px; border-radius: 50%; background: var(--live);
   box-shadow: 0 0 0 3px var(--live-soft); flex: none;
 }
+
+/* ============================================================================
+   ARTEFACTS — wireframes, deck slides, screenshots
+
+   Case-study images are the evidence. They get a frame, a caption, and a
+   click-to-enlarge, because a wireframe shown at 300px wide is decoration.
+   ========================================================================= */
+.fig { margin: 30px 0; }
+.fig-frame {
+  border: 1px solid var(--line-2); border-radius: var(--r-lg);
+  background: var(--bg-3); overflow: hidden; position: relative;
+}
+.fig-frame img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+.fig--pad .fig-frame { padding: clamp(16px, 3vw, 34px); }
+.fig--pad .fig-frame img { border-radius: var(--r-sm); box-shadow: var(--shadow-2); }
+.fig figcaption {
+  margin-top: 11px; font-size: 13.2px; color: var(--ink-3); line-height: 1.55;
+  display: flex; gap: 10px; align-items: baseline;
+}
+.fig figcaption b {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent-ink); flex: none;
+}
+
+/* Two or three artefacts side by side, dropping to one column on mobile. */
+.figs { display: grid; gap: 16px; margin: 30px 0; grid-template-columns: minmax(0,1fr); }
+@media (min-width: 720px) {
+  .figs--2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .figs--3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+.figs .fig { margin: 0; }
+.figs--phone .fig-frame { display: grid; place-items: center; padding: 20px; }
+.figs--phone img { max-width: 240px; border-radius: var(--r-sm); box-shadow: var(--shadow-2); }
+
+/* Full-bleed within the prose column, so an artefact can breathe. */
+.prose .fig, .prose .figs { max-width: none; width: min(100%, 940px); }
+@media (min-width: 1100px) {
+  .prose .fig--wide, .prose .figs--wide { width: 940px; margin-inline: 0; }
+}
+
+/* ------------------------------------------------------------- lightbox */
+.lb {
+  position: fixed; inset: 0; z-index: 120; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  opacity: 0; pointer-events: none; transition: opacity .28s var(--swift);
+  padding: clamp(16px, 4vw, 56px);
+}
+.lb.on { opacity: 1; pointer-events: auto; }
+.lb img {
+  max-width: 100%; max-height: 82vh; width: auto; border-radius: var(--r-md);
+  border: 1px solid var(--line); box-shadow: var(--shadow-2);
+  transform: scale(.97); transition: transform .38s var(--spring);
+}
+.lb.on img { transform: none; }
+.lb-cap {
+  position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+  max-width: min(90vw, 640px); text-align: center;
+  font-size: 13px; color: var(--ink-2);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 18px; width: 36px; height: 36px;
+  display: grid; place-items: center; border-radius: var(--r-md);
+  border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink-2);
+}
+.lb-close:hover { color: var(--ink); border-color: var(--line); }
+
+/* ============================================================================
+   DECK VIEWER
+
+   The original decks are the artefact. Rather than link a 8 MB PDF and hope,
+   the slides are rendered as images and read in place — one at a time, with
+   arrow keys, a counter and a thumbnail rail. The PDF stays as a download for
+   people who want it.
+   ========================================================================= */
+.deck { border: 1px solid var(--line-2); border-radius: var(--r-lg); overflow: hidden; background: var(--bg-2); }
+.deck-stage {
+  position: relative; aspect-ratio: 16/9; background: var(--bg-3);
+  display: grid; place-items: center; overflow: hidden;
+}
+.deck-stage img {
+  width: 100%; height: 100%; object-fit: contain; cursor: zoom-in;
+  animation: deck-in .32s var(--swift) both;
+}
+@keyframes deck-in { from { opacity: 0; transform: translateY(4px); } }
+.deck-nav {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 10px; pointer-events: none;
+}
+.deck-nav button {
+  pointer-events: auto; width: 38px; height: 38px; display: grid; place-items: center;
+  border-radius: var(--r-md); border: 1px solid var(--line-2);
+  background: color-mix(in srgb, var(--bg) 74%, transparent);
+  backdrop-filter: blur(8px); color: var(--ink-2);
+  transition: color .2s, border-color .2s, opacity .2s, transform .2s var(--spring);
+}
+.deck-nav button:hover { color: var(--ink); border-color: var(--line); }
+.deck-nav button:active { transform: scale(.93); }
+.deck-nav button[disabled] { opacity: .28; pointer-events: none; }
+.deck-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 11px 14px; border-top: 1px solid var(--line-2); background: var(--bg-2);
+}
+.deck-count { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); letter-spacing: .06em; }
+.deck-count b { color: var(--ink); font-weight: 500; }
+.deck-title { font-size: 13px; color: var(--ink-2); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.deck-rail {
+  display: flex; gap: 6px; padding: 10px 12px; overflow-x: auto;
+  border-top: 1px solid var(--line-2); background: var(--bg-3);
+  scrollbar-width: thin;
+}
+.deck-rail button {
+  flex: none; width: 78px; aspect-ratio: 16/9; border-radius: var(--r-xs);
+  border: 1px solid var(--line-2); overflow: hidden; opacity: .5;
+  transition: opacity .25s, border-color .25s, transform .25s var(--spring);
+}
+.deck-rail button img { width: 100%; height: 100%; object-fit: cover; }
+.deck-rail button:hover { opacity: .85; }
+.deck-rail button[aria-current="true"] { opacity: 1; border-color: var(--accent); transform: translateY(-1px); }
+@media (max-width: 600px) { .deck-rail button { width: 62px; } }

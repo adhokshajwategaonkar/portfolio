@@ -2,12 +2,12 @@ import { caseStudy } from '../case-template.mjs';
 
 export default caseStudy({
   "dir": "projects/lila-games",
-  "title": "LILA Games — APM take-home assessment | Adhokshaj Wategaonkar",
-  "ogTitle": "LILA Games — APM take-home assessment",
-  "description": "A mobile gaming product assessment written as a LILA Games APM take-home — retention mechanics, monetisation shape, and the player-motivation model underneath both.",
+  "title": "Systems thinking for free-to-play games — LILA Games | Adhokshaj Wategaonkar",
+  "ogTitle": "Systems thinking for free-to-play games — a LILA Games assessment",
+  "description": "How do you design progression systems that keep millions of players engaged? A product case study on crafting economies, staffing models, feature analysis and monetisation for a mobile free-to-play shooter.",
   "kicker": "Take-home assessment · LILA Games",
-  "heading": "APM take-home",
-  "lead": "A mobile gaming product assessment, written under a real deadline and kept exactly as\n    submitted. Retention mechanics, monetisation shape, and the player-motivation model that has to\n    sit underneath both of them.",
+  "heading": "Systems thinking for free-to-play games",
+  "lead": "How do you design progression systems that keep millions of players engaged? Crafting\n    economies, staffing models, feature analysis and monetisation mechanics for a mobile\n    free-to-play shooter — worked through structured modelling rather than opinion.",
   "badges": [
     {
       "text": "Take-home assessment"
@@ -33,11 +33,11 @@ export default caseStudy({
     ],
     [
       "Surface",
-      "Mobile gaming — a category where retention and monetisation are the same system viewed from two angles."
+      "A mobile free-to-play shooter. Crafting economy, progression, staffing model and monetisation, modelled as one system rather than four features."
     ],
     [
       "Focus",
-      "Retention mechanics · monetisation design · player motivation."
+      "Game economy · progression systems · monetisation · product analytics · systems design."
     ]
   ],
   "sections": [

@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Beacon.li × Deel — APM assessment | Adhokshaj Wategaonkar</title>
+<meta name="description" content="An APM assessment for Beacon.li: how an AI orchestration platform adds value to a prospect that already has mature AI. Two gaps found in Deel from G2 evidence, two agentic solutions, with wireframes, north-star metrics and a rollout plan." />
+<meta name="theme-color" content="#08080A" />
+<link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/projects/beacon-deel/" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/projects/beacon-deel/" />
+<meta property="og:title" content="Beacon.li × Deel — designing agentic AI for an AI-native prospect" />
+<meta property="og:description" content="An APM assessment for Beacon.li: how an AI orchestration platform adds value to a prospect that already has mature AI. Two gaps found in Deel from G2 evidence, two agentic solutions, with wireframes, north-star metrics and a rollout plan." />
+<meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@AdhokshajW" />
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
+     blank screen for as long as that CDN is slow — which on a portfolio is the
+     difference between a first impression and a bounce. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all';this.onload=null" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" /></noscript>
+<link rel="stylesheet" href="../../assets/site.css" />
+
+<!-- Resolve the theme BEFORE first paint. In site.js this would flash
+     near-black at every light-mode visitor on every cold start. -->
+<script>
+  document.documentElement.classList.add('js');
+  try {
+    var p = localStorage.getItem('aw.theme') || 'system';
+    var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
+    document.documentElement.dataset.theme = t;
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
+  } catch (e) {}
+</script>
+</head>
+
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<div class="rules" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
+    <nav class="tabs" aria-label="Primary">
+      <a href="../../">Home</a>
+      <a href="../../work/" aria-current="page">Work</a>
+      <a href="../../career/">Career</a>
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="kbd-btn" data-palette aria-label="Open command palette">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span>Search</span><kbd>⌘K</kbd>
+      </button>
+      <button class="icon-btn" data-theme-btn aria-label="Change theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="sheet" aria-label="Mobile">
+  <a href="../../">Home <span class="label">01</span></a>
+  <a href="../../work/">Work <span class="label">02</span></a>
+  <a href="../../career/">Career <span class="label">03</span></a>
+  <a href="../../about/">About <span class="label">04</span></a>
+  <a href="../../contact/">Contact <span class="label">05</span></a>
+</nav>
+
+<main id="main">
+
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <a class="arrow-link rise" href="../../work/" style="margin-bottom:22px">
+      <span style="display:inline-flex;transform:rotate(180deg)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> All work
+    </a>
+
+    <div class="rise" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+      <span class="badge">Take-home assessment</span>
+      <span class="badge">Enterprise AI · agentic</span>
+      <span class="badge">14 Sep 2025</span>
+    </div>
+
+    <span class="label rise" style="--i:1; display:block; margin-top:26px">Take-home assessment · Beacon.li × Deel · Sep 2025</span>
+    <h1 class="intro-name rise" style="--i:1; margin-top:14px; font-size:clamp(2.1rem,5.4vw,3.6rem)">Selling agentic AI to a company that already has AI</h1>
+    <p class="lead rise" style="--i:2; margin-top:22px; font-size:clamp(1.05rem,1.7vw,1.25rem)">The brief was deliberately awkward: show how Beacon.li's orchestration platform adds value to
+    an enterprise prospect that <em>already</em> has mature AI. I picked Deel — 35,000+ businesses,
+    high AI adoption, one of the fastest-growing unicorns on record — because if the argument
+    survives there, it survives anywhere.</p>
+
+    <div class="intro-links rise" style="--i:3">
+      <a class="btn btn--primary" href="../../assets/cases/beacon/Beacon-Deel-APM-Assessment.pdf" target="_blank" rel="noopener">Read the full submission (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <table class="spec rise"><tbody>
+      <tr><th>The brief</th><td>Design original, practical agentic AI features that add automation, efficiency or intelligence to an enterprise prospect — <strong>even inside an AI-native product</strong>.</td></tr>
+      <tr><th>Prospect</th><td>Deel — global payroll, HR and compliance across 140+ countries. Owns its legal and payroll infrastructure. Already ships Deel AI.</td></tr>
+      <tr><th>Method</th><td>Market and prospect research → gap analysis from public user evidence → two solutions, each with functionality, target roles, business outcomes, a north-star metric, UX flow, wireframes, validation, rollout, risks and mitigations.</td></tr>
+      <tr><th>Deliverable</th><td>16 pages including annexure. Linked above, unedited.</td></tr>
+    </tbody></table>
+  </div>
+</section>
+
+<section class="section section--ruled" style="padding-top:clamp(40px,5vw,72px)">
+  <div class="wrap">
+    <article class="prose rise">
+      <h2 style="margin-top:0">Why "they already have AI" is the wrong objection</h2>
+      <p>
+        Deel ships Deel AI — an assistant that answers compliance, workflow and reporting questions.
+        The tempting read is that the AI slot is filled. It isn't, because the two things solve
+        different problems: <strong>an assistant answers questions a user knows how to ask</strong>,
+        and the expensive failures happen when they don't.
+      </p>
+      <p>
+        So rather than proposing a better assistant, I went looking for where users are stuck in a
+        way a chat box can't reach — which meant starting from evidence rather than from the product
+        surface.
+      </p>
+
+      <h2>The gaps, from public evidence</h2>
+      <p>
+        I pulled user reviews from G2 rather than reasoning from the feature list. Two themes were
+        consistent enough to build on, and both are the kind of problem an orchestration layer is
+        actually suited to — they're about <em>navigating a workflow</em>, not about retrieving a fact.
+      </p>
+
+      <h3>Gap 1 — no embedded, real-time guidance</h3>
+      <p>
+        Users struggle to resolve complex or unfamiliar issues inside the platform, particularly in
+        intricate workflows. The available options are static help centres, delayed support, or
+        generic AI answers. The result is slower onboarding, more errors, and a higher ticket volume
+        — all of which cost Deel money on the support side while costing the user their afternoon.
+      </p>
+
+      <figure class="fig fig--pad">
+        <div class="fig-frame">
+          <img src="../../assets/cases/beacon/g2-gap1.jpg" loading="lazy" alt="Collage of G2 user reviews describing difficulty navigating Deel's interface and slow support resolution" data-cap="Gap 1 — G2 reviews on navigating complexity and support latency." />
+        </div>
+        <figcaption><b>Evidence</b> G2 reviews describing complexity, navigation difficulty and support latency. The gap statement is downstream of this, not the other way round.</figcaption>
+      </figure>
+
+      <h3>Gap 2 — incomplete mobile parity</h3>
+      <p>
+        Users run critical HR and payroll tasks from phones, and hit an app that lacks the desktop's
+        functionality, speed and usability. Missing features, slow performance, clunky navigation —
+        most painful exactly when someone is travelling and the task is urgent.
+      </p>
+
+      <figure class="fig fig--pad">
+        <div class="fig-frame">
+          <img src="../../assets/cases/beacon/g2-gap2.jpg" loading="lazy" alt="Collage of G2 user reviews describing missing features and poor performance in Deel's mobile app" data-cap="Gap 2 — G2 reviews on mobile feature parity and performance." />
+        </div>
+        <figcaption><b>Evidence</b> The mobile complaints cluster around <em>parity</em>, not aesthetics — which points at an orchestration answer rather than a redesign.</figcaption>
+      </figure>
+
+      <h2 id="solution-1">Solution 1 — a contextual in-platform overlay agent</h2>
+      <p>
+        An overlay that sits above Deel's UI, detects workflow context, and gives step-by-step
+        guidance at the moment someone stalls. The interaction that makes it work is deliberately
+        <strong>spatial rather than conversational</strong>: you don't describe your problem, you
+        point at it. The agent reads the highlighted region the way you'd hand someone a screenshot.
+      </p>
+      <p>
+        It then returns a structured answer rather than prose — what the problem is, how to solve it,
+        whether Deel can do this at all, whether the agent may do it for you, a DIY workaround, and
+        the option to file it as a feature request. That last branch matters: <strong>"the product
+        cannot do this" is a valid answer</strong>, and a support agent that can't say it wastes the
+        user's time to protect the product's feelings.
+      </p>
+
+      <div class="figs figs--3">
+        <figure class="fig">
+          <div class="fig-frame"><img src="../../assets/cases/beacon/wf-overlay-1.jpg" loading="lazy" alt="Low-fidelity wireframe: the overlay agent appears as a hovering icon over the Deel interface" data-cap="Wireframe 1 — the agent as a persistent, low-commitment hovering icon." /></div>
+          <figcaption><b>WF 01</b> The agent as a hovering icon — present, not intrusive.</figcaption>
+        </figure>
+        <figure class="fig">
+          <div class="fig-frame"><img src="../../assets/cases/beacon/wf-overlay-2.jpg" loading="lazy" alt="Low-fidelity wireframe: the user selects the region of the screen they are stuck on" data-cap="Wireframe 2 — the user highlights the area they're stuck on." /></div>
+          <figcaption><b>WF 02</b> Point at the problem instead of describing it.</figcaption>
+        </figure>
+        <figure class="fig">
+          <div class="fig-frame"><img src="../../assets/cases/beacon/wf-overlay-3.jpg" loading="lazy" alt="Low-fidelity wireframe: the agent returns a structured, guided resolution" data-cap="Wireframe 3 — a structured resolution, including whether Deel can do this at all." /></div>
+          <figcaption><b>WF 03</b> A structured resolution, not a paragraph.</figcaption>
+        </figure>
+      </div>
+
+      <div class="callout">
+        <span class="label">North star</span>
+        <p>
+          <strong>Reduction in user support tickets</strong> — with fewer tickets, faster resolution
+          and higher immediate satisfaction as the supporting set. Chosen because it is the one
+          number where the user's benefit and Deel's cost saving are the same event, which makes it
+          very hard to game.
+        </p>
+      </div>
+
+      <h2 id="solution-2">Solution 2 — Companion Mode on mobile</h2>
+      <p>
+        Rather than rebuilding the mobile app to parity — expensive, slow, and someone else's
+        roadmap — Companion Mode uses orchestrator agents to close the gap behaviourally. It syncs
+        desktop context so a task can be handed off mid-flight, watches recurring work (monthly
+        payroll, leave approvals) and turns it into runnable "recipes", and surfaces a prioritised
+        feed of what's pending with one-tap execution.
+      </p>
+      <p>
+        The insight is that mobile parity was never really about features. It's about
+        <strong>what a user can finish in ninety seconds while standing in an airport</strong>, and
+        that's a sequencing problem an agent can solve without shipping every desktop screen.
+      </p>
+
+      <div class="figs figs--2 figs--phone">
+        <figure class="fig">
+          <div class="fig-frame"><img src="../../assets/cases/beacon/wf-mobile-1.jpg" loading="lazy" alt="Mobile wireframe: the companion suggests turning a repeated task into a saved recurring workflow" data-cap="Companion Mode — the agent notices a repeated task and offers to make it a recipe." /></div>
+          <figcaption><b>WF 01</b> Recurring work, detected and offered back as a one-tap recipe.</figcaption>
+        </figure>
+        <figure class="fig">
+          <div class="fig-frame"><img src="../../assets/cases/beacon/wf-mobile-2.jpg" loading="lazy" alt="Mobile wireframe: a prioritised real-time feed of pending tasks, recent changes and action items" data-cap="Companion Mode — a prioritised feed of pending tasks with one-tap execution." /></div>
+          <figcaption><b>WF 02</b> A prioritised feed — what's pending, what changed, what needs you.</figcaption>
+        </figure>
+      </div>
+
+      <div class="callout">
+        <span class="label">North star</span>
+        <p>
+          <strong>Percentage reduction in manual effort and time spent on repetitive tasks</strong>,
+          measured in Mixpanel as time-to-complete for recurring workflows before and after the
+          agent. A time delta, not an engagement metric — because on mobile, more time in the app is
+          a symptom, not a win.
+        </p>
+      </div>
+
+      <h2>Validation and rollout</h2>
+      <p>
+        Both solutions carry the same shape of plan, because the risk is the same shape: an agent
+        acting inside someone's payroll system is a trust problem before it is a technical one.
+      </p>
+      <ul>
+        <li><strong>Validate</strong> with user interviews and journey mapping, then interactive prototypes for the core scenarios under targeted usability testing.</li>
+        <li><strong>Launch</strong> to a small pilot group first, watching engagement and task completion, with in-app feedback and KPIs — overlay activations, ticket deflections, task resolution time.</li>
+        <li><strong>Expand</strong> incrementally rather than by date.</li>
+      </ul>
+      <p>
+        The three risks I named — workflow and data integration, end-user adoption and trust, and
+        privacy and security — map to three mitigations: co-build the integration with Deel from day
+        one, ship in-app onboarding with transparent opt-in permissions, and comply with enterprise
+        security mandates with regular access audits. <strong>Opt-in is the load-bearing one.</strong>
+        An agent that can act on your behalf without an explicit grant is not a feature, it's an
+        incident waiting to be written up.
+      </p>
+      <hr />
+      <h2>What I'd take into a team</h2>
+      <ul>
+        <li>
+          <strong>Start from evidence you didn't generate.</strong> The gaps came from public
+          reviews, so the argument doesn't depend on my taste. That's also what makes it usable in
+          a sales conversation.
+        </li>
+        <li>
+          <strong>"They already have AI" describes the surface, not the job.</strong> An assistant
+          serves users who know what to ask; the money is in the ones who don't.
+        </li>
+        <li>
+          <strong>Pick a north star where the user's win and the company's win are the same
+          event.</strong> Ticket deflection and time-to-complete both pass that test. Engagement
+          doesn't.
+        </li>
+        <li>
+          <strong>Let the product say no.</strong> Building "Deel can't currently do this" into the
+          answer structure is a small decision that buys a lot of trust.
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section section--tight section--ruled">
+  <div class="wrap">
+    <div class="sec-head rise"><div><span class="label">Next</span></div></div>
+    <a class="card proj rise" href="../galaxeye/">
+      <div class="card-pad proj">
+        <div class="proj-top">
+          <div><span class="badge">Company · GalaxEye Space</span><h3 style="margin-top:12px">SAR analytics, concept to trials</h3></div>
+          <span style="color:var(--accent-ink);flex:none;width:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <p>Two markets that look like one, and a demo that turned out to be the product.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
+        <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
+          Product Manager. Bengaluru, India.<br />
+          AI platforms by day; two products of my own the rest of the time.
+        </p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../career/">Career</a></li>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">X / Twitter ↗</a></li>
+          <li><a href="../../Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+          <li><a href="mailto:adhokshaj.pande@gmail.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span class="label">© <span data-year>2026</span> Adhokshaj Wategaonkar</span>
+      <span class="label">Press <kbd style="font-family:var(--font-mono)">⌘K</kbd> anywhere</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="palette" role="dialog" aria-modal="true" aria-label="Command palette" aria-hidden="true">
+  <input type="text" placeholder="Search pages, projects, links…" aria-label="Search" autocomplete="off" spellcheck="false" />
+  <ul role="listbox" aria-label="Results"></ul>
+  <div class="palette-foot">
+    <span class="label"><kbd>↑↓</kbd> navigate</span>
+    <span class="label"><kbd>↵</kbd> open</span>
+    <span class="label"><kbd>esc</kbd> close</span>
+  </div>
+</div>
+
+<script src="../../assets/site.js"></script>
+</body>
+</html>

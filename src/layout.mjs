@@ -236,3 +236,24 @@ export const coverMock = (inner, ms = '.56') =>
       <span class="halo"></span>
       ${inner}
     </div>`;
+
+/** The original deck, read in place. `slides` is [{t}] in order. */
+export const deckViewer = (base, slides, pdf) => `<div class="deck rise" data-deck='${JSON.stringify(slides).replace(/'/g, "&#39;")}' data-deck-base="${base}">
+      <div class="deck-stage">
+        <img src="${base}s01.jpg" alt="${slides[0].t}" />
+        <div class="deck-nav">
+          <button type="button" data-deck-prev aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-deck-next aria-label="Next slide">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="deck-bar">
+        <span class="deck-count"><b data-deck-cur>01</b> / ${String(slides.length).padStart(2, '0')}</span>
+        <span class="deck-title">${slides[0].t}</span>
+        ${pdf ? `<a class="arrow-link" href="${pdf}" target="_blank" rel="noopener" style="flex:none">PDF ↗</a>` : ''}
+      </div>
+      <div class="deck-rail" role="tablist" aria-label="Slides"></div>
+    </div>`;

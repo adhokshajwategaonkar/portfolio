@@ -2,11 +2,11 @@ import { caseStudy } from '../case-template.mjs';
 
 export default caseStudy({
   "dir": "projects/youtube-music",
-  "title": "YouTube Music — increasing weekly active users | Adhokshaj Wategaonkar",
-  "ogTitle": "YouTube Music — increasing weekly active users",
-  "description": "A product case study and full PRD on increasing weekly active users at YouTube Music — where WAU leaks in a streaming product and which habit loop is worth building for.",
-  "kicker": "Product case study + PRD · YouTube Music",
-  "heading": "Increasing weekly active users",
+  "title": "Driving engagement in YouTube Music | Adhokshaj Wategaonkar",
+  "ogTitle": "Driving engagement in YouTube Music — a growth case study",
+  "description": "How do you increase Weekly Active Users for a music streaming platform competing with Spotify? User segmentation, engagement loops, social network effects, RICE prioritisation and feature design across activation, sharing and retention.",
+  "kicker": "Growth strategy + PRD · YouTube Music",
+  "heading": "Driving engagement in YouTube Music",
   "lead": "WAU is the metric. The real question underneath it is which habit is worth building — because\n    a streaming product does not lose users who dislike it, it loses users who never formed a reason\n    to open it on a Tuesday.",
   "badges": [
     {
@@ -33,11 +33,11 @@ export default caseStudy({
     ],
     [
       "Surface",
-      "YouTube Music — streaming, competing with Spotify on catalogue parity."
+      "YouTube Music — streaming, competing with Spotify at catalogue parity, where the differentiator has to be behavioural rather than editorial."
     ],
     [
       "The question",
-      "<strong>Which habit loop actually produces a weekly open, and what would it cost to build?</strong>"
+      "<strong>Which engagement loop actually produces a weekly open — and can social network effects do work that a recommendation algorithm can’t?</strong>"
     ],
     [
       "Artifact",
