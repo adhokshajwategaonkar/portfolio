@@ -29,7 +29,7 @@
     document.documentElement.dataset.theme = t;
     try { localStorage.setItem(THEME_KEY, pref); } catch {}
     const meta = $('meta[name="theme-color"]');
-    if (meta) meta.content = t === 'light' ? '#FAFAF7' : '#0A0A0B';
+    if (meta) meta.content = t === 'light' ? '#FAFAFB' : '#08080A';
     $$('[data-theme-btn]').forEach(b => {
       b.setAttribute('aria-label', `Theme: ${pref}. Click to change.`);
       b.dataset.pref = pref;
@@ -289,10 +289,16 @@
       }, new Map()).values(),
       { label: 'Animus — case study', hint: 'Project', href: withBase('projects/animus/'), kind: 'page' },
       { label: 'Shastra — case study', hint: 'Project', href: withBase('projects/shastra/'), kind: 'page' },
+      { label: 'The Weekend Conundrum — BookMyShow', hint: 'Case study', href: withBase('projects/weekend-conundrum/'), kind: 'page' },
+      { label: 'Zomato — ordering & revenue', hint: 'Case study', href: withBase('projects/zomato/'), kind: 'page' },
+      { label: 'YouTube Music — weekly active users', hint: 'Case study', href: withBase('projects/youtube-music/'), kind: 'page' },
+      { label: 'Shopsy — user growth', hint: 'Case study', href: withBase('projects/shopsy/'), kind: 'page' },
+      { label: 'GalaxEye Space — SAR analytics', hint: 'Case study', href: withBase('projects/galaxeye/'), kind: 'page' },
+      { label: 'LILA Games — APM take-home', hint: 'Case study', href: withBase('projects/lila-games/'), kind: 'page' },
       { label: 'Download résumé (PDF)', hint: 'File', href: withBase('Adhokshaj-Wategaonkar-Resume.pdf'), kind: 'out' },
       { label: 'LinkedIn', hint: 'External', href: 'https://www.linkedin.com/in/adhokshaj/', kind: 'out' },
       { label: 'X / Twitter', hint: 'External', href: 'https://twitter.com/AdhokshajW', kind: 'out' },
-      { label: 'Notion portfolio', hint: 'External', href: 'https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6', kind: 'out' },
+      { label: 'Animus — live site', hint: 'External', href: 'https://adhokshajwategaonkar.github.io/animus-site/', kind: 'out' },
       { label: 'Animus — live app', hint: 'External', href: 'https://animus-jwui.onrender.com', kind: 'out' },
       { label: 'Shastra — live site', hint: 'External', href: 'https://adhokshajwategaonkar.github.io/shastra-site/', kind: 'out' },
       { label: 'Copy email address', hint: 'Action', kind: 'act',

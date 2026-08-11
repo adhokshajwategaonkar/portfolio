@@ -1,86 +1,10 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>About — Adhokshaj Wategaonkar</title>
-<meta name="description" content="Product Manager in Bengaluru. Engineering background, three years across identity, space tech and enterprise AI, and two products shipped solo. How I work and what I use." />
-<meta name="theme-color" content="#08080A" />
-<link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/about/" />
-
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/about/" />
-<meta property="og:title" content="About — Adhokshaj Wategaonkar" />
-<meta property="og:description" content="Product Manager in Bengaluru. Engineering background, three years across identity, space tech and enterprise AI, and two products shipped solo. How I work and what I use." />
-<meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:creator" content="@AdhokshajW" />
-
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
-     blank screen for as long as that CDN is slow — which on a portfolio is the
-     difference between a first impression and a bounce. -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all';this.onload=null" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" /></noscript>
-<link rel="stylesheet" href="../assets/site.css" />
-
-<!-- Resolve the theme BEFORE first paint. In site.js this would flash
-     near-black at every light-mode visitor on every cold start. -->
-<script>
-  document.documentElement.classList.add('js');
-  try {
-    var p = localStorage.getItem('aw.theme') || 'system';
-    var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
-    document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
-  } catch (e) {}
-</script>
-</head>
-
-<body data-root="../">
-<a class="skip" href="#main">Skip to content</a>
-<div class="rules" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-<div class="grain" aria-hidden="true"></div>
-
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="../"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
-    <nav class="tabs" aria-label="Primary">
-      <a href="../">Home</a>
-      <a href="../work/">Work</a>
-      <a href="../career/">Career</a>
-      <a href="../about/" aria-current="page">About</a>
-      <a href="../contact/">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="kbd-btn" data-palette aria-label="Open command palette">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span>Search</span><kbd>⌘K</kbd>
-      </button>
-      <button class="icon-btn" data-theme-btn aria-label="Change theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
-      </button>
-      <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-<div class="progress" aria-hidden="true"></div>
-
-<nav class="sheet" aria-label="Mobile">
-  <a href="../">Home <span class="label">01</span></a>
-  <a href="../work/">Work <span class="label">02</span></a>
-  <a href="../career/">Career <span class="label">03</span></a>
-  <a href="../about/">About <span class="label">04</span></a>
-  <a href="../contact/">Contact <span class="label">05</span></a>
-</nav>
-
-<main id="main">
-
+export default {
+  dir: 'about',
+  nav: 'about',
+  title: `About — Adhokshaj Wategaonkar`,
+  ogTitle: `About — Adhokshaj Wategaonkar`,
+  description: `Product Manager in Bengaluru. Engineering background, three years across identity, space tech and enterprise AI, and two products shipped solo. How I work and what I use.`,
+  body: `
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
     <span class="label rise">About</span>
@@ -263,57 +187,5 @@
     </div>
   </div>
 </section>
-
-</main>
-
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
-        <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
-          Product Manager. Bengaluru, India.<br />
-          AI platforms by day; two products of my own the rest of the time.
-        </p>
-      </div>
-      <div>
-        <h4>Site</h4>
-        <ul>
-          <li><a href="../">Home</a></li>
-          <li><a href="../work/">Work</a></li>
-          <li><a href="../career/">Career</a></li>
-          <li><a href="../about/">About</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">X / Twitter ↗</a></li>
-          <li><a href="../Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
-          <li><a href="mailto:adhokshaj.pande@gmail.com">Email ↗</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bar">
-      <span class="label">© <span data-year>2026</span> Adhokshaj Wategaonkar</span>
-      <span class="label">Press <kbd style="font-family:var(--font-mono)">⌘K</kbd> anywhere</span>
-    </div>
-  </div>
-</footer>
-
-<div class="scrim" aria-hidden="true"></div>
-<div class="palette" role="dialog" aria-modal="true" aria-label="Command palette" aria-hidden="true">
-  <input type="text" placeholder="Search pages, projects, links…" aria-label="Search" autocomplete="off" spellcheck="false" />
-  <ul role="listbox" aria-label="Results"></ul>
-  <div class="palette-foot">
-    <span class="label"><kbd>↑↓</kbd> navigate</span>
-    <span class="label"><kbd>↵</kbd> open</span>
-    <span class="label"><kbd>esc</kbd> close</span>
-  </div>
-</div>
-
-<script src="../assets/site.js"></script>
-</body>
-</html>
+`,
+};

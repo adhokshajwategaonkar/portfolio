@@ -5,29 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Contact — Adhokshaj Wategaonkar</title>
 <meta name="description" content="Get in touch with Adhokshaj Wategaonkar — Product Manager, Bengaluru. Email, LinkedIn, X, and résumé." />
-<meta name="theme-color" content="#0A0A0B" />
+<meta name="theme-color" content="#08080A" />
+<link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/contact/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/contact/" />
 <meta property="og:title" content="Contact — Adhokshaj Wategaonkar" />
-<meta property="og:description" content="Product Manager, Bengaluru. Open to AI platform and infrastructure roles." />
+<meta property="og:description" content="Get in touch with Adhokshaj Wategaonkar — Product Manager, Bengaluru. Email, LinkedIn, X, and résumé." />
 <meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@AdhokshajW" />
+
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
      blank screen for as long as that CDN is slow — which on a portfolio is the
-     difference between a first impression and a bounce. Text paints immediately
-     in the system fallback and swaps when Geist arrives. -->
+     difference between a first impression and a bounce. -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all';this.onload=null" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" /></noscript>
 <link rel="stylesheet" href="../assets/site.css" />
+
+<!-- Resolve the theme BEFORE first paint. In site.js this would flash
+     near-black at every light-mode visitor on every cold start. -->
 <script>
   document.documentElement.classList.add('js');
   try {
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
   } catch (e) {}
 </script>
 </head>
@@ -45,7 +53,7 @@
       <a href="../work/">Work</a>
       <a href="../career/">Career</a>
       <a href="../about/">About</a>
-      <a href="./" aria-current="page">Contact</a>
+      <a href="../contact/" aria-current="page">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="kbd-btn" data-palette aria-label="Open command palette">
@@ -68,7 +76,7 @@
   <a href="../work/">Work <span class="label">02</span></a>
   <a href="../career/">Career <span class="label">03</span></a>
   <a href="../about/">About <span class="label">04</span></a>
-  <a href="./">Contact <span class="label">05</span></a>
+  <a href="../contact/">Contact <span class="label">05</span></a>
 </nav>
 
 <main id="main">
@@ -79,8 +87,8 @@
       <span class="beacon"><b></b><i></i></span>
       Open to Product Manager roles — AI &amp; platform
     </span>
-    <h1 class="display rise" style="--i:1; margin:26px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
-      Let's talk about<br />something <span class="serif accent">hard</span>.
+    <h1 class="intro-name rise" style="--i:1; margin-top:22px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
+      Let's talk about<br />something hard.
     </h1>
     <p class="lead rise" style="--i:2; margin-top:24px">
       Hiring, collaborating, or you've got an AI product problem you want a second opinion on —
@@ -123,10 +131,6 @@
             <span class="label">X / Twitter</span>
             <span class="v"><a class="link" href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">@AdhokshajW ↗</a></span>
           </div>
-          <div class="kv-row" style="padding:13px 0">
-            <span class="label">Notion</span>
-            <span class="v"><a class="link" href="https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6" target="_blank" rel="noopener">The original portfolio ↗</a></span>
-          </div>
           <div class="kv-row" style="padding:13px 0; border-bottom:0">
             <span class="label">Phone</span>
             <span class="v"><a class="link" href="tel:+918552886369">+91 85528 86369</a></span>
@@ -140,7 +144,7 @@
         <div class="kv">
           <div class="kv-row" style="padding:13px 0">
             <span class="label">Animus</span>
-            <span class="v"><a class="link" href="https://animus-jwui.onrender.com" target="_blank" rel="noopener">animus-jwui.onrender.com ↗</a><br /><span class="faint" style="font-size:13px">Invite-only, and the free instance takes ~50s to wake.</span></span>
+            <span class="v"><a class="link" href="https://adhokshajwategaonkar.github.io/animus-site/" target="_blank" rel="noopener">animus-site ↗</a> · <a class="link" href="https://animus-jwui.onrender.com" target="_blank" rel="noopener">the app ↗</a><br /><span class="faint" style="font-size:13px">The app is invite-only, and the free instance takes ~50s to wake.</span></span>
           </div>
           <div class="kv-row" style="padding:13px 0; border-bottom:0">
             <span class="label">Shastra</span>
@@ -181,7 +185,7 @@
         <a class="brand" href="../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          Building AI-native products, and the occasional whole one by myself.
+          AI platforms by day; two products of my own the rest of the time.
         </p>
       </div>
       <div>
@@ -191,7 +195,7 @@
           <li><a href="../work/">Work</a></li>
           <li><a href="../career/">Career</a></li>
           <li><a href="../about/">About</a></li>
-          <li><a href="./">Contact</a></li>
+          <li><a href="../contact/">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -199,8 +203,8 @@
         <ul>
           <li><a href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">X / Twitter ↗</a></li>
-          <li><a href="https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6" target="_blank" rel="noopener">Notion portfolio ↗</a></li>
           <li><a href="../Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+          <li><a href="mailto:adhokshaj.pande@gmail.com">Email ↗</a></li>
         </ul>
       </div>
     </div>

@@ -22,7 +22,11 @@ fi
 # Sanity check: Pages will silently mangle the site without this file.
 [ -f .nojekyll ] || { echo "!! .nojekyll is missing — recreate it before deploying."; exit 1; }
 
-if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
+# Always rebuild first — the committed HTML is generated from src/, and a
+# deploy that skipped this would ship stale pages that look fine locally.
+node build.js
+
+if [ -z "$(git status --porcelain)" ]; then
   echo "Nothing to commit."
   exit 0
 fi

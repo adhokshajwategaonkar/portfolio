@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Zomato — ordering experience & revenue case study | Adhokshaj Wategaonkar</title>
+<meta name="description" content="A product case study on Zomato: where the food-ordering funnel leaks for 20 million users, and which interventions are worth building when revenue rather than engagement is the goal." />
+<meta name="theme-color" content="#08080A" />
+<link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/projects/zomato/" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/projects/zomato/" />
+<meta property="og:title" content="Zomato — improving the ordering experience for 20 million users" />
+<meta property="og:description" content="A product case study on Zomato: where the food-ordering funnel leaks for 20 million users, and which interventions are worth building when revenue rather than engagement is the goal." />
+<meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@AdhokshajW" />
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
+     blank screen for as long as that CDN is slow — which on a portfolio is the
+     difference between a first impression and a bounce. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all';this.onload=null" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" /></noscript>
+<link rel="stylesheet" href="../../assets/site.css" />
+
+<!-- Resolve the theme BEFORE first paint. In site.js this would flash
+     near-black at every light-mode visitor on every cold start. -->
+<script>
+  document.documentElement.classList.add('js');
+  try {
+    var p = localStorage.getItem('aw.theme') || 'system';
+    var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
+    document.documentElement.dataset.theme = t;
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
+  } catch (e) {}
+</script>
+</head>
+
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<div class="rules" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
+    <nav class="tabs" aria-label="Primary">
+      <a href="../../">Home</a>
+      <a href="../../work/" aria-current="page">Work</a>
+      <a href="../../career/">Career</a>
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="kbd-btn" data-palette aria-label="Open command palette">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span>Search</span><kbd>⌘K</kbd>
+      </button>
+      <button class="icon-btn" data-theme-btn aria-label="Change theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="sheet" aria-label="Mobile">
+  <a href="../../">Home <span class="label">01</span></a>
+  <a href="../../work/">Work <span class="label">02</span></a>
+  <a href="../../career/">Career <span class="label">03</span></a>
+  <a href="../../about/">About <span class="label">04</span></a>
+  <a href="../../contact/">Contact <span class="label">05</span></a>
+</nav>
+
+<main id="main">
+
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <a class="arrow-link rise" href="../../work/" style="margin-bottom:22px">
+      <span style="display:inline-flex;transform:rotate(180deg)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> All work
+    </a>
+
+    <div class="rise" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+      <span class="badge">Self-directed case study</span>
+      <span class="badge">Growth · monetisation</span>
+    </div>
+
+    <span class="label rise" style="--i:1; display:block; margin-top:26px">Product case study · Zomato</span>
+    <h1 class="intro-name rise" style="--i:1; margin-top:14px; font-size:clamp(2.1rem,5.4vw,3.6rem)">Ordering experience &amp; revenue</h1>
+    <p class="lead rise" style="--i:2; margin-top:22px; font-size:clamp(1.05rem,1.7vw,1.25rem)">Improving the food-ordering experience for 20 million users — with revenue as the objective,
+    which is a materially different brief from improving engagement and leads to a different
+    shortlist.</p>
+
+    
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <table class="spec rise"><tbody>
+      <tr><th>Format</th><td>Self-directed product case study, presented as a deck. Persona and funnel work, competitive teardown, and a prioritised intervention list.</td></tr>
+      <tr><th>Surface</th><td>Zomato — food delivery and restaurant discovery, India.</td></tr>
+      <tr><th>The question</th><td><strong>Where does the ordering funnel actually lose revenue, as opposed to where it loses attention?</strong></td></tr>
+      <tr><th>Focus</th><td>Funnel analysis, competitive positioning, monetisation.</td></tr>
+    </tbody></table>
+  </div>
+</section>
+
+<section class="section section--ruled" style="padding-top:clamp(40px,5vw,72px)">
+  <div class="wrap">
+    <article class="prose rise">
+      <h2 style="margin-top:0">Engagement and revenue are not the same funnel</h2>
+      <p>
+        In food delivery it is easy to improve the metrics that feel like progress — session length,
+        items browsed, screens per visit — while leaving order value and order frequency untouched.
+        Browsing is not a proxy for buying here; past a point it is a symptom of a user who cannot
+        decide, and an undecided user is a user who orders from the same three places or does not
+        order at all.
+      </p>
+      <p>
+        So the brief was set against revenue from the start, which changes what counts as a good
+        idea: anything that adds a step to a decided user has to pay for itself.
+      </p>
+
+      <h2>How I worked it</h2>
+      <ul>
+        <li><strong>Segmented by intent, not demographics</strong> — the decided user and the undecided user need opposite products, and the app serves them the same one.</li>
+        <li><strong>Mapped the funnel to the money</strong>, so an intervention is judged by whether it moves order value or frequency.</li>
+        <li><strong>Ran a competitive teardown</strong> against the nearest alternative to separate genuine gaps from cosmetic differences.</li>
+        <li><strong>Prioritised by realistic impact</strong>, and wrote down what I deliberately was not proposing — usually the more interesting half of a shortlist.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section section--tight section--ruled">
+  <div class="wrap">
+    <div class="sec-head rise"><div><span class="label">Next</span></div></div>
+    <a class="card proj rise" href="../youtube-music/">
+      <div class="card-pad proj">
+        <div class="proj-top">
+          <div><span class="badge">Case study + PRD · YouTube Music</span><h3 style="margin-top:12px">Increasing weekly active users</h3></div>
+          <span style="color:var(--accent-ink);flex:none;width:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <p>Where WAU leaks in a streaming product, and which habit loop is worth building for.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
+        <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
+          Product Manager. Bengaluru, India.<br />
+          AI platforms by day; two products of my own the rest of the time.
+        </p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../career/">Career</a></li>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">X / Twitter ↗</a></li>
+          <li><a href="../../Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+          <li><a href="mailto:adhokshaj.pande@gmail.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span class="label">© <span data-year>2026</span> Adhokshaj Wategaonkar</span>
+      <span class="label">Press <kbd style="font-family:var(--font-mono)">⌘K</kbd> anywhere</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="palette" role="dialog" aria-modal="true" aria-label="Command palette" aria-hidden="true">
+  <input type="text" placeholder="Search pages, projects, links…" aria-label="Search" autocomplete="off" spellcheck="false" />
+  <ul role="listbox" aria-label="Results"></ul>
+  <div class="palette-foot">
+    <span class="label"><kbd>↑↓</kbd> navigate</span>
+    <span class="label"><kbd>↵</kbd> open</span>
+    <span class="label"><kbd>esc</kbd> close</span>
+  </div>
+</div>
+
+<script src="../../assets/site.js"></script>
+</body>
+</html>

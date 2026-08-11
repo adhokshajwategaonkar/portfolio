@@ -4,30 +4,38 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Work — Adhokshaj Wategaonkar</title>
-<meta name="description" content="Shipped products, product case studies, PRDs, company deep dives and PM assessments. Animus, Shastra, Zomato, YouTube Music, Shopsy, GalaxEye, EarthID, FleetPanda, LILA Games." />
-<meta name="theme-color" content="#0A0A0B" />
+<meta name="description" content="Shipped products and product case studies: Animus, Shastra, BookMyShow, Zomato, YouTube Music, Shopsy, GalaxEye Space and a LILA Games take-home. Every case study lives on this site." />
+<meta name="theme-color" content="#08080A" />
+<link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/work/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/work/" />
 <meta property="og:title" content="Work — Adhokshaj Wategaonkar" />
-<meta property="og:description" content="Shipped products, product case studies, PRDs, company deep dives and PM assessments." />
+<meta property="og:description" content="Shipped products and product case studies: Animus, Shastra, BookMyShow, Zomato, YouTube Music, Shopsy, GalaxEye Space and a LILA Games take-home. Every case study lives on this site." />
 <meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@AdhokshajW" />
+
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
      blank screen for as long as that CDN is slow — which on a portfolio is the
-     difference between a first impression and a bounce. Text paints immediately
-     in the system fallback and swaps when Geist arrives. -->
+     difference between a first impression and a bounce. -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all';this.onload=null" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" /></noscript>
 <link rel="stylesheet" href="../assets/site.css" />
+
+<!-- Resolve the theme BEFORE first paint. In site.js this would flash
+     near-black at every light-mode visitor on every cold start. -->
 <script>
   document.documentElement.classList.add('js');
   try {
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
   } catch (e) {}
 </script>
 </head>
@@ -42,7 +50,7 @@
     <a class="brand" href="../"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
     <nav class="tabs" aria-label="Primary">
       <a href="../">Home</a>
-      <a href="./" aria-current="page">Work</a>
+      <a href="../work/" aria-current="page">Work</a>
       <a href="../career/">Career</a>
       <a href="../about/">About</a>
       <a href="../contact/">Contact</a>
@@ -65,7 +73,7 @@
 
 <nav class="sheet" aria-label="Mobile">
   <a href="../">Home <span class="label">01</span></a>
-  <a href="./">Work <span class="label">02</span></a>
+  <a href="../work/">Work <span class="label">02</span></a>
   <a href="../career/">Career <span class="label">03</span></a>
   <a href="../about/">About <span class="label">04</span></a>
   <a href="../contact/">Contact <span class="label">05</span></a>
@@ -75,306 +83,282 @@
 
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
-    <span class="label rise">Work · <span data-result-count>14</span> shown</span>
-    <h1 class="display rise" style="--i:1; margin:22px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
-      Everything, in<br />one place.
+    <span class="label rise">Work · <span data-result-count>8</span> shown</span>
+    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
+      Everything, in one place.
     </h1>
-    <p class="lead rise" style="--i:2; margin-top:24px">
-      Two products I designed, built and shipped on my own. Four case studies where I worked
-      the problem from scratch. Company deep dives, PRDs and assessments. Filter by what
-      you're actually here for — the filter is in the URL, so a filtered view is shareable.
+    <p class="lead rise" style="--i:2; margin-top:22px">
+      Two products I designed, built and shipped on my own, and six case studies where I worked the
+      problem from scratch. All of them are written up here rather than parked in a doc somewhere —
+      the filter is in the URL, so a filtered view is a shareable link.
     </p>
   </div>
 </section>
 
-<section class="section">
+<section class="section section--ruled" style="padding-top:clamp(36px,5vw,64px)">
   <div class="wrap">
 
     <div class="chips rise" role="group" aria-label="Filter projects">
-      <button class="chip" data-filter="all" aria-pressed="true">Everything <span class="n">14</span></button>
+      <button class="chip" data-filter="all" aria-pressed="true">Everything <span class="n">8</span></button>
       <button class="chip" data-filter="product" aria-pressed="false">Shipped products <span class="n">2</span></button>
       <button class="chip" data-filter="case" aria-pressed="false">Case studies <span class="n">4</span></button>
-      <button class="chip" data-filter="prd" aria-pressed="false">PRDs <span class="n">4</span></button>
-      <button class="chip" data-filter="company" aria-pressed="false">Company work <span class="n">3</span></button>
+      <button class="chip" data-filter="prd" aria-pressed="false">PRDs <span class="n">2</span></button>
+      <button class="chip" data-filter="company" aria-pressed="false">Company work <span class="n">1</span></button>
       <button class="chip" data-filter="assessment" aria-pressed="false">Assessments <span class="n">1</span></button>
-      <button class="chip" data-filter="ml" aria-pressed="false">ML &amp; research <span class="n">2</span></button>
     </div>
 
     <div class="grid grid--2">
 
-      <!-- ============================================ shipped products -->
       <a class="card proj" data-card data-tags="product" href="../projects/animus/">
-        <div class="cover"><span class="halo"></span><span class="glyph">🧠</span></div>
+        <div class="cover" style="--ms:.5">
+      <span class="halo"></span>
+      <div class="mock phone" aria-hidden="true">
+        <div class="bar"><b>animus</b><span style="font-size:10px;color:#6B6B76">◑</span></div>
+        <div class="panes"><span class="on">the pile</span><span>progress</span></div>
+        <div>
+          <div class="hero-n">14</div>
+          <div class="hero-k">in the pile · 6 cleared this week</div>
+        </div>
+        <div class="item"><b><i style="background:#C6FF3D"></i>Book dentist — Friday</b><span>task · due in 2 days</span></div>
+        <div class="item"><b><i style="background:#3DA9FC"></i>Attention Is All You Need</b><span>link · arxiv.org</span></div>
+        <div class="item"><b><i style="background:#7C5CFC"></i>Pricing should degrade, not block</b><span>idea · 4 days ago</span></div>
+        <div class="item"><b><i style="background:#FF8A3D"></i>Ship the nudge templates</b><span>goal · this week</span></div>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
             <div>
-              <span class="badge badge--live"><i></i>Live · solo build</span>
+              <span class="badge badge--live"><i></i>Live · built solo</span>
               <h3 style="margin-top:12px">Animus</h3>
             </div>
           </div>
-          <p>
-            WhatsApp is the capture surface; a PWA is where the value lives. Claude Haiku parses a
-            raw message into structured items, the feed ranks them by what's closest to rotting,
-            and a nudge engine brings the right one back. Designed for adults with ADHD — where
-            every mechanic that punishes absence is the mechanic that loses the user.
-          </p>
+          <p>WhatsApp is the capture surface; a PWA is where the value lives. Claude Haiku parses a raw
+      message into structured items, the feed ranks them by what's closest to rotting, and a nudge
+      engine brings the right one back. Designed for adults with ADHD — where every mechanic that
+      punishes absence is the mechanic that loses the user.</p>
           <div class="proj-foot">
             <div class="tags"><span>Node + Express</span><span>React</span><span>Supabase</span><span>WhatsApp Cloud API</span><span>Claude Haiku</span></div>
-            <span class="arrow-link">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
+            <span class="arrow-link">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
       <a class="card proj" data-card data-tags="product" href="../projects/shastra/">
-        <div class="cover"><span class="halo"></span><span class="glyph">🪐</span></div>
+        <div class="cover" style="--ms:.66">
+      <span class="halo"></span>
+      <div class="mock win" aria-hidden="true">
+        <div class="win-bar"><i></i><i></i><i></i><span>shastra — free kundli</span></div>
+        <div class="win-body">
+          <svg class="kundli" viewBox="0 0 100 100" role="img" aria-label="North Indian birth chart">
+            <rect x="1" y="1" width="98" height="98"/>
+            <line x1="1" y1="1" x2="99" y2="99"/><line x1="99" y1="1" x2="1" y2="99"/>
+            <line x1="50" y1="1" x2="1" y2="50"/><line x1="50" y1="1" x2="99" y2="50"/>
+            <line x1="1" y1="50" x2="50" y2="99"/><line x1="99" y1="50" x2="50" y2="99"/>
+            <text class="p" x="46" y="18">Su</text><text class="p" x="70" y="30">Me</text>
+            <text class="p" x="16" y="56">Ma</text><text class="p" x="78" y="56">Ju</text>
+            <text class="p" x="44" y="88">Mo</text><text class="p" x="28" y="30">Ve</text>
+            <text x="47" y="46">1</text><text x="47" y="60">7</text>
+          </svg>
+          <div class="skel"><i class="m"></i><i></i><i class="s"></i></div>
+        </div>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
             <div>
-              <span class="badge badge--live"><i></i>Live · solo build</span>
+              <span class="badge badge--live"><i></i>Live · built solo</span>
               <h3 style="margin-top:12px">Shastra</h3>
             </div>
           </div>
-          <p>
-            Vedic astrology built on a verifiable ephemeris rather than vibes. Swiss Ephemeris
-            computes; the LLM only narrates, and never sees a birth date, place, email or phone.
-            The ethics rules — no fear-selling, no remedies, no health predictions — are asserted
-            in the test suite, so a prompt that drops them fails the build.
-          </p>
+          <p>Vedic astrology built on a verifiable ephemeris rather than vibes. Swiss Ephemeris computes;
+      the LLM only narrates, and never sees a birth date, place, email or phone. The ethics rules —
+      no fear-selling, no remedies, no health predictions — are asserted in the test suite, so a
+      prompt that drops them fails the build.</p>
           <div class="proj-foot">
             <div class="tags"><span>Swiss Ephemeris</span><span>Node</span><span>Prompt architecture</span><span>Programmatic SEO</span></div>
-            <span class="arrow-link">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
+            <span class="arrow-link">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
-      <!-- ================================================ case studies -->
-      <a class="card proj" data-card data-tags="case" href="https://adhokshaj.notion.site/The-Weekend-Conundrum-e9d2c0eb29724530b62920b60a8a7963" target="_blank" rel="noopener">
+      <a class="card proj" data-card data-tags="case" href="../projects/weekend-conundrum/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Product case study</span>
+        <strong>The Weekend<br />Conundrum</strong>
+        <span class="foot"><span>BookMyShow</span><span>Discovery</span></span>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
-            <div><span class="badge">Case study · BookMyShow</span><h3 style="margin-top:12px">"The Weekend Conundrum"</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            <div>
+              <span class="badge">Case study · BookMyShow</span>
+              <h3 style="margin-top:12px">"The Weekend Conundrum"</h3>
+            </div>
           </div>
-          <p>
-            People want to go out. They just don't know what to do with the weekend. A discovery-first
-            teardown of BookMyShow: the decision problem, why browsing a ticket catalogue doesn't solve
-            it, and the interface that would.
-          </p>
+          <p>People want to go out. They just don't know what to do with the weekend — a decision problem,
+      not a catalogue problem. A ticketing app is built to solve the second one, which is why browsing
+      it doesn't help.</p>
           <div class="proj-foot">
             <div class="tags"><span>Discovery</span><span>Consumer</span><span>UX</span></div>
-            <span class="label">Notion ↗</span>
+            <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
-      <a class="card proj" data-card data-tags="case" href="https://adhokshaj.notion.site/Improving-the-food-ordering-experience-on-Zomato-to-increase-Revenue-7f948529155b49b5a0616f1f71ff6fc9" target="_blank" rel="noopener">
+      <a class="card proj" data-card data-tags="case" href="../projects/zomato/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Product case study</span>
+        <strong>Ordering,<br />and revenue</strong>
+        <span class="foot"><span>Zomato</span><span>20M users</span></span>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
-            <div><span class="badge">Case study · Zomato</span><h3 style="margin-top:12px">Ordering experience &amp; revenue</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            <div>
+              <span class="badge">Case study · Zomato</span>
+              <h3 style="margin-top:12px">Ordering experience & revenue</h3>
+            </div>
           </div>
-          <p>
-            Improving food ordering for 20 million users. Persona and funnel work, a competitive
-            teardown against Swiggy, and a prioritised intervention list scoped by what each
-            change would realistically move.
-          </p>
+          <p>Improving the food-ordering experience for 20 million users. Persona and funnel work, a
+      competitive teardown, and a prioritised intervention list scoped against what each change
+      would realistically move.</p>
           <div class="proj-foot">
             <div class="tags"><span>Growth</span><span>Funnel</span><span>Monetisation</span></div>
-            <span class="label">Notion ↗</span>
+            <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
-      <a class="card proj" data-card data-tags="case prd" href="https://adhokshaj.notion.site/Increasing-Weekly-Active-Users-at-Youtube-Music-e1d5e4bd4ccb46a88e9320c5f3580bb3" target="_blank" rel="noopener">
+      <a class="card proj" data-card data-tags="case prd" href="../projects/youtube-music/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Case study + PRD</span>
+        <strong>Weekly active<br />users</strong>
+        <span class="foot"><span>YouTube Music</span><span>Retention</span></span>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
-            <div><span class="badge">Case study + PRD · YouTube Music</span><h3 style="margin-top:12px">Increasing weekly active users</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            <div>
+              <span class="badge">Case study + PRD · YouTube Music</span>
+              <h3 style="margin-top:12px">Increasing weekly active users</h3>
+            </div>
           </div>
-          <p>
-            Where WAU actually leaks in a streaming product, and which habit loop is worth
-            building for. Ships with a full written PRD — goals, non-goals, success metrics
-            and acceptance criteria.
-          </p>
+          <p>Where WAU actually leaks in a streaming product, and which habit loop is worth building for.
+      Ships with a written PRD — goals, non-goals, success metrics and acceptance criteria.</p>
           <div class="proj-foot">
             <div class="tags"><span>Retention</span><span>Habit loop</span><span>PRD</span></div>
-            <span class="label">Notion ↗</span>
+            <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
-      <a class="card proj" data-card data-tags="case prd" href="https://adhokshaj.notion.site/Increase-User-Growth-of-Shopsy-d2a485932a974dcf9072dc2e77401051" target="_blank" rel="noopener">
+      <a class="card proj" data-card data-tags="case prd" href="../projects/shopsy/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Case study + PRD</span>
+        <strong>User<br />growth</strong>
+        <span class="foot"><span>Shopsy</span><span>Tier 2–3 India</span></span>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
-            <div><span class="badge">Case study + PRD · Shopsy</span><h3 style="margin-top:12px">Increasing user growth</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            <div>
+              <span class="badge">Case study + PRD · Shopsy</span>
+              <h3 style="margin-top:12px">Increasing user growth</h3>
+            </div>
           </div>
-          <p>
-            Growth for value commerce in tier-2 and tier-3 India, where the constraint is trust
-            and data cost rather than selection. Segment work, acquisition loops, and a PRD for
-            the intervention that survived prioritisation.
-          </p>
+          <p>Growth for value commerce in tier-2 and tier-3 India, where the binding constraint is trust
+      and data cost rather than selection. Segment work, acquisition loops, and a PRD for the
+      intervention that survived prioritisation.</p>
           <div class="proj-foot">
             <div class="tags"><span>Growth</span><span>India</span><span>PRD</span></div>
-            <span class="label">Notion ↗</span>
+            <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
-      <!-- ==================================================== PRD docs -->
-      <a class="card proj" data-card data-tags="prd" href="https://docs.google.com/document/d/1L2IAbcfiXCuxV1xO-L9sAaSMSvqisGx9q4iXT4ajMyc/edit?usp=sharing" target="_blank" rel="noopener">
+      <a class="card proj" data-card data-tags="company" href="../projects/galaxeye/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Company work</span>
+        <strong>SAR analytics<br />for defence</strong>
+        <span class="foot"><span>GalaxEye Space</span><span>2024 — 2025</span></span>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
-            <div><span class="badge">PRD · Google Doc</span><h3 style="margin-top:12px">Shopsy — user growth PRD</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            <div>
+              <span class="badge">Company · GalaxEye Space</span>
+              <h3 style="margin-top:12px">SAR analytics, concept to trials</h3>
+            </div>
           </div>
-          <p>
-            The written artifact rather than the narrative: problem statement, goals and non-goals,
-            user stories, success metrics, and the acceptance criteria an engineer could build against.
-          </p>
+          <p>Drone-mounted synthetic-aperture-radar analytics taken from concept through government
+      trials as product co-owner, alongside cross-portfolio market strategy across defence and
+      commercial lines.</p>
           <div class="proj-foot">
-            <div class="tags"><span>Requirements</span><span>Metrics</span></div>
-            <span class="label">Google Docs ↗</span>
+            <div class="tags"><span>Defence</span><span>Geospatial</span><span>Market strategy</span></div>
+            <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
 
-      <a class="card proj" data-card data-tags="prd" href="https://docs.google.com/document/d/1yzYFfawX-Nni-IV1lwWabs-fjil03Ef7kHzJcyGlPig/edit?usp=sharing" target="_blank" rel="noopener">
+      <a class="card proj" data-card data-tags="assessment" href="../projects/lila-games/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Take-home assessment</span>
+        <strong>Mobile gaming<br />product review</strong>
+        <span class="foot"><span>LILA Games</span><span>APM</span></span>
+      </div>
+    </div>
         <div class="card-pad proj">
           <div class="proj-top">
-            <div><span class="badge">PRD · Google Doc</span><h3 style="margin-top:12px">YouTube Music — WAU PRD</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            <div>
+              <span class="badge">Assessment · LILA Games</span>
+              <h3 style="margin-top:12px">APM take-home</h3>
+            </div>
           </div>
-          <p>
-            Requirements for the retention intervention — including what deliberately stayed out
-            of scope, which is usually the more interesting half of a spec.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Requirements</span><span>Retention</span></div>
-            <span class="label">Google Docs ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- ================================================ company work -->
-      <a class="card proj" data-card data-tags="company" href="https://adhokshaj.notion.site/GalaxEye-PMI-3e381cbf1ec04dcbbd04392f4ef442f6" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div><span class="badge">Company · GalaxEye Space</span><h3 style="margin-top:12px">Product market intelligence</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            Cross-portfolio market strategy across defence and commercial lines — structured
-            competitive analysis and 20+ buyer interviews across government procurement,
-            agri-tech and defence agencies, turned into repositioning and feature priority.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Market strategy</span><span>Defence</span><span>Positioning</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="card proj" data-card data-tags="company" href="https://adhokshaj.notion.site/EarthID-Product-Analysis-3333de951fb24b88a53198f836e6cf3f" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div><span class="badge">Company · EarthID</span><h3 style="margin-top:12px">Product analysis</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            Decentralised identity, read as a product rather than a protocol. Verifiable credentials
-            and zero-knowledge proofs turned into a KYC flow a regulated business could actually
-            put in front of a customer.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Identity</span><span>ZKP</span><span>Regulated UX</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="card proj" data-card data-tags="company" href="https://adhokshaj.notion.site/FleetPanda-Product-Marketing-3ebf768ce3334c52b0ec40f83f0b56f7" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div><span class="badge">Company · FleetPanda</span><h3 style="margin-top:12px">Product marketing</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            Positioning and go-to-market for petroleum logistics software — an unglamorous
-            category where the buyer's real objection is switching cost, not features.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>GTM</span><span>Positioning</span><span>B2B</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- ================================================== assessment -->
-      <a class="card proj" data-card data-tags="assessment" href="https://adhokshaj.notion.site/LILA-Games-Assessment-APM-730201e40636499aa57cd463e1617ebc" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div><span class="badge">Assessment · LILA Games</span><h3 style="margin-top:12px">APM take-home</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            Mobile gaming product assessment — retention mechanics, monetisation shape, and the
-            player-motivation model underneath both. Written under a real deadline, kept as-is.
-          </p>
+          <p>A mobile gaming product assessment — retention mechanics, monetisation shape, and the
+      player-motivation model underneath both. Written under a real deadline and kept as-is.</p>
           <div class="proj-foot">
             <div class="tags"><span>Gaming</span><span>Retention</span><span>Monetisation</span></div>
-            <span class="label">Notion ↗</span>
+            <span class="arrow-link">Read the assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </div>
       </a>
-
-      <!-- ========================================================== ML -->
-      <a class="card proj" data-card data-tags="ml" href="https://adhokshaj.notion.site/Brain-Tumor-Classification-Using-Convolutional-Neural-Networks-c2e860101e2a4e518b3dec6e3e81a1a5" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div><span class="badge">ML · Research</span><h3 style="margin-top:12px">Brain tumour classification</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            CNN-based classification over MRI scans. From the engineering half of my background —
-            and a useful reminder that in a clinical setting, a confusion matrix is a product
-            decision, not a metric.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>CNN</span><span>Python</span><span>Medical imaging</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="card proj" data-card data-tags="ml" href="https://adhokshaj.notion.site/Music-Genre-Prediction-Using-ML-Tuned-Using-Optuna-d12e189000e64fb7895c135d9784bf71" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div><span class="badge">ML · Research</span><h3 style="margin-top:12px">Music genre prediction</h3></div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            Audio feature extraction plus gradient boosting, hyperparameter-tuned with Optuna.
-            Genre is a fuzzy label, which makes the labelling strategy more consequential than
-            the model choice.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Optuna</span><span>Feature engineering</span><span>Python</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
     </div>
 
-    <p class="faint rise" style="margin-top:40px; font-size:13.5px">
-      Some of the above lives in Notion and Google Docs rather than here — those are the original
-      artifacts, and rewriting them into a website would only make them prettier, not truer.
-      <a class="link" href="https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6" target="_blank" rel="noopener">The full Notion index is here ↗</a>
-    </p>
+    <div class="rise" style="margin-top:56px; padding-top:26px; border-top:1px solid var(--line-2)">
+      <span class="label">Earlier — engineering</span>
+      <p class="muted" style="margin-top:12px; font-size:14.4px; max-width:64ch">
+        From the ML half of my background, before product. Kept because they're the reason an
+        architecture review isn't a room I sit quietly in — not because they're recent.
+      </p>
+      <div class="kv" style="margin-top:14px">
+        <div class="kv-row">
+          <span class="label">CNN · Medical imaging</span>
+          <span class="v">
+            <a class="link" href="https://adhokshaj.notion.site/Brain-Tumor-Classification-Using-Convolutional-Neural-Networks-c2e860101e2a4e518b3dec6e3e81a1a5" target="_blank" rel="noopener">Brain tumour classification from MRI ↗</a><br />
+            <span class="faint" style="font-size:13.5px">In a clinical setting a confusion matrix is a product decision, not a metric.</span>
+          </span>
+        </div>
+        <div class="kv-row">
+          <span class="label">Optuna · Audio</span>
+          <span class="v">
+            <a class="link" href="https://adhokshaj.notion.site/Music-Genre-Prediction-Using-ML-Tuned-Using-Optuna-d12e189000e64fb7895c135d9784bf71" target="_blank" rel="noopener">Music genre prediction, tuned with Optuna ↗</a><br />
+            <span class="faint" style="font-size:13.5px">Genre is a fuzzy label, which makes the labelling strategy matter more than the model.</span>
+          </span>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -388,14 +372,14 @@
         <a class="brand" href="../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          Building AI-native products, and the occasional whole one by myself.
+          AI platforms by day; two products of my own the rest of the time.
         </p>
       </div>
       <div>
         <h4>Site</h4>
         <ul>
           <li><a href="../">Home</a></li>
-          <li><a href="./">Work</a></li>
+          <li><a href="../work/">Work</a></li>
           <li><a href="../career/">Career</a></li>
           <li><a href="../about/">About</a></li>
           <li><a href="../contact/">Contact</a></li>
@@ -406,8 +390,8 @@
         <ul>
           <li><a href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">X / Twitter ↗</a></li>
-          <li><a href="https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6" target="_blank" rel="noopener">Notion portfolio ↗</a></li>
           <li><a href="../Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+          <li><a href="mailto:adhokshaj.pande@gmail.com">Email ↗</a></li>
         </ul>
       </div>
     </div>

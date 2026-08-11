@@ -4,42 +4,40 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Adhokshaj Wategaonkar — Product Manager, AI platforms</title>
-<meta name="description" content="Product Manager building AI-native platforms. LLM gateways, agent orchestration, SAR analytics for defence, and two products shipped solo. Bengaluru." />
-<meta name="theme-color" content="#0A0A0B" />
+<meta name="description" content="Product Manager working on AI platforms — multi-provider LLM gateways, agent orchestration, and interfaces that make non-deterministic systems inspectable. Bengaluru." />
+<meta name="theme-color" content="#08080A" />
 <link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/" />
 
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/" />
 <meta property="og:title" content="Adhokshaj Wategaonkar — Product Manager, AI platforms" />
-<meta property="og:description" content="Product Manager building AI-native platforms. LLM gateways, agent orchestration, SAR analytics for defence, and two products shipped solo." />
+<meta property="og:description" content="Product Manager working on AI platforms — multi-provider LLM gateways, agent orchestration, and interfaces that make non-deterministic systems inspectable. Bengaluru." />
 <meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@AdhokshajW" />
 
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
      blank screen for as long as that CDN is slow — which on a portfolio is the
-     difference between a first impression and a bounce. Text paints immediately
-     in the system fallback and swaps when Geist arrives. -->
+     difference between a first impression and a bounce. -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all';this.onload=null" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" /></noscript>
-<link rel="stylesheet" href="assets/site.css" />
+<link rel="stylesheet" href="./assets/site.css" />
 
-<!-- Resolve the theme before first paint. If React-style hydration set this
-     on mount, every cold start would flash near-black at a light-mode
-     visitor. Kept inline and blocking on purpose. -->
+<!-- Resolve the theme BEFORE first paint. In site.js this would flash
+     near-black at every light-mode visitor on every cold start. -->
 <script>
   document.documentElement.classList.add('js');
   try {
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
   } catch (e) {}
 </script>
-
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Adhokshaj Wategaonkar",
 "jobTitle":"Product Manager","email":"adhokshaj.pande@gmail.com",
@@ -54,19 +52,16 @@
 <div class="rules" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ======================================================== nav ======= -->
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="./"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
-
     <nav class="tabs" aria-label="Primary">
       <a href="./" aria-current="page">Home</a>
-      <a href="work/">Work</a>
-      <a href="career/">Career</a>
-      <a href="about/">About</a>
-      <a href="contact/">Contact</a>
+      <a href="./work/">Work</a>
+      <a href="./career/">Career</a>
+      <a href="./about/">About</a>
+      <a href="./contact/">Contact</a>
     </nav>
-
     <div class="nav-actions">
       <button class="kbd-btn" data-palette aria-label="Open command palette">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -85,73 +80,198 @@
 
 <nav class="sheet" aria-label="Mobile">
   <a href="./">Home <span class="label">01</span></a>
-  <a href="work/">Work <span class="label">02</span></a>
-  <a href="career/">Career <span class="label">03</span></a>
-  <a href="about/">About <span class="label">04</span></a>
-  <a href="contact/">Contact <span class="label">05</span></a>
+  <a href="./work/">Work <span class="label">02</span></a>
+  <a href="./career/">Career <span class="label">03</span></a>
+  <a href="./about/">About <span class="label">04</span></a>
+  <a href="./contact/">Contact <span class="label">05</span></a>
 </nav>
 
 <main id="main">
 
 <!-- ======================================================= hero ======== -->
-<section class="hero">
+<section class="hero" style="padding-bottom:clamp(40px,6vw,72px)">
   <div class="wrap">
-    <div class="rise" style="--i:0">
-      <span class="availability">
-        <span class="beacon"><b></b><i></i></span>
-        Open to Product Manager roles — AI &amp; platform
+    <div class="intro-meta rise">
+      <span class="label">Product Manager</span>
+      <span class="label">Bengaluru, India</span>
+      <span class="label" style="display:flex;align-items:center;gap:8px;color:var(--live-ink)">
+        <span class="dot-live"></span>Open to roles
       </span>
     </div>
 
-    <h1 class="display rise" style="--i:1; margin: 26px 0 0">
-      I turn ambiguous<br />AI problems into<br /><span class="serif accent">shipped</span> product.
-    </h1>
+    <h1 class="intro-name rise" style="--i:1">Adhokshaj Wategaonkar</h1>
 
-    <p class="lead rise" style="--i:2; margin-top: 26px">
-      Product Manager, 3+ years. I've owned an LLM gateway across four model providers,
-      redesigned an agent chat experience down to its tool-call traces, taken SAR analytics
-      software through government trials — and shipped two products end-to-end on my own,
-      from schema to landing page.
+    <p class="lead rise" style="--i:2; margin-top:24px; max-width:56ch">
+      I work on AI platforms — multi-provider LLM gateways, agent orchestration, and the
+      interfaces that make non-deterministic systems inspectable enough to trust. Three years
+      across enterprise AI, space tech and digital identity, and two products I designed,
+      built and shipped on my own.
     </p>
 
-    <div class="rise" style="--i:3; display:flex; gap:10px; flex-wrap:wrap; margin-top:34px">
-      <a class="btn btn--primary" href="work/">
-        See the work
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn--ghost" href="Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-        Résumé
-      </a>
-      <button class="btn btn--ghost" data-copy="adhokshaj.pande@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        adhokshaj.pande@gmail.com
-      </button>
+    <div class="intro-links rise" style="--i:3">
+      <a class="btn btn--primary" href="work/">Selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--ghost" href="Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Résumé</a>
+      <button class="btn btn--ghost" data-copy="adhokshaj.pande@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> adhokshaj.pande@gmail.com</button>
     </div>
   </div>
 </section>
 
-<!-- ==================================================== marquee ======== -->
-<div class="wrap rise">
-  <div class="marquee" style="padding-block:26px; border-block:1px solid var(--line-2)">
-    <div class="marquee-track">
-      <span>Beacon.li</span><span>·</span><span>GalaxEye Space</span><span>·</span><span>EarthID</span><span>·</span><span>L&amp;T Technology Services</span><span>·</span>
-      <span>LLM gateways</span><span>·</span><span>Agent orchestration</span><span>·</span><span>SAR analytics</span><span>·</span><span>Verifiable credentials</span><span>·</span>
-      <span>Aero India 2025</span><span>·</span><span>HIMTECH Symposium</span><span>·</span>
-      <span>Beacon.li</span><span>·</span><span>GalaxEye Space</span><span>·</span><span>EarthID</span><span>·</span><span>L&amp;T Technology Services</span><span>·</span>
-      <span>LLM gateways</span><span>·</span><span>Agent orchestration</span><span>·</span><span>SAR analytics</span><span>·</span><span>Verifiable credentials</span><span>·</span>
-      <span>Aero India 2025</span><span>·</span><span>HIMTECH Symposium</span><span>·</span>
+<!-- =============================================== selected work ======= -->
+<section class="section section--ruled" id="work">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <div>
+        <span class="label">Selected work</span>
+        <h2 style="margin-top:14px">Four worth your time.</h2>
+      </div>
+      <a class="arrow-link" href="work/">Everything <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <div class="grid grid--2">
+
+      <a class="card proj rise" style="--i:0" href="projects/animus/">
+        <div class="cover" style="--ms:.56">
+      <span class="halo"></span>
+      <div class="mock phone" aria-hidden="true">
+        <div class="bar"><b>animus</b><span style="font-size:10px;color:#6B6B76">◑</span></div>
+        <div class="panes"><span class="on">the pile</span><span>progress</span></div>
+        <div>
+          <div class="hero-n">14</div>
+          <div class="hero-k">in the pile · 6 cleared this week</div>
+        </div>
+        <div class="item"><b><i style="background:#C6FF3D"></i>Book dentist — Friday</b><span>task · due in 2 days</span></div>
+        <div class="item"><b><i style="background:#3DA9FC"></i>Attention Is All You Need</b><span>link · arxiv.org</span></div>
+        <div class="item"><b><i style="background:#7C5CFC"></i>Pricing should degrade, not block</b><span>idea · 4 days ago</span></div>
+        <div class="item"><b><i style="background:#FF8A3D"></i>Ship the nudge templates</b><span>goal · this week</span></div>
+      </div>
+    </div>
+        <div class="card-pad proj">
+          <div class="proj-top">
+            <div>
+              <span class="badge badge--live"><i></i>Live · built solo</span>
+              <h3 style="margin-top:12px">Animus</h3>
+            </div>
+          </div>
+          <p>
+            Capture to WhatsApp, and a PWA does the organising. Claude Haiku parses a raw message
+            into structured items; the feed ranks them by what's closest to rotting. Built for
+            adults with ADHD, where what you're actually selling is the absence of a system to
+            maintain.
+          </p>
+          <div class="proj-foot">
+            <div class="tags"><span>Node</span><span>React</span><span>Supabase</span><span>WhatsApp API</span><span>Claude Haiku</span></div>
+            <span class="arrow-link">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card proj rise" style="--i:1" href="projects/shastra/">
+        <div class="cover" style="--ms:.72">
+      <span class="halo"></span>
+      <div class="mock win" aria-hidden="true">
+        <div class="win-bar"><i></i><i></i><i></i><span>shastra — free kundli</span></div>
+        <div class="win-body">
+          <svg class="kundli" viewBox="0 0 100 100" role="img" aria-label="North Indian birth chart">
+            <rect x="1" y="1" width="98" height="98"/>
+            <line x1="1" y1="1" x2="99" y2="99"/><line x1="99" y1="1" x2="1" y2="99"/>
+            <line x1="50" y1="1" x2="1" y2="50"/><line x1="50" y1="1" x2="99" y2="50"/>
+            <line x1="1" y1="50" x2="50" y2="99"/><line x1="99" y1="50" x2="50" y2="99"/>
+            <text class="p" x="46" y="18">Su</text><text class="p" x="70" y="30">Me</text>
+            <text class="p" x="16" y="56">Ma</text><text class="p" x="78" y="56">Ju</text>
+            <text class="p" x="44" y="88">Mo</text><text class="p" x="28" y="30">Ve</text>
+            <text x="47" y="46">1</text><text x="47" y="60">7</text>
+          </svg>
+          <div class="skel"><i class="m"></i><i></i><i class="s"></i></div>
+        </div>
+      </div>
+    </div>
+        <div class="card-pad proj">
+          <div class="proj-top">
+            <div>
+              <span class="badge badge--live"><i></i>Live · built solo</span>
+              <h3 style="margin-top:12px">Shastra</h3>
+            </div>
+          </div>
+          <p>
+            Vedic astrology where the maths is verifiable and the ethics are executable. Swiss
+            Ephemeris computes every position; the model only narrates, and never sees a birth
+            date or a phone number. The restraint rules are asserted in the test suite, so a
+            prompt that drops them fails the build.
+          </p>
+          <div class="proj-foot">
+            <div class="tags"><span>Swiss Ephemeris</span><span>Node</span><span>Prompt architecture</span><span>SEO</span></div>
+            <span class="arrow-link">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card proj rise" style="--i:2" href="projects/weekend-conundrum/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Product case study</span>
+        <strong>The Weekend<br />Conundrum</strong>
+        <span class="foot"><span>BookMyShow</span><span>Discovery</span></span>
+      </div>
+    </div>
+        <div class="card-pad proj">
+          <div class="proj-top">
+            <div>
+              <span class="badge">Case study · BookMyShow</span>
+              <h3 style="margin-top:12px">"The Weekend Conundrum"</h3>
+            </div>
+          </div>
+          <p>
+            People want to go out. They just don't know what to do with the weekend — which is a
+            decision problem, not a catalogue problem, and a ticketing app is built to solve the
+            wrong one.
+          </p>
+          <div class="proj-foot">
+            <div class="tags"><span>Discovery</span><span>Consumer</span><span>UX</span></div>
+            <span class="arrow-link">Read it here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card proj rise" style="--i:3" href="projects/zomato/">
+        <div class="cover">
+      <span class="halo"></span>
+      <div class="slide">
+        <span class="kicker">Product case study</span>
+        <strong>Ordering,<br />and revenue</strong>
+        <span class="foot"><span>Zomato</span><span>20M users</span></span>
+      </div>
+    </div>
+        <div class="card-pad proj">
+          <div class="proj-top">
+            <div>
+              <span class="badge">Case study · Zomato</span>
+              <h3 style="margin-top:12px">Ordering experience &amp; revenue</h3>
+            </div>
+          </div>
+          <p>
+            Improving the food-ordering experience for 20 million users, with the interventions
+            scoped against what each one would realistically move rather than against how good
+            it would look on a slide.
+          </p>
+          <div class="proj-foot">
+            <div class="tags"><span>Growth</span><span>Funnel</span><span>Monetisation</span></div>
+            <span class="arrow-link">Read it here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </a>
+
     </div>
   </div>
-</div>
+</section>
 
 <!-- ====================================================== stats ======== -->
-<section class="section section--tight">
+<section class="section section--tight section--ruled">
   <div class="wrap">
     <div class="stats rise">
       <div class="stat">
         <div class="n"><span data-count="85">85</span><em>%+</em></div>
-        <div class="k label">Request completion, multi-provider LLM gateway</div>
+        <div class="k label">Request completion across a four-provider LLM gateway</div>
       </div>
       <div class="stat">
         <div class="n"><span data-count="95">95</span><em>%</em></div>
@@ -163,181 +283,21 @@
       </div>
       <div class="stat">
         <div class="n"><span data-count="2">2</span></div>
-        <div class="k label">Products designed, built &amp; shipped solo</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================== selected work ======= -->
-<section class="section" id="work">
-  <div class="wrap">
-    <div class="sec-head rise">
-      <div>
-        <span class="label">Selected work</span>
-        <h2 style="margin-top:14px">Things I built, and<br />things I figured out.</h2>
-      </div>
-      <a class="arrow-link" href="work/">
-        All 14 projects
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-
-    <div class="grid grid--2">
-
-      <!-- Animus -->
-      <a class="card proj rise" style="--i:0" href="projects/animus/">
-        <div class="cover"><span class="halo"></span><span class="glyph">🧠</span></div>
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div>
-              <span class="badge badge--live"><i></i>Live · solo build</span>
-              <h3 style="margin-top:12px">Animus</h3>
-            </div>
-          </div>
-          <p>
-            Capture anything to WhatsApp — a link, a half-thought, a task you'll forget.
-            Haiku parses it into a structured item; a PWA ranks it by what's closest to rotting
-            and brings it back. Built for adults with ADHD, where the product promise is the
-            <em>absence</em> of a system to maintain.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Node</span><span>React</span><span>Postgres</span><span>WhatsApp API</span><span>Claude Haiku</span></div>
-            <span class="arrow-link">Read case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Shastra -->
-      <a class="card proj rise" style="--i:1" href="projects/shastra/">
-        <div class="cover"><span class="halo"></span><span class="glyph">🪐</span></div>
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div>
-              <span class="badge badge--live"><i></i>Live · solo build</span>
-              <h3 style="margin-top:12px">Shastra</h3>
-            </div>
-          </div>
-          <p>
-            Vedic astrology where the maths is real and the ethics are executable. Swiss Ephemeris
-            computes every position; the model only narrates, and never sees a birth date or a phone
-            number. 161 tests, including three published reference charts, make
-            "the maths is real" a claim you can check.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Swiss Ephemeris</span><span>Node</span><span>Prompt design</span><span>SEO tools</span></div>
-            <span class="arrow-link">Read case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Weekend Conundrum -->
-      <a class="card proj rise" style="--i:2" href="https://adhokshaj.notion.site/The-Weekend-Conundrum-e9d2c0eb29724530b62920b60a8a7963" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div>
-              <span class="badge">Product case study</span>
-              <h3 style="margin-top:12px">"The Weekend Conundrum"</h3>
-            </div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            BookMyShow teardown: people want to go out, they just don't know <em>what</em> to do
-            with the weekend. Discovery-first redesign, from the decision problem through to
-            the interface that solves it.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Discovery</span><span>UX</span><span>Consumer</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Zomato -->
-      <a class="card proj rise" style="--i:3" href="https://adhokshaj.notion.site/Improving-the-food-ordering-experience-on-Zomato-to-increase-Revenue-7f948529155b49b5a0616f1f71ff6fc9" target="_blank" rel="noopener">
-        <div class="card-pad proj">
-          <div class="proj-top">
-            <div>
-              <span class="badge">Product case study</span>
-              <h3 style="margin-top:12px">Zomato — ordering &amp; revenue</h3>
-            </div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-3);flex:none"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </div>
-          <p>
-            Improving the food-ordering experience for 20 million users. Funnel analysis,
-            competitive teardown, and a prioritised set of interventions scoped against
-            what each would actually move.
-          </p>
-          <div class="proj-foot">
-            <div class="tags"><span>Growth</span><span>Funnel</span><span>Monetisation</span></div>
-            <span class="label">Notion ↗</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================================================== how I work ======= -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head rise">
-      <div>
-        <span class="label">How I work</span>
-        <h2 style="margin-top:14px">Three things I'm actually<br />good at.</h2>
-      </div>
-    </div>
-
-    <div class="grid grid--3">
-      <div class="card card-pad rise" style="--i:0">
-        <span class="label">01 — Ambiguity</span>
-        <h3 style="margin:14px 0 10px">Specs for things nobody<br />has built before</h3>
-        <p class="muted" style="font-size:14.4px">
-          Fallback logic across four LLM providers. Tenant isolation boundaries for an agent
-          orchestrator. A cost attribution model mapping inference spend down to the workflow.
-          These don't have reference implementations — you write the requirement by deciding
-          what failure is acceptable.
-        </p>
-      </div>
-      <div class="card card-pad rise" style="--i:1">
-        <span class="label">02 — Interfaces</span>
-        <h3 style="margin:14px 0 10px">Progressive disclosure over<br />non-deterministic systems</h3>
-        <p class="muted" style="font-size:14.4px">
-          I prototyped Beacon's streaming agent chat from scratch: what surfaces in real time,
-          and how a user expands from an answer into the reasoning behind it and then into the
-          raw tool calls. Layered control, so trust is something the user can go and verify.
-        </p>
-      </div>
-      <div class="card card-pad rise" style="--i:2">
-        <span class="label">03 — Shipping</span>
-        <h3 style="margin:14px 0 10px">I build the thing, not just<br />the deck about the thing</h3>
-        <p class="muted" style="font-size:14.4px">
-          Animus and Shastra are mine end to end — schema, prompts, spend caps, design language,
-          landing page, deploy. It makes me a materially better PM: I've had to make the
-          tradeoffs I'd otherwise be asking someone else to make.
-        </p>
+        <div class="k label">Products designed, built and shipped solo</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ==================================================== career ========= -->
-<section class="section">
+<section class="section section--ruled">
   <div class="wrap">
     <div class="sec-head rise">
       <div>
         <span class="label">Trajectory</span>
-        <h2 style="margin-top:14px">Code → product → AI&nbsp;platforms.</h2>
+        <h2 style="margin-top:14px">Code → product → AI platforms.</h2>
       </div>
-      <a class="arrow-link" href="career/">
-        Full timeline
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <a class="arrow-link" href="career/">Full timeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="kv rise">
@@ -351,33 +311,30 @@
       </div>
       <div class="kv-row">
         <span class="label">2023 — 2024 · EarthID</span>
-        <span class="v"><strong>Product Manager.</strong> Full lifecycle across PM and UX — research, wireframes, Figma prototypes — plus requirements for verifiable credentials and zero-knowledge-proof KYC.</span>
+        <span class="v"><strong>Product Manager.</strong> Full lifecycle across PM and UX, plus requirements for verifiable credentials and zero-knowledge-proof KYC.</span>
       </div>
       <div class="kv-row">
         <span class="label">2021 — 2022 · L&amp;T Technology Services</span>
-        <span class="v"><strong>Software Engineer.</strong> ML models on Azure for power-plant operations — predictive maintenance and load-management pipelines. The engineering half of how I read a system.</span>
+        <span class="v"><strong>Software Engineer.</strong> ML models on Azure for power-plant operations. The engineering half of how I read a system.</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ======================================================= CTA ========= -->
-<section class="section">
+<section class="section section--tight">
   <div class="wrap">
     <div class="big-cta rise">
       <span class="label">Currently</span>
-      <h2 style="margin:18px 0 16px; font-size:clamp(1.9rem,4.6vw,3.2rem)">
-        Looking for the next<br /><span class="serif accent">hard</span> product problem.
+      <h2 style="margin:18px 0 16px; font-size:clamp(1.7rem,4vw,2.6rem)">
+        Looking for the next hard product problem.
       </h2>
       <p class="lead" style="margin-inline:auto">
-        Ideally AI platform or infrastructure, where the requirement isn't obvious and
-        someone has to decide what "good enough" means. Bengaluru or remote.
+        Ideally AI platform or infrastructure, on a team where a PM is expected to have an opinion
+        about the architecture. Bengaluru or remote.
       </p>
-      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:30px">
-        <a class="btn btn--primary" href="mailto:adhokshaj.pande@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-          Get in touch
-        </a>
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px">
+        <a class="btn btn--primary" href="mailto:adhokshaj.pande@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> Get in touch</a>
         <a class="btn btn--ghost" href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
@@ -386,7 +343,6 @@
 
 </main>
 
-<!-- ===================================================== footer ======== -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
@@ -394,17 +350,17 @@
         <a class="brand" href="./"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          Building AI-native products, and the occasional whole one by myself.
+          AI platforms by day; two products of my own the rest of the time.
         </p>
       </div>
       <div>
         <h4>Site</h4>
         <ul>
           <li><a href="./">Home</a></li>
-          <li><a href="work/">Work</a></li>
-          <li><a href="career/">Career</a></li>
-          <li><a href="about/">About</a></li>
-          <li><a href="contact/">Contact</a></li>
+          <li><a href="./work/">Work</a></li>
+          <li><a href="./career/">Career</a></li>
+          <li><a href="./about/">About</a></li>
+          <li><a href="./contact/">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -412,8 +368,8 @@
         <ul>
           <li><a href="https://www.linkedin.com/in/adhokshaj/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://twitter.com/AdhokshajW" target="_blank" rel="noopener">X / Twitter ↗</a></li>
-          <li><a href="https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6" target="_blank" rel="noopener">Notion portfolio ↗</a></li>
-          <li><a href="Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+          <li><a href="./Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+          <li><a href="mailto:adhokshaj.pande@gmail.com">Email ↗</a></li>
         </ul>
       </div>
     </div>
@@ -424,7 +380,6 @@
   </div>
 </footer>
 
-<!-- =============================================== command palette ===== -->
 <div class="scrim" aria-hidden="true"></div>
 <div class="palette" role="dialog" aria-modal="true" aria-label="Command palette" aria-hidden="true">
   <input type="text" placeholder="Search pages, projects, links…" aria-label="Search" autocomplete="off" spellcheck="false" />
@@ -436,6 +391,6 @@
   </div>
 </div>
 
-<script src="assets/site.js"></script>
+<script src="./assets/site.js"></script>
 </body>
 </html>

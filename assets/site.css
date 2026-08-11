@@ -13,32 +13,47 @@
 :root {
   color-scheme: dark;
 
-  --bg:        #0A0A0B;   /* canvas — near-black, never pure black          */
-  --bg-2:      #0F0F12;   /* cards / elevated surfaces                      */
-  --bg-3:      #16161A;   /* nested surfaces, fields, chips                 */
-  --bg-wash:   rgba(255,255,255,.028);
+  /* Cool near-black. The warm grey read "editorial"; this reads "platform",
+     which is the register the work actually sits in. */
+  --bg:        #08080A;
+  --bg-2:      #0E0E12;
+  --bg-3:      #15151B;
+  --bg-wash:   rgba(255,255,255,.032);
 
-  --line:      rgba(255,255,255,.10);   /* visible hairline                  */
-  --line-2:    rgba(255,255,255,.055);  /* structural grid rule              */
-  --line-3:    rgba(255,255,255,.028);  /* barely-there                      */
+  --line:      rgba(255,255,255,.11);
+  --line-2:    rgba(255,255,255,.062);
+  --line-3:    rgba(255,255,255,.032);
 
-  --ink:       #EDEDEF;   /* primary text                                    */
-  --ink-2:     #A2A2AA;   /* secondary                                       */
-  --ink-3:     #6E6E78;   /* tertiary / metadata                             */
+  --ink:       #EDEDF2;
+  --ink-2:     #9C9CA9;
+  --ink-3:     #74747E;
 
-  /* The accent splits in two on purpose. --accent is for FILLS (near-black
-     text sits on it at ~6:1 in both themes). --accent-ink is for TEXT, and
-     it has to change between themes or it fails contrast on a light canvas. */
-  --accent:     #FF4D1C;
-  --accent-ink: #FF6B3D;
-  --on-accent:  #0A0A0B;
-  --accent-soft: rgba(255,77,28,.13);
-  --accent-glow: rgba(255,77,28,.20);
+  /* ONE chromatic accent, in the Linear/Stripe register. It splits in two:
+     --accent is for FILLS (white text on it is 5.1:1) and --accent-ink is for
+     TEXT (7.6:1 here, and it has to deepen in light or it fails on paper). */
+  --accent:     #4F5EE8;
+  --accent-ink: #8B98FF;
+  --on-accent:  #FFFFFF;
+  --accent-soft: rgba(79,94,232,.14);
+  --accent-glow: rgba(79,94,232,.20);
 
-  --card-edge: linear-gradient(180deg, rgba(255,255,255,.07), transparent 60%);
+  /* Green exists for exactly one job: "this is live and you can go poke it".
+     It is never decoration. */
+  --live:      #34D399;
+  --live-ink:  #34D399;
+  --live-soft: rgba(52,211,153,.12);
+
+  --card-edge: linear-gradient(180deg, rgba(255,255,255,.055), transparent 55%);
   --shadow-1: 0 1px 2px rgba(0,0,0,.3);
-  --shadow-2: 0 20px 46px -22px rgba(0,0,0,.85), 0 2px 10px -4px rgba(0,0,0,.5);
-  --grain-opacity: .085;
+  --shadow-2: 0 16px 40px -22px rgba(0,0,0,.9), 0 2px 8px -3px rgba(0,0,0,.5);
+  --grain-opacity: .07;
+
+  /* Sharper than before. Vercel's geometry is small, consistent radii —
+     nothing rounder than 10px, and no pills anywhere. */
+  --r-lg: 10px;
+  --r-md: 8px;
+  --r-sm: 6px;
+  --r-xs: 4px;
 
   --spring: cubic-bezier(.22,1,.36,1);
   --swift:  cubic-bezier(.32,.72,0,1);
@@ -57,31 +72,35 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --bg:        #FAFAF7;   /* warm off-white — never pure white              */
+  --bg:        #FAFAFB;
   --bg-2:      #FFFFFF;
-  --bg-3:      #F2F2ED;
-  --bg-wash:   rgba(10,10,11,.030);
+  --bg-3:      #F1F2F5;
+  --bg-wash:   rgba(9,9,16,.030);
 
-  --line:      rgba(10,10,11,.13);
-  --line-2:    rgba(10,10,11,.075);
-  --line-3:    rgba(10,10,11,.04);
+  --line:      rgba(9,9,16,.13);
+  --line-2:    rgba(9,9,16,.075);
+  --line-3:    rgba(9,9,16,.045);
 
-  --ink:       #121215;
-  --ink-2:     #55555E;
-  --ink-3:     #86868F;
+  --ink:       #0E0E13;
+  --ink-2:     #52525C;
+  --ink-3:     #7C7C87;
 
-  --accent:     #FF4D1C;
-  --accent-ink: #C43A0E;      /* 5.1:1 on the warm canvas                   */
-  --on-accent:  #0A0A0B;
-  --accent-soft: rgba(255,77,28,.10);
-  --accent-glow: rgba(255,77,28,.16);
+  --accent:     #4F5EE8;
+  --accent-ink: #3A48C9;      /* 7.8:1 on the canvas                        */
+  --on-accent:  #FFFFFF;
+  --accent-soft: rgba(79,94,232,.09);
+  --accent-glow: rgba(79,94,232,.14);
 
-  /* A white highlight on a white card is nothing. Depth in light mode comes
-     from the border and a tighter shadow instead of a lit top edge. */
+  --live:      #10B981;
+  --live-ink:  #0F7A4E;       /* the dark green; the bright one is invisible */
+  --live-soft: rgba(16,185,129,.10);
+
+  /* A white highlight on a white card is nothing. Depth in light comes from
+     the border and a tighter shadow instead of a lit top edge. */
   --card-edge: none;
-  --shadow-1: 0 1px 2px rgba(10,10,20,.05);
-  --shadow-2: 0 14px 34px -20px rgba(10,10,20,.28), 0 2px 6px -3px rgba(10,10,20,.10);
-  --grain-opacity: .04;
+  --shadow-1: 0 1px 2px rgba(9,9,20,.05);
+  --shadow-2: 0 12px 30px -20px rgba(9,9,20,.25), 0 1px 4px -2px rgba(9,9,20,.08);
+  --grain-opacity: .03;
 }
 
 /* --------------------------------------------------------------- baseline */
@@ -114,12 +133,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :focus-visible {
   outline: 2px solid var(--accent-ink);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: var(--r-xs);
 }
 
 /* ------------------------------------------------------------------ layout */
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: clamp(64px, 9vw, 128px); position: relative; }
+/* Full-bleed hairline dividers between sections. Vercel hangs everything off
+   rules like these; without them a long dark page reads as one soft mass. */
+.section--ruled { border-top: 1px solid var(--line-2); }
 .section--tight { padding-block: clamp(44px, 6vw, 80px); }
 
 /* The Vercel move: persistent vertical rules that the whole page hangs off. */
@@ -240,7 +262,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .tabs { position: relative; display: flex; align-items: center; gap: 2px; }
 .tabs a {
   position: relative; z-index: 1;
-  padding: 7px 13px; border-radius: 8px;
+  padding: 7px 13px; border-radius: var(--r-sm);
   font-size: 13.5px; color: var(--ink-2);
   transition: color .25s var(--swift);
   white-space: nowrap;
@@ -249,7 +271,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .tabs a[aria-current="page"] { color: var(--ink); font-weight: 500; }
 .tab-pill {
   position: absolute; z-index: 0; top: 0; left: 0; height: 100%;
-  border-radius: 8px; background: var(--bg-wash);
+  border-radius: var(--r-sm); background: var(--bg-wash);
   border: 1px solid var(--line-2);
   transition: transform .42s var(--spring), width .42s var(--spring), opacity .3s;
   opacity: 0;
@@ -261,7 +283,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 
 .icon-btn {
   width: 34px; height: 34px; display: grid; place-items: center;
-  border: 1px solid var(--line-2); border-radius: 9px;
+  border: 1px solid var(--line-2); border-radius: var(--r-md);
   color: var(--ink-2); background: var(--bg-wash);
   transition: color .2s, border-color .2s, transform .2s var(--spring);
 }
@@ -272,7 +294,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .kbd-btn {
   display: flex; align-items: center; gap: 8px;
   height: 34px; padding: 0 10px 0 12px;
-  border: 1px solid var(--line-2); border-radius: 9px;
+  border: 1px solid var(--line-2); border-radius: var(--r-md);
   background: var(--bg-wash); color: var(--ink-3);
   font-size: 12.5px;
   transition: color .2s, border-color .2s;
@@ -280,7 +302,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .kbd-btn:hover { color: var(--ink-2); border-color: var(--line); }
 .kbd-btn kbd {
   font-family: var(--font-mono); font-size: 10.5px;
-  border: 1px solid var(--line-2); border-radius: 5px;
+  border: 1px solid var(--line-2); border-radius: var(--r-xs);
   padding: 2px 5px; color: var(--ink-3); background: var(--bg-3);
 }
 @media (max-width: 700px) { .kbd-btn span { display: none; } .kbd-btn { padding: 0 8px; } }
@@ -314,18 +336,21 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 
 /* ------------------------------------------------------------------ hero */
 .hero { padding-top: calc(var(--nav-h) + clamp(56px, 11vw, 132px)); padding-bottom: clamp(48px, 7vw, 96px); position: relative; }
+/* Much quieter than the old hero wash. A faint cool bloom that reads as
+   depth rather than as a gradient someone chose. */
 .hero::before {
   content: ""; position: absolute; z-index: -1;
-  top: -12%; left: 50%; transform: translateX(-50%);
-  width: min(1000px, 120vw); aspect-ratio: 2/1;
-  background: radial-gradient(ellipse at center, var(--accent-glow), transparent 66%);
-  filter: blur(40px); opacity: .8;
+  top: -22%; left: 50%; transform: translateX(-50%);
+  width: min(820px, 110vw); aspect-ratio: 2.4/1;
+  background: radial-gradient(ellipse at center, var(--accent-glow), transparent 68%);
+  filter: blur(60px); opacity: .5;
   pointer-events: none;
 }
+[data-theme="light"] .hero::before { opacity: .7; }
 
 .availability {
   display: inline-flex; align-items: center; gap: 9px;
-  padding: 6px 13px 6px 10px; border-radius: 100px;
+  padding: 6px 13px 6px 10px; border-radius: var(--r-sm);
   border: 1px solid var(--line); background: var(--bg-wash);
   font-size: 12.5px; color: var(--ink-2);
 }
@@ -339,7 +364,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 /* --------------------------------------------------------------- buttons */
 .btn {
   display: inline-flex; align-items: center; gap: 9px;
-  height: 44px; padding: 0 20px; border-radius: 11px;
+  height: 44px; padding: 0 20px; border-radius: var(--r-md);
   font-size: 14.5px; font-weight: 500; letter-spacing: -.01em;
   border: 1px solid transparent; white-space: nowrap;
   transition: transform .22s var(--spring), background-color .2s, border-color .2s, color .2s, box-shadow .3s;
@@ -373,7 +398,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   position: relative; isolation: isolate;
   background: var(--bg-2);
   border: 1px solid var(--line-2);
-  border-radius: 15px;
+  border-radius: var(--r-lg);
   overflow: hidden;
   transition: border-color .35s var(--swift), transform .45s var(--spring), box-shadow .45s var(--swift);
 }
@@ -428,17 +453,17 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .badge {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .11em;
-  padding: 4px 8px; border-radius: 6px;
+  padding: 4px 8px; border-radius: var(--r-xs);
   border: 1px solid var(--line-2); color: var(--ink-3); background: var(--bg-3);
   white-space: nowrap;
 }
-.badge--live { color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent) 28%, transparent); background: var(--accent-soft); }
+.badge--live { color: var(--live-ink); border-color: color-mix(in srgb, var(--live) 30%, transparent); background: var(--live-soft); }
 .badge i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span {
   font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .04em;
-  color: var(--ink-3); padding: 3px 7px; border-radius: 5px;
+  color: var(--ink-3); padding: 3px 7px; border-radius: var(--r-xs);
   background: var(--bg-3); border: 1px solid var(--line-3);
 }
 
@@ -472,7 +497,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 /* ---------------------------------------------------------------- filter */
 .chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 28px; }
 .chip {
-  padding: 7px 14px; border-radius: 100px;
+  padding: 7px 14px; border-radius: var(--r-sm);
   border: 1px solid var(--line-2); background: var(--bg-wash);
   color: var(--ink-2); font-size: 13px;
   transition: all .28s var(--swift);
@@ -568,12 +593,12 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .prose code {
   font-family: var(--font-mono); font-size: .85em;
   background: var(--bg-3); border: 1px solid var(--line-3);
-  padding: 2px 6px; border-radius: 5px; color: var(--ink);
+  padding: 2px 6px; border-radius: var(--r-xs); color: var(--ink);
 }
 
 .callout {
   border: 1px solid var(--line-2); border-left: 2px solid var(--accent);
-  background: var(--bg-2); border-radius: 0 12px 12px 0;
+  background: var(--bg-2); border-radius: 0 var(--r-md) var(--r-md) 0;
   padding: 18px 20px;
 }
 .callout .label { margin-bottom: 8px; }
@@ -589,7 +614,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 /* Live site preview in a browser frame. The iframe is only attached on
    demand — Render's free tier cold-starts in ~50s and an eager iframe
    would just show a spinner to everyone who scrolled past. */
-.frame { border: 1px solid var(--line); border-radius: 13px; overflow: hidden; background: var(--bg-2); box-shadow: var(--shadow-2); }
+.frame { border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; background: var(--bg-2); box-shadow: var(--shadow-2); }
 .frame-bar {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 13px; border-bottom: 1px solid var(--line-2); background: var(--bg-3);
@@ -618,7 +643,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   width: min(560px, calc(100vw - 32px));
   transform: translate(-50%, -10px) scale(.97); opacity: 0; pointer-events: none;
   background: var(--bg-2); border: 1px solid var(--line);
-  border-radius: 15px; box-shadow: var(--shadow-2); overflow: hidden;
+  border-radius: var(--r-lg); box-shadow: var(--shadow-2); overflow: hidden;
   transition: opacity .28s var(--swift), transform .4s var(--spring);
 }
 .palette.on { opacity: 1; transform: translate(-50%, 0) scale(1); pointer-events: auto; }
@@ -631,7 +656,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .palette ul { list-style: none; max-height: min(52vh, 400px); overflow-y: auto; padding: 7px; }
 .palette li {
   display: flex; align-items: center; gap: 12px;
-  padding: 10px 13px; border-radius: 9px; cursor: pointer;
+  padding: 10px 13px; border-radius: var(--r-sm); cursor: pointer;
   font-size: 14px; color: var(--ink-2);
 }
 .palette li[data-active="true"] { background: var(--bg-3); color: var(--ink); }
@@ -650,7 +675,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   position: fixed; z-index: 95; left: 50%; bottom: 28px;
   transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
   display: flex; align-items: center; gap: 9px;
-  padding: 11px 17px; border-radius: 11px;
+  padding: 11px 17px; border-radius: var(--r-md);
   background: var(--ink); color: var(--bg); font-size: 13.5px; font-weight: 500;
   box-shadow: var(--shadow-2);
   transition: opacity .3s var(--swift), transform .45s var(--spring);
@@ -673,7 +698,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 
 /* ------------------------------------------------------------------ misc */
 .big-cta {
-  border: 1px solid var(--line-2); border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--line-2); border-radius: var(--r-lg); overflow: hidden;
   background: var(--bg-2); position: relative;
   padding: clamp(34px, 6vw, 64px);
   text-align: center;
@@ -703,7 +728,130 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 }
 .skip {
   position: absolute; left: 12px; top: -60px; z-index: 100;
-  padding: 10px 16px; background: var(--ink); color: var(--bg); border-radius: 9px;
+  padding: 10px 16px; background: var(--ink); color: var(--bg); border-radius: var(--r-md);
   transition: top .3s var(--spring);
 }
 .skip:focus { top: 12px; }
+
+/* ============================================================================
+   COVERS, SLIDES AND PRODUCT MOCKUPS
+
+   Every project card gets the same cover frame, so the grid reads as one
+   system. What sits inside differs: shipped products show a drawn UI mockup,
+   case studies show a miniature of their opening slide.
+
+   The mockups are MARKUP, not screenshots. They stay sharp at any size, follow
+   the site's theme, cost no image weight, and can't silently go stale when the
+   product ships a new build. Everything inside is built at a fixed pixel size
+   and scaled as a unit, so type stays proportional instead of collapsing to
+   4px at small sizes.
+   ========================================================================= */
+
+.cover { aspect-ratio: 16 / 10; }
+.cover .mock { transform: scale(var(--ms, .58)); transform-origin: center; flex: none; }
+
+/* ------------------------------------------------------- miniature slide */
+.slide {
+  position: relative; width: 78%; aspect-ratio: 16/9;
+  background: linear-gradient(158deg, var(--bg-2), var(--bg-3) 70%);
+  border: 1px solid var(--line-2); border-radius: var(--r-sm);
+  box-shadow: var(--shadow-2);
+  padding: clamp(13px, 4%, 22px);
+  display: flex; flex-direction: column; justify-content: space-between; gap: 10px;
+  transition: transform .6s var(--spring);
+}
+@media (hover: hover) { .card:hover .slide { transform: translateY(-4px) scale(1.02); } }
+.slide .kicker {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--accent-ink);
+}
+.slide strong {
+  font-size: clamp(15px, 2.3vw, 22px); font-weight: 600;
+  letter-spacing: -.035em; line-height: 1.1; color: var(--ink);
+}
+.slide .foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3);
+  border-top: 1px solid var(--line-3); padding-top: 8px;
+}
+
+/* ---------------------------------------------------------- phone mockup
+   Animus's own palette, not this site's — a mockup that adopted the
+   portfolio's colours would be a lie about what the product looks like. */
+.phone {
+  width: 244px; height: 480px;
+  background: #0B0B0F; color: #F5F5F7;
+  border: 1px solid rgba(255,255,255,.15); border-radius: 20px;
+  box-shadow: 0 26px 60px -26px rgba(0,0,0,.95), 0 0 0 5px rgba(255,255,255,.03);
+  overflow: hidden; padding: 14px 13px;
+  display: flex; flex-direction: column; gap: 11px;
+  font-family: var(--font-sans); font-size: 11px; line-height: 1.35;
+}
+.phone .bar { display: flex; align-items: center; justify-content: space-between; }
+.phone .bar b { font-size: 12.5px; font-weight: 600; letter-spacing: -.02em; }
+.phone .panes { display: flex; gap: 4px; }
+.phone .panes span {
+  flex: 1; text-align: center; padding: 5px 0; border-radius: 6px;
+  font-size: 9.5px; color: #6B6B76; border: 1px solid rgba(255,255,255,.07);
+}
+.phone .panes span.on { color: #0B0B0F; background: #C6FF3D; border-color: transparent; font-weight: 600; }
+.phone .hero-n { font-size: 44px; font-weight: 650; letter-spacing: -.05em; line-height: 1; color: #C6FF3D; }
+.phone .hero-k { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: #6B6B76; margin-top: 5px; }
+.phone .item {
+  border: 1px solid rgba(255,255,255,.07); border-radius: 9px;
+  background: #16161C; padding: 9px 10px; display: grid; gap: 4px;
+}
+.phone .item i { width: 5px; height: 5px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: 1px; }
+.phone .item b { font-weight: 550; font-size: 11px; letter-spacing: -.01em; }
+.phone .item span { font-size: 8.5px; letter-spacing: .1em; text-transform: uppercase; color: #6B6B76; }
+
+/* ------------------------------------------------------- whatsapp thread */
+.wa {
+  width: 258px; padding: 14px 12px; border-radius: 14px;
+  background: #0D1418; border: 1px solid rgba(255,255,255,.09);
+  box-shadow: var(--shadow-2);
+  display: grid; gap: 8px; font-size: 11px; line-height: 1.4;
+}
+.wa .msg { max-width: 84%; padding: 8px 10px; border-radius: 9px; color: #E9EDEF; }
+.wa .out { margin-left: auto; background: #005C4B; border-bottom-right-radius: 3px; }
+.wa .in  { background: #202C33; border-bottom-left-radius: 3px; }
+.wa .t { display: block; font-size: 8.5px; color: rgba(233,237,239,.45); text-align: right; margin-top: 3px; }
+
+/* -------------------------------------------------------- browser mockup */
+.win {
+  width: 380px; border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--bg-2); box-shadow: var(--shadow-2);
+}
+.win-bar { display: flex; align-items: center; gap: 6px; padding: 7px 10px; background: var(--bg-3); border-bottom: 1px solid var(--line-2); }
+.win-bar i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
+.win-bar span { flex: 1; text-align: center; font-family: var(--font-mono); font-size: 8.5px; color: var(--ink-3); }
+.win-body { padding: 14px; display: grid; gap: 11px; }
+
+/* Kundli square — the North Indian chart, drawn rather than screenshotted. */
+.kundli { width: 100%; aspect-ratio: 1; }
+.kundli line, .kundli rect { stroke: var(--line); fill: none; stroke-width: 1; }
+.kundli text { fill: var(--ink-3); font-family: var(--font-mono); font-size: 7px; }
+.kundli .p { fill: var(--accent-ink); font-weight: 500; }
+
+.skel { display: grid; gap: 6px; }
+.skel i { height: 6px; border-radius: 3px; background: var(--line-2); display: block; }
+.skel i.s { width: 62%; }
+.skel i.m { width: 84%; }
+
+/* ------------------------------------------------------------ hero intro
+   The editorial-minimal hero. Name is the headline; everything else is a
+   fact, set small. Nothing here is trying to sound like a tagline. */
+.intro-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--line-2);
+}
+.intro-name {
+  font-size: clamp(2.5rem, 6.4vw, 4.6rem); font-weight: 600;
+  letter-spacing: -.045em; line-height: 1; margin: 30px 0 0;
+}
+.intro-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.dot-live {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--live);
+  box-shadow: 0 0 0 3px var(--live-soft); flex: none;
+}

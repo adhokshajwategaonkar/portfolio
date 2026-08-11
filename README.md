@@ -1,49 +1,55 @@
 # adhokshaj — portfolio
 
-A static, multi-page portfolio site. **No build step, no dependencies, no `node_modules`.**
-Open `index.html` in a browser and it works; push it to GitHub Pages and it works there too.
+A static, multi-page portfolio site. **No dependencies, no `node_modules`, no framework.**
+There is a tiny local build (`node build.js`) that stamps shared chrome around each page; the
+*deployed* artifact is still plain static HTML that GitHub Pages serves directly.
 
 ---
 
-## Why no build step
+## Why there's a build step (and why it's this small)
 
-A Vite/React setup would mean a lockfile, a GitHub Action and a `node_modules` directory for
-what is ultimately eight HTML files and one stylesheet. The cost of that choice would be paid
-every time a line of copy changes.
+Nav, footer, `<head>` and the command palette used to be hand-copied into every page. At five
+pages that was an acceptable cost; at thirteen it's a guarantee of drift. So `src/layout.mjs`
+holds one copy of the chrome, `src/pages/*.mjs` hold the body of each page, and `node build.js`
+writes the HTML.
 
-What you give up is component reuse, and it shows in exactly one place: **the nav, the footer
-and the command-palette markup are duplicated across every page.** Nothing will catch drift
-between them. If you change the nav, change it in all eight files — `grep -l 'class="tabs"' -r .`
-lists them.
+**The build runs on your machine and the output is committed.** Pages serves static files as
+before — no Action, no lockfile, no `node_modules`. The only rule: **edit `src/`, never the
+generated `index.html` files**, and run `node build.js` before you deploy. `deploy.sh` does it
+for you.
 
-The "app-like" feel comes from the **View Transitions API** (`@view-transition { navigation: auto }`
-in `site.css`) rather than from a router. Real URLs, real page loads, animated transitions where
-the browser supports them, and a plain fast site where it doesn't.
+The "app-like" feel still comes from the **View Transitions API**
+(`@view-transition { navigation: auto }` in `site.css`), not from a router.
 
 ---
 
 ## Layout
 
 ```
-index.html                  Home — hero, selected work, how I work, career preview, CTA
-work/index.html             Work — filterable archive of all 14 projects
-career/index.html           Career — interactive timeline, education
-about/index.html            About — story, toolkit, "now"
-contact/index.html          Contact — email, socials, live products, practicalities
-projects/animus/index.html  Native case study — Animus
-projects/shastra/index.html Native case study — Shastra
-404.html                    Self-contained. See note below.
+build.js                    node build.js  →  writes every index.html
+src/layout.mjs              ONE copy of head, nav, footer, palette + mockup helpers
+src/case-template.mjs       shared shell for a case-study page
+src/pages/*.mjs             the body of each page. EDIT THESE, not the HTML
 
-assets/site.css             The whole design system. Colour lives ONLY in :root and
-                            [data-theme="light"]. Never put a hex value anywhere else.
-assets/site.js              Theme engine, command palette, filters, timeline, reveals,
-                            count-ups, lazy previews. Fully progressive.
-assets/og.png               1200×630 social card
-assets/favicon.svg
+index.html                  Home — editorial hero, four featured cases, numbers, career
+work/                       Work — filterable archive, all 8 cases + engineering archive
+career/  about/  contact/
+projects/animus/            solo build · case study
+projects/shastra/           solo build · case study
+projects/weekend-conundrum/ BookMyShow
+projects/zomato/
+projects/youtube-music/     + link to the PRD
+projects/shopsy/            + link to the PRD
+projects/galaxeye/
+projects/lila-games/        + link to the original submission
+404.html                    self-contained on purpose — see below
 
+assets/site.css             design system. Colour lives ONLY in :root and
+                            [data-theme="light"]. Never a hex anywhere else.
+assets/site.js              theme, palette, filters, timeline, reveals, previews
+assets/og.png · favicon.svg
 Adhokshaj-Wategaonkar-Resume.pdf
-sitemap.xml · robots.txt · .nojekyll
-deploy.sh                   One command: commit + push to GitHub Pages
+sitemap.xml · robots.txt · .nojekyll · deploy.sh
 ```
 
 ---
@@ -66,9 +72,17 @@ git commit -m "portfolio site"
 git branch -M main
 git push -u origin main
 
-# 3 — turn Pages on
-gh api -X POST repos/:owner/portfolio/pages -f source[branch]=main -f source[path]=/
+# 3 — turn Pages on.
+#    The quotes are load-bearing: zsh treats [ ] as glob characters and fails
+#    with "no matches found: source[branch]=main" if you leave them off.
+gh api -X POST "repos/:owner/portfolio/pages" -f "source[branch]=main" -f "source[path]=/"
 #    …or in the browser: Settings → Pages → Source: Deploy from a branch → main → / (root)
+```
+
+Check it worked:
+
+```bash
+gh api "repos/:owner/portfolio/pages" --jq '.status, .html_url'
 ```
 
 Live at **`https://adhokshajwategaonkar.github.io/portfolio/`** within a minute or two.
@@ -109,11 +123,17 @@ site the real root is `/portfolio/`, so a `<link href="/assets/site.css">` would
 `adhokshajwategaonkar.github.io/assets/site.css` and 404 — leaving an unstyled error page. All its
 CSS is inline, and a small script at the bottom computes the correct "back home" link from the URL.
 
+**Product mockups are markup, not screenshots.** The Animus phone and the Shastra chart in
+`src/layout.mjs` are drawn in HTML/CSS/SVG using each product's *own* design tokens — Animus keeps
+its lime-on-near-black, Shastra its chart geometry. They stay sharp at any size, follow the theme,
+add zero image weight, and can't silently go stale when the product ships a new build. Repainting
+them in the portfolio's indigo would be a lie about what the products look like, so don't.
+
 **Colour has exactly one source of truth.** The `:root` and `[data-theme="light"]` blocks at the top
 of `site.css`. The one thing not to "simplify": `--accent` (for fills) and `--accent-ink` (for text)
-are separate tokens. The brand orange as *text* on the warm-white canvas fails contrast, so
-`--accent-ink` deepens in light mode. In dark they're nearly the same, which is exactly why the
-split is easy to delete by accident.
+are separate tokens. The indigo as *text* on the near-white canvas fails contrast, so `--accent-ink`
+deepens to `#3A48C9` in light and lifts to `#8B98FF` in dark. `--live` is a third token and exists
+for exactly one job — "this is running, go poke it". It is never decoration.
 
 **The theme is resolved before first paint.** Each page has a tiny blocking script in its `<head>`
 that reads `localStorage` and sets `data-theme`. If that ran in `site.js` instead, every cold start
@@ -129,15 +149,14 @@ this by blocking the script in devtools.
 
 ---
 
-## Adding a project to the Work page
+## Adding a project
 
-Copy any `<a class="card proj" data-card …>` block in `work/index.html` and change three things:
-
-1. `data-tags` — space-separated, from `product case prd company assessment ml`. An item can carry
-   more than one (the YouTube Music card is `case prd`, so it appears under both filters).
-2. The `href`, badge text, heading and description.
-3. **The counts in the filter chips** — those are hand-written in the `<span class="n">` elements
-   and nothing recalculates them. The `data-result-count` in the page header *is* computed.
+1. Copy a file in `src/pages/` — `project-galaxeye.mjs` is the fullest example, the five generated
+   ones are leaner.
+2. Add an entry to the `PROJECTS` array at the top of `src/pages/work.mjs`. **The filter chips and
+   their counts are derived from that array**, so they can't drift — unlike the previous version,
+   where they were hand-typed and immediately wrong.
+3. `node build.js`.
 
 ---
 
@@ -146,11 +165,11 @@ Copy any `<a class="card proj" data-card …>` block in `work/index.html` and ch
 | Section | Comes from |
 |---|---|
 | Career, education, skills | `Adhokshaj-Wategaonkar-Resume.pdf` |
-| 12 case studies, collabs, ML projects | [Notion portfolio](https://adhokshaj.notion.site/Hi-I-m-Adhokshaj-d14bd00fa0814905af5147c71f491ab6) |
-| Shopsy + YouTube Music PRDs, LILA assessment | The "Portfolio content and links" Figma file |
-| Animus + Shastra case studies | Written from the project repos — decisions, tradeoffs and gotchas |
+| Animus + Shastra | Written from the project repos — real decisions, trade-offs and gotchas |
+| GalaxEye | The résumé, expanded |
+| BookMyShow, Zomato, YouTube Music, Shopsy, LILA | The "Portfolio content and links" Figma decks + Adho's own notes |
+| Shopsy + YouTube Music PRDs | Google Docs, linked from their pages |
 
-⚠️ **Verify the Notion links open in a private window.** They point at `adhokshaj.notion.site`,
-which is the public domain for that workspace, but each sub-page must be shared to web individually
-for a stranger to reach it. Anything not shared will render fine for you (you're logged in) and
-404 for a recruiter.
+**No page redirects to the old Notion portfolio.** Two exceptions, both deliberate: the two
+archived ML projects on `/work/`, and the LILA take-home, where the original submission *is* the
+artifact and rewriting it would defeat the point.
