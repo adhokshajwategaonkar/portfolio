@@ -8,8 +8,8 @@ export default {
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
     <span class="label rise">About</span>
-    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
-      I like problems<br />where nobody has<br />written the spec yet.
+    <h1 class="display rise" style="--i:1; margin:22px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
+      I like problems<br />where nobody has<br />written the <span class="serif accent">spec</span> yet.
     </h1>
   </div>
 </section>
@@ -18,8 +18,10 @@ export default {
   <div class="wrap" style="display:grid; gap:56px; grid-template-columns:1fr">
     <div class="prose rise">
       <p>
-        I'm a Product Manager in Bengaluru, three-plus years in, currently focused on
-        enterprise AI platforms. I started as an engineer — a CS degree specialised in machine
+        I'm a Product Manager in Bengaluru, three-plus years in. What I want to work on is
+        products where AI and LLMs do real work, B2B or B2C. My employed roles have all been
+        enterprise; Animus and Shastra, the two I built on my own, are consumer, and I would
+        take either. I started as an engineer: a CS degree specialised in machine
         learning, then a year building and deploying models on Azure for power-plant operations
         at L&amp;T. That half hasn't gone anywhere. It's the reason I can sit in an architecture
         review and have an opinion about tenant isolation rather than a question about it.
@@ -154,7 +156,7 @@ export default {
     <div class="kv rise">
       <div class="kv-row">
         <span class="label">Looking for</span>
-        <span class="v">A Product Manager role on an <strong>AI platform or infrastructure</strong> team. Bengaluru or remote.</span>
+        <span class="v"><strong>Any product role where I get to work with AI and LLMs on real problems.</strong> B2B or B2C. Bengaluru, remote, or somewhere worth moving for.</span>
       </div>
       <div class="kv-row">
         <span class="label">Building</span>

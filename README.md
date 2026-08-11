@@ -48,6 +48,8 @@ assets/site.css             design system. Colour lives ONLY in :root and
                             [data-theme="light"]. Never a hex anywhere else.
 assets/site.js              theme, palette, filters, timeline, reveals, previews
 assets/og.png · favicon.svg
+assets/og.py                regenerates og.png. `python3 assets/og.py`, needs
+                            Pillow. Not served, kept next to its output
 Adhokshaj-Wategaonkar-Resume.pdf
 sitemap.xml · robots.txt · .nojekyll · deploy.sh
 ```

@@ -17,6 +17,7 @@
      This block only handles changes after boot. */
   const THEME_KEY = 'aw.theme';
   const order = ['system', 'light', 'dark'];
+  const THEME_ICON = { system: 'monitor', light: 'sun', dark: 'moon' };
 
   function resolved(pref) {
     return pref === 'system'
@@ -29,12 +30,18 @@
     document.documentElement.dataset.theme = t;
     try { localStorage.setItem(THEME_KEY, pref); } catch {}
     const meta = $('meta[name="theme-color"]');
-    if (meta) meta.content = t === 'light' ? '#FAFAFB' : '#08080A';
+    // These two are the ONLY hex values in this file, and they have to track
+    // --bg in site.css by hand. Change one, change all three.
+    if (meta) meta.content = t === 'light' ? '#FAFAF7' : '#0A0A0B';
+    // data-pref is what picks the icon. The button carries all three and CSS
+    // shows one. The label names where the next click goes, which is the only
+    // thing a screen-reader user can't work out from the icon.
+    const next = order[(order.indexOf(pref) + 1) % order.length];
     $$('[data-theme-btn]').forEach(b => {
-      b.setAttribute('aria-label', `Theme: ${pref}. Click to change.`);
+      b.setAttribute('aria-label', `Theme: ${pref}. Switch to ${next}.`);
       b.dataset.pref = pref;
     });
-    if (announce) toast(`${pref[0].toUpperCase()}${pref.slice(1)} theme`, 'sun');
+    if (announce) toast(`${pref[0].toUpperCase()}${pref.slice(1)} theme`, THEME_ICON[pref]);
   }
 
   function currentPref() {
@@ -58,6 +65,8 @@
   const ICONS = {
     check: '<path d="M20 6 9 17l-5-5"/>',
     sun:   '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+    moon:  '<path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/>',
+    monitor: '<rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/>',
     link:  '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>'
   };
 

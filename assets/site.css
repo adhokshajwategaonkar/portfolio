@@ -13,47 +13,57 @@
 :root {
   color-scheme: dark;
 
-  /* Cool near-black. The warm grey read "editorial"; this reads "platform",
-     which is the register the work actually sits in. */
-  --bg:        #08080A;
-  --bg-2:      #0E0E12;
-  --bg-3:      #15151B;
-  --bg-wash:   rgba(255,255,255,.032);
+  /* Warm near-black. Never pure black, and warm rather than blue-grey: the
+     canvas has to sit under a signal orange without turning it pink. */
+  --bg:        #0A0A0B;   /* canvas                                          */
+  --bg-2:      #0F0F12;   /* cards / elevated surfaces                       */
+  --bg-3:      #16161A;   /* nested surfaces, fields, chips                  */
+  --bg-wash:   rgba(255,255,255,.028);
 
-  --line:      rgba(255,255,255,.11);
-  --line-2:    rgba(255,255,255,.062);
-  --line-3:    rgba(255,255,255,.032);
+  --line:      rgba(255,255,255,.10);   /* visible hairline                  */
+  --line-2:    rgba(255,255,255,.055);  /* structural grid rule              */
+  --line-3:    rgba(255,255,255,.028);  /* barely-there                      */
 
-  --ink:       #EDEDF2;
-  --ink-2:     #9C9CA9;
-  --ink-3:     #74747E;
+  --ink:       #EDEDEF;   /* primary text                                    */
+  --ink-2:     #A2A2AA;   /* secondary                                       */
+  --ink-3:     #6E6E78;   /* tertiary / metadata                             */
 
-  /* ONE chromatic accent, in the Linear/Stripe register. It splits in two:
-     --accent is for FILLS (white text on it is 5.1:1) and --accent-ink is for
-     TEXT (7.6:1 here, and it has to deepen in light or it fails on paper). */
-  --accent:     #4F5EE8;
-  --accent-ink: #8B98FF;
-  --on-accent:  #FFFFFF;
-  --accent-soft: rgba(79,94,232,.14);
-  --accent-glow: rgba(79,94,232,.20);
+  /* Signal orange, and the accent splits in three. --accent is for FILLS
+     (near-black text sits on it at about 6:1 in both themes). --accent-ink is
+     for TEXT, and it has to deepen in light or it fails on the canvas.
+     --live is the third, below. Writing color:var(--accent) is almost always
+     a mistake; you want --accent-ink. */
+  --accent:     #FF4D1C;
+  --accent-ink: #FF6B3D;
+  --on-accent:  #0A0A0B;
+  --accent-soft: rgba(255,77,28,.13);
+  --accent-glow: rgba(255,77,28,.20);
 
   /* Green exists for exactly one job: "this is live and you can go poke it".
-     It is never decoration. */
-  --live:      #34D399;
-  --live-ink:  #34D399;
-  --live-soft: rgba(52,211,153,.12);
+     It is never decoration. Tuned a shade warmer and less minty than a stock
+     emerald so it reads as a status light next to the orange, not as a second
+     brand colour arguing with it. */
+  --live:      #35C88A;
+  --live-ink:  #35C88A;
+  --live-soft: rgba(53,200,138,.12);
 
-  --card-edge: linear-gradient(180deg, rgba(255,255,255,.055), transparent 55%);
+  --card-edge: linear-gradient(180deg, rgba(255,255,255,.07), transparent 60%);
   --shadow-1: 0 1px 2px rgba(0,0,0,.3);
-  --shadow-2: 0 16px 40px -22px rgba(0,0,0,.9), 0 2px 8px -3px rgba(0,0,0,.5);
-  --grain-opacity: .07;
+  --shadow-2: 0 20px 46px -22px rgba(0,0,0,.85), 0 2px 10px -4px rgba(0,0,0,.5);
+  --grain-opacity: .085;
 
-  /* Sharper than before. Vercel's geometry is small, consistent radii —
-     nothing rounder than 10px, and no pills anywhere. */
-  --r-lg: 10px;
-  --r-md: 8px;
-  --r-sm: 6px;
-  --r-xs: 4px;
+  /* Softer geometry. The sharp 10px-and-under set read like a dashboard;
+     these radii are what the site is meant to look like. --r-pill is a real
+     pill and belongs to exactly two things: .availability and .chip. */
+  --r-pill: 100px;   /* availability pill, filter chips                      */
+  --r-2xl:  18px;    /* the big closing CTA panel                            */
+  --r-xl:   15px;    /* cards, command palette                               */
+  --r-lg:   13px;    /* frames, figures, deck                                */
+  --r-md:   11px;    /* buttons, toast, callout, lightbox                    */
+  --r-sm:    9px;    /* icon buttons, palette rows, skip link, slides        */
+  --r-tab:   8px;    /* nav tabs and the pill that slides behind them        */
+  --r-xs:    6px;    /* badges, deck thumbnails                              */
+  --r-2xs:   5px;    /* tags, inline code, kbd, focus ring                   */
 
   --spring: cubic-bezier(.22,1,.36,1);
   --swift:  cubic-bezier(.32,.72,0,1);
@@ -72,35 +82,35 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --bg:        #FAFAFB;
+  --bg:        #FAFAF7;   /* warm off-white, never pure white               */
   --bg-2:      #FFFFFF;
-  --bg-3:      #F1F2F5;
-  --bg-wash:   rgba(9,9,16,.030);
+  --bg-3:      #F2F2ED;
+  --bg-wash:   rgba(10,10,11,.030);
 
-  --line:      rgba(9,9,16,.13);
-  --line-2:    rgba(9,9,16,.075);
-  --line-3:    rgba(9,9,16,.045);
+  --line:      rgba(10,10,11,.13);
+  --line-2:    rgba(10,10,11,.075);
+  --line-3:    rgba(10,10,11,.04);
 
-  --ink:       #0E0E13;
-  --ink-2:     #52525C;
-  --ink-3:     #7C7C87;
+  --ink:       #121215;
+  --ink-2:     #55555E;
+  --ink-3:     #86868F;
 
-  --accent:     #4F5EE8;
-  --accent-ink: #3A48C9;      /* 7.8:1 on the canvas                        */
-  --on-accent:  #FFFFFF;
-  --accent-soft: rgba(79,94,232,.09);
-  --accent-glow: rgba(79,94,232,.14);
+  --accent:     #FF4D1C;
+  --accent-ink: #C43A0E;      /* 5.1:1 on the warm canvas                   */
+  --on-accent:  #0A0A0B;
+  --accent-soft: rgba(255,77,28,.10);
+  --accent-glow: rgba(255,77,28,.16);
 
-  --live:      #10B981;
-  --live-ink:  #0F7A4E;       /* the dark green; the bright one is invisible */
-  --live-soft: rgba(16,185,129,.10);
+  --live:      #0FA968;
+  --live-ink:  #0B7A4B;       /* the dark green; the bright one is invisible */
+  --live-soft: rgba(15,169,104,.10);
 
   /* A white highlight on a white card is nothing. Depth in light comes from
      the border and a tighter shadow instead of a lit top edge. */
   --card-edge: none;
-  --shadow-1: 0 1px 2px rgba(9,9,20,.05);
-  --shadow-2: 0 12px 30px -20px rgba(9,9,20,.25), 0 1px 4px -2px rgba(9,9,20,.08);
-  --grain-opacity: .03;
+  --shadow-1: 0 1px 2px rgba(10,10,20,.05);
+  --shadow-2: 0 14px 34px -20px rgba(10,10,20,.28), 0 2px 6px -3px rgba(10,10,20,.10);
+  --grain-opacity: .04;
 }
 
 /* --------------------------------------------------------------- baseline */
@@ -133,7 +143,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :focus-visible {
   outline: 2px solid var(--accent-ink);
   outline-offset: 3px;
-  border-radius: var(--r-xs);
+  border-radius: var(--r-2xs);
 }
 
 /* ------------------------------------------------------------------ layout */
@@ -245,7 +255,13 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .nav.stuck { border-bottom-color: var(--line-2); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 560; letter-spacing: -.025em; }
+/* The flex gap here used to apply between "Adhokshaj" and the .sur span as
+   well as after the dot, and the markup carried an &nbsp; on top of it, so the
+   name read as two separate words with a 14px hole in it. The dot now owns its
+   own spacing and the surname gets one deliberate word space. */
+.brand { display: flex; align-items: center; gap: 0; font-weight: 560; letter-spacing: -.025em; }
+.brand .dot { margin-right: 10px; }
+.brand .sur { margin-left: .3em; }
 .brand .dot {
   width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
   box-shadow: 0 0 0 0 var(--accent-glow);
@@ -262,7 +278,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .tabs { position: relative; display: flex; align-items: center; gap: 2px; }
 .tabs a {
   position: relative; z-index: 1;
-  padding: 7px 13px; border-radius: var(--r-sm);
+  padding: 7px 13px; border-radius: var(--r-tab);
   font-size: 13.5px; color: var(--ink-2);
   transition: color .25s var(--swift);
   white-space: nowrap;
@@ -271,7 +287,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .tabs a[aria-current="page"] { color: var(--ink); font-weight: 500; }
 .tab-pill {
   position: absolute; z-index: 0; top: 0; left: 0; height: 100%;
-  border-radius: var(--r-sm); background: var(--bg-wash);
+  border-radius: var(--r-tab); background: var(--bg-wash);
   border: 1px solid var(--line-2);
   transition: transform .42s var(--spring), width .42s var(--spring), opacity .3s;
   opacity: 0;
@@ -283,7 +299,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 
 .icon-btn {
   width: 34px; height: 34px; display: grid; place-items: center;
-  border: 1px solid var(--line-2); border-radius: var(--r-md);
+  border: 1px solid var(--line-2); border-radius: var(--r-sm);
   color: var(--ink-2); background: var(--bg-wash);
   transition: color .2s, border-color .2s, transform .2s var(--spring);
 }
@@ -291,10 +307,19 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .icon-btn:active { transform: scale(.94); }
 .icon-btn svg { width: 15px; height: 15px; }
 
+/* The theme button cycles system → light → dark and has to LOOK like three
+   states, not one. All three icons ship in the markup; data-pref (set by
+   applyTheme in site.js) picks which one is visible. Doing it in CSS rather
+   than by swapping innerHTML means the right icon is there on first paint. */
+[data-theme-btn] svg { display: none; }
+[data-theme-btn][data-pref="system"] [data-icon="system"],
+[data-theme-btn][data-pref="light"]  [data-icon="light"],
+[data-theme-btn][data-pref="dark"]   [data-icon="dark"] { display: block; }
+
 .kbd-btn {
   display: flex; align-items: center; gap: 8px;
   height: 34px; padding: 0 10px 0 12px;
-  border: 1px solid var(--line-2); border-radius: var(--r-md);
+  border: 1px solid var(--line-2); border-radius: var(--r-sm);
   background: var(--bg-wash); color: var(--ink-3);
   font-size: 12.5px;
   transition: color .2s, border-color .2s;
@@ -302,7 +327,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .kbd-btn:hover { color: var(--ink-2); border-color: var(--line); }
 .kbd-btn kbd {
   font-family: var(--font-mono); font-size: 10.5px;
-  border: 1px solid var(--line-2); border-radius: var(--r-xs);
+  border: 1px solid var(--line-2); border-radius: var(--r-2xs);
   padding: 2px 5px; color: var(--ink-3); background: var(--bg-3);
 }
 @media (max-width: 700px) { .kbd-btn span { display: none; } .kbd-btn { padding: 0 8px; } }
@@ -350,7 +375,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 
 .availability {
   display: inline-flex; align-items: center; gap: 9px;
-  padding: 6px 13px 6px 10px; border-radius: var(--r-sm);
+  padding: 6px 13px 6px 10px; border-radius: var(--r-pill);
   border: 1px solid var(--line); background: var(--bg-wash);
   font-size: 12.5px; color: var(--ink-2);
 }
@@ -398,7 +423,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   position: relative; isolation: isolate;
   background: var(--bg-2);
   border: 1px solid var(--line-2);
-  border-radius: var(--r-lg);
+  border-radius: var(--r-xl);
   overflow: hidden;
   transition: border-color .35s var(--swift), transform .45s var(--spring), box-shadow .45s var(--swift);
 }
@@ -463,7 +488,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span {
   font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .04em;
-  color: var(--ink-3); padding: 3px 7px; border-radius: var(--r-xs);
+  color: var(--ink-3); padding: 3px 7px; border-radius: var(--r-2xs);
   background: var(--bg-3); border: 1px solid var(--line-3);
 }
 
@@ -497,7 +522,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 /* ---------------------------------------------------------------- filter */
 .chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 28px; }
 .chip {
-  padding: 7px 14px; border-radius: var(--r-sm);
+  padding: 7px 14px; border-radius: var(--r-pill);
   border: 1px solid var(--line-2); background: var(--bg-wash);
   color: var(--ink-2); font-size: 13px;
   transition: all .28s var(--swift);
@@ -511,7 +536,12 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 @keyframes pop { from { opacity: 0; transform: scale(.97) translateY(8px); } }
 
 /* ----------------------------------------------------------------- stats */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); border-top: 1px solid var(--line-2); }
+/* Two columns below the breakpoint, four above, and never auto-fit. auto-fit
+   resolved to THREE columns between roughly 600 and 700px, which left the
+   fourth stat alone on a second row with an underline a third of the width of
+   the one above it. Four items divide cleanly by 2 and by 4, so those are the
+   only two counts allowed. Same class of bug as the grid--2 one in the notes. */
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 22px; border-top: 1px solid var(--line-2); }
 .stat { padding: 26px 0 4px; border-bottom: 1px solid var(--line-2); }
 .stat .n {
   font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 620; letter-spacing: -.045em; line-height: 1;
@@ -520,7 +550,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .stat .n em { font-style: normal; color: var(--accent-ink); }
 .stat .k { margin-top: 10px; }
 @media (min-width: 700px) {
-  .stats { grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .stats { grid-template-columns: repeat(4, 1fr); gap: 0; column-gap: 0; }
   .stat { padding-inline: 0; }
   .stat + .stat { border-left: 1px solid var(--line-2); padding-left: 24px; }
 }
@@ -539,8 +569,11 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   content: ""; position: absolute; left: 6px; top: 0; bottom: 0;
   width: 1px; background: var(--line-2);
 }
-.tl-row:first-child::before { top: 22px; }
-.tl-row:last-child::before { bottom: calc(100% - 32px); }
+/* The spine has to START and STOP at the centre of the first and last node,
+   or it pokes out past them. Node top is 27px and the node is 9px tall, so
+   its centre is 31.5px. These three numbers move together. */
+.tl-row:first-child::before { top: 31.5px; }
+.tl-row:last-child::before { bottom: calc(100% - 31.5px); }
 .tl-row::after { /* the node */
   content: ""; position: absolute; left: 2px; top: 27px;
   width: 9px; height: 9px; border-radius: 50%;
@@ -593,7 +626,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .prose code {
   font-family: var(--font-mono); font-size: .85em;
   background: var(--bg-3); border: 1px solid var(--line-3);
-  padding: 2px 6px; border-radius: var(--r-xs); color: var(--ink);
+  padding: 2px 6px; border-radius: var(--r-2xs); color: var(--ink);
 }
 
 .callout {
@@ -643,7 +676,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   width: min(560px, calc(100vw - 32px));
   transform: translate(-50%, -10px) scale(.97); opacity: 0; pointer-events: none;
   background: var(--bg-2); border: 1px solid var(--line);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-2); overflow: hidden;
+  border-radius: var(--r-xl); box-shadow: var(--shadow-2); overflow: hidden;
   transition: opacity .28s var(--swift), transform .4s var(--spring);
 }
 .palette.on { opacity: 1; transform: translate(-50%, 0) scale(1); pointer-events: auto; }
@@ -698,7 +731,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 
 /* ------------------------------------------------------------------ misc */
 .big-cta {
-  border: 1px solid var(--line-2); border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid var(--line-2); border-radius: var(--r-2xl); overflow: hidden;
   background: var(--bg-2); position: relative;
   padding: clamp(34px, 6vw, 64px);
   text-align: center;
@@ -728,7 +761,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 }
 .skip {
   position: absolute; left: 12px; top: -60px; z-index: 100;
-  padding: 10px 16px; background: var(--ink); color: var(--bg); border-radius: var(--r-md);
+  padding: 10px 16px; background: var(--ink); color: var(--bg); border-radius: var(--r-sm);
   transition: top .3s var(--spring);
 }
 .skip:focus { top: 12px; }
@@ -885,7 +918,11 @@ html:not(.js) .rise { opacity: 1; transform: none; }
   .figs--2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .figs--3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
-.figs .fig { margin: 0; }
+/* Frames in a row share the row's height and the captions line up underneath,
+   rather than each frame shrink-wrapping its own image and leaving the
+   captions on two different baselines. */
+.figs .fig { margin: 0; display: flex; flex-direction: column; }
+.figs .fig-frame { flex: 1 1 auto; }
 .figs--phone .fig-frame { display: grid; place-items: center; padding: 20px; }
 .figs--phone img { max-width: 240px; border-radius: var(--r-sm); box-shadow: var(--shadow-2); }
 
@@ -917,7 +954,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 }
 .lb-close {
   position: absolute; top: 18px; right: 18px; width: 36px; height: 36px;
-  display: grid; place-items: center; border-radius: var(--r-md);
+  display: grid; place-items: center; border-radius: var(--r-sm);
   border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink-2);
 }
 .lb-close:hover { color: var(--ink); border-color: var(--line); }
@@ -946,7 +983,7 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 }
 .deck-nav button {
   pointer-events: auto; width: 38px; height: 38px; display: grid; place-items: center;
-  border-radius: var(--r-md); border: 1px solid var(--line-2);
+  border-radius: var(--r-sm); border: 1px solid var(--line-2);
   background: color-mix(in srgb, var(--bg) 74%, transparent);
   backdrop-filter: blur(8px); color: var(--ink-2);
   transition: color .2s, border-color .2s, opacity .2s, transform .2s var(--spring);

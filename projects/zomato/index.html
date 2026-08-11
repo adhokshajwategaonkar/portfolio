@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Zomato — improving the food ordering experience | Adhokshaj Wategaonkar</title>
 <meta name="description" content="A Zomato product case study: decomposing revenue into frequency, order value and orders, mapping the ordering journey, RICE-scoring four problems, and designing Quick Meals and Zomato Party against the two that scored highest." />
-<meta name="theme-color" content="#08080A" />
+<meta name="theme-color" content="#0A0A0B" />
 <link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/projects/zomato/" />
 
 <meta property="og:type" content="article" />
@@ -35,7 +35,7 @@
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
   } catch (e) {}
 </script>
 </head>
@@ -47,7 +47,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="../../"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>Adhokshaj<span class="sur">Wategaonkar</span></a>
     <nav class="tabs" aria-label="Primary">
       <a href="../../">Home</a>
       <a href="../../work/" aria-current="page">Work</a>
@@ -60,8 +60,12 @@
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <span>Search</span><kbd>⌘K</kbd>
       </button>
-      <button class="icon-btn" data-theme-btn aria-label="Change theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      <!-- Three icons, one visible. data-pref defaults to system so the button
+           isn't blank before site.js corrects it. See [data-theme-btn] in site.css. -->
+      <button class="icon-btn" data-theme-btn data-pref="system" aria-label="Theme: system. Switch to light.">
+        <svg data-icon="system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4m0 15.2V22M4.2 4.2l1.7 1.7m12.2 12.2 1.7 1.7M2 12h2.4m15.2 0H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg data-icon="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
       </button>
       <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -109,6 +113,7 @@
 <section class="section section--tight">
   <div class="wrap">
     <table class="spec rise"><tbody>
+      <tr><th>Problem</th><td><strong>A customer cannot compare what an order will really cost until the final screen, and ordering from the same restaurant repeatedly earns them nothing.</strong> Both problems cost orders, and both sit in the part of the funnel closest to the money.</td></tr>
       <tr><th>Surface</th><td>Zomato — search, discovery and delivery. <strong>80M MAU · 1.25M daily orders · 55% Indian market share · 3,200+ cities.</strong> Competing with Swiggy, Uber Eats, Magicpin.</td></tr>
       <tr><th>The question</th><td><strong>How do you improve the ordering experience in a way that moves revenue, not just engagement?</strong></td></tr>
       <tr><th>Method</th><td>Product and business-model review → persona → revenue decomposition → two-part journey map → RICE prioritisation → two solutions with entry points and flows → success metrics.</td></tr>
@@ -327,7 +332,7 @@
         <a class="brand" href="../../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          AI platforms by day; two products of my own the rest of the time.
+          Building with AI and LLMs, at work and on my own time.
         </p>
       </div>
       <div>

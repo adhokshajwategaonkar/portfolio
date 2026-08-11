@@ -28,6 +28,10 @@ export default caseStudy({
   ],
   "spec": [
     [
+      "Problem",
+      "<strong>A free-to-play game earns nothing at the moment a player is enjoying it most.</strong> Progression, crafting and monetisation are one system rather than three levers, so tuning any of them alone produces a game that either cannot pay for itself or extracts hard enough to lose the player."
+    ],
+    [
       "Format",
       "Timed take-home for an Associate Product Manager role. Kept as submitted rather than tidied up afterwards."
     ],

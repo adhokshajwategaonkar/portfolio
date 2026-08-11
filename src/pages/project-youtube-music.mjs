@@ -28,6 +28,10 @@ export default caseStudy({
   ],
   "spec": [
     [
+      "Problem",
+      "<strong>Two music apps with the same catalogue give a listener no reason to open one rather than the other.</strong> Recommendations alone do not build a weekly habit, so the reason to come back has to come from somewhere other than the library."
+    ],
+    [
       "Format",
       "Case study plus a written PRD — problem statement, goals and non-goals, user stories, success metrics and acceptance criteria."
     ],

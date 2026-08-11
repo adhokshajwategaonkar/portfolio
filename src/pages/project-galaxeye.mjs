@@ -22,6 +22,7 @@ export default caseStudy({
     { text: 'Read the 30-page strategy', href: NOTION, external: true },
   ],
   spec: [
+    ['Problem', '<strong>Verifying an insurance claim after a flood or a cyclone means sending an assessor to a site the disaster has just made hard to reach.</strong> It is slow, expensive and largely guesswork. Satellite operators hold data that answers it and sell almost exclusively to governments, so it never reaches the industry with the problem.'],
     ['Role', '<strong>Associate Product Manager, product co-owner.</strong> New-market product strategy, requirements for the analytics layer, cross-portfolio positioning, and the demo experience shown to buyers.'],
     ['The question', '<strong>Can satellite intelligence become a B2B product for insurers</strong> — a market that has never bought raw earth-observation data — rather than another defence contract?'],
     ['Domain', 'Multimodal satellite imagery (SAR + optical), disaster intelligence, geospatial analytics. Drone-mounted SAR analytics on the defence side.'],

@@ -59,7 +59,7 @@ export function render(p) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>${p.title}</title>
 <meta name="description" content="${p.description}" />
-<meta name="theme-color" content="#08080A" />
+<meta name="theme-color" content="#0A0A0B" />
 <link rel="canonical" href="${canonical}" />
 
 <meta property="og:type" content="${p.dir.startsWith('projects') ? 'article' : 'website'}" />
@@ -89,7 +89,7 @@ export function render(p) {
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
   } catch (e) {}
 </script>
 ${p.head || ''}</head>
@@ -101,7 +101,7 @@ ${p.head || ''}</head>
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="${R}"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
+    <a class="brand" href="${R}"><span class="dot"></span>Adhokshaj<span class="sur">Wategaonkar</span></a>
     <nav class="tabs" aria-label="Primary">
       ${tabs}
     </nav>
@@ -110,8 +110,12 @@ ${p.head || ''}</head>
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <span>Search</span><kbd>⌘K</kbd>
       </button>
-      <button class="icon-btn" data-theme-btn aria-label="Change theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      <!-- Three icons, one visible. data-pref defaults to system so the button
+           isn't blank before site.js corrects it. See [data-theme-btn] in site.css. -->
+      <button class="icon-btn" data-theme-btn data-pref="system" aria-label="Theme: system. Switch to light.">
+        <svg data-icon="system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4m0 15.2V22M4.2 4.2l1.7 1.7m12.2 12.2 1.7 1.7M2 12h2.4m15.2 0H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg data-icon="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
       </button>
       <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -136,7 +140,7 @@ ${p.body}
         <a class="brand" href="${R}"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          AI platforms by day; two products of my own the rest of the time.
+          Building with AI and LLMs, at work and on my own time.
         </p>
       </div>
       <div>

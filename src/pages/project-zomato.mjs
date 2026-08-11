@@ -39,6 +39,7 @@ export default caseStudy({
     { text: 'Download the PDF', href: `${A}Zomato-Case-Study.pdf`, external: true },
   ],
   spec: [
+    ['Problem', '<strong>A customer cannot compare what an order will really cost until the final screen, and ordering from the same restaurant repeatedly earns them nothing.</strong> Both problems cost orders, and both sit in the part of the funnel closest to the money.'],
     ['Surface', 'Zomato — search, discovery and delivery. <strong>80M MAU · 1.25M daily orders · 55% Indian market share · 3,200+ cities.</strong> Competing with Swiggy, Uber Eats, Magicpin.'],
     ['The question', '<strong>How do you improve the ordering experience in a way that moves revenue, not just engagement?</strong>'],
     ['Method', 'Product and business-model review → persona → revenue decomposition → two-part journey map → RICE prioritisation → two solutions with entry points and flows → success metrics.'],

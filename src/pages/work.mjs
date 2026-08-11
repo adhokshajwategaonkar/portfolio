@@ -7,10 +7,10 @@ const PROJECTS = [
     href: '../projects/animus/', tags: ['product'], live: true,
     badge: 'Live · built solo', title: 'Animus',
     cover: coverMock(mock.animusFeed(), '.5'),
-    body: `WhatsApp is the capture surface; a PWA is where the value lives. Claude Haiku parses a raw
-      message into structured items, the feed ranks them by what's closest to rotting, and a nudge
-      engine brings the right one back. Designed for adults with ADHD — where every mechanic that
-      punishes absence is the mechanic that loses the user.`,
+    body: `People with ADHD lose a thought in the seconds between having it and finding somewhere to
+      put it, and every tool built to catch those thoughts asks for upkeep they cannot sustain.
+      Animus makes capture a WhatsApp message. Claude Haiku parses it into structured items, the
+      feed ranks them by what is closest to rotting, and a nudge engine brings the right one back.`,
     tagList: ['Node + Express', 'React', 'Supabase', 'WhatsApp Cloud API', 'Claude Haiku'],
     cta: 'Case study',
   },
@@ -18,10 +18,11 @@ const PROJECTS = [
     href: '../projects/shastra/', tags: ['product'], live: true,
     badge: 'Live · built solo', title: 'Shastra',
     cover: coverMock(mock.shastraChart(), '.66'),
-    body: `Vedic astrology built on a verifiable ephemeris rather than vibes. Swiss Ephemeris computes;
-      the LLM only narrates, and never sees a birth date, place, email or phone. The ethics rules —
-      no fear-selling, no remedies, no health predictions — are asserted in the test suite, so a
-      prompt that drops them fails the build.`,
+    body: `Online Vedic astrology runs on per-minute meters and sells remedies for the fear it just
+      manufactured, and a reader has no way to check whether the maths underneath is real. Shastra
+      computes every position with Swiss Ephemeris and lets the model narrate rather than predict.
+      It never sees a birth date, place, email or phone. The restraint rules are asserted in the
+      test suite, so a prompt that drops them fails the build.`,
     tagList: ['Swiss Ephemeris', 'Node', 'Prompt architecture', 'Programmatic SEO'],
     cta: 'Case study',
   },
@@ -29,9 +30,9 @@ const PROJECTS = [
     href: '../projects/weekend-conundrum/', tags: ['case'],
     badge: 'Case study · BookMyShow', title: '"The Weekend Conundrum"',
     cover: slide({ kicker: 'Product case study · 12 slides', title: 'The Weekend<br />Conundrum', left: 'BookMyShow', right: 'Discovery' }),
-    body: `People want to go out. They just don't know what to do with the weekend — a decision problem,
-      not a catalogue problem. Persona, journey map, weighted prioritisation and a "plan your weekend"
-      feature. Full deck on the page.`,
+    body: `People want to go out and cannot decide what to do, so BookMyShow only gets the booking once
+      the hard part is already over. Persona, journey map, weighted prioritisation and a
+      plan-your-weekend feature. Full deck on the page.`,
     tagList: ['Discovery', 'Consumer', 'UX', 'Journey mapping'],
     cta: 'Read the case study',
   },
@@ -39,9 +40,10 @@ const PROJECTS = [
     href: '../projects/zomato/', tags: ['case'],
     badge: 'Case study · Zomato', title: 'Improving the food ordering experience',
     cover: slide({ kicker: 'Product case study · 12 slides', title: 'Ordering,<br />and revenue', left: 'Zomato', right: '80M MAU' }),
-    body: `Revenue = frequency × order value × orders — which of the three you pick decides the whole
-      solution. Journey mapping, RICE scoring of four problems, and two features designed against the
-      two that survived. Full deck on the page.`,
+    body: `A Zomato customer cannot compare what an order will really cost until the last screen, so the
+      cart is where the money leaks. Revenue = frequency × order value × orders, and which term you
+      attack decides the whole solution. Journey mapping, RICE scoring of four problems, and two
+      features designed against the two that survived. Full deck on the page.`,
     tagList: ['Growth', 'RICE', 'Funnel', 'Monetisation'],
     cta: 'Read the case study',
   },
@@ -49,9 +51,10 @@ const PROJECTS = [
     href: '../projects/youtube-music/', tags: ['case', 'prd'],
     badge: 'Growth strategy + PRD · YouTube Music', title: 'Driving engagement in YouTube Music',
     cover: slide({ kicker: 'Growth strategy + PRD', title: 'Driving<br />engagement', left: 'YouTube Music', right: 'vs Spotify' }),
-    body: `How do you grow weekly active users against a competitor at catalogue parity? Segmentation,
-      engagement loops, social network effects and RICE prioritisation across activation, sharing and
-      retention — with a written PRD behind it.`,
+    body: `Two music apps with the same catalogue give a listener no reason to open one rather than the
+      other, and recommendations alone do not build a weekly habit. Segmentation, engagement loops,
+      social network effects and RICE prioritisation across activation, sharing and retention, with
+      a written PRD behind it.`,
     tagList: ['Consumer', 'Growth', 'Product metrics', 'PRD'],
     cta: 'Read the case study',
   },
@@ -59,9 +62,10 @@ const PROJECTS = [
     href: '../projects/shopsy/', tags: ['case', 'prd'],
     badge: 'Growth strategy + PRD · Shopsy', title: 'Growing the next 200 million e-commerce users',
     cover: slide({ kicker: 'Growth strategy + PRD', title: 'The next<br />200 million', left: 'Shopsy', right: 'Tier 2–3 India' }),
-    body: `Growth for India's fastest-growing social commerce platform. Segmentation, behavioural
-      analysis and experimentation aimed at acquisition, trust and referral-driven growth among
-      Tier-2 and Tier-3 consumers — with a written PRD behind it.`,
+    body: `A first-time shopper in tier-2 or tier-3 India abandons the order before paying, because they
+      doubt the parcel will arrive and the browsing itself costs mobile data. Segmentation,
+      behavioural analysis and experiments aimed at acquisition, trust and referral-driven growth,
+      with a written PRD behind it.`,
     tagList: ['Growth PM', 'User research', 'Experimentation', 'PRD'],
     cta: 'Read the case study',
   },
@@ -69,9 +73,10 @@ const PROJECTS = [
     href: '../projects/beacon-deel/', tags: ['company', 'assessment'],
     badge: 'Assessment · Beacon.li × Deel', title: 'Agentic AI for an AI-native prospect',
     cover: slide({ kicker: 'Take-home assessment', title: 'Agentic AI for<br />an AI-native buyer', left: 'Beacon.li × Deel', right: 'Sep 2025' }),
-    body: `The brief was deliberately awkward — show how an AI orchestration platform adds value to a
-      prospect that already ships mature AI. Two gaps found in Deel from public G2 evidence, two
-      agentic solutions, each with wireframes, a north-star metric and a rollout plan.`,
+    body: `An enterprise AI assistant only answers questions a user knows how to ask, and the expensive
+      failures in payroll and compliance are the ones nobody thought to ask about. Two gaps found in
+      Deel from public G2 evidence, two agentic solutions, each with wireframes, a north-star metric
+      and a rollout plan.`,
     tagList: ['Enterprise AI', 'Agentic', 'Wireframes', 'GTM'],
     cta: 'Read the assessment',
   },
@@ -79,9 +84,10 @@ const PROJECTS = [
     href: '../projects/galaxeye/', tags: ['company'],
     badge: 'Company · GalaxEye Space', title: 'Building a new market for satellite intelligence',
     cover: slide({ kicker: 'Company work', title: 'A new market for<br />satellite intelligence', left: 'GalaxEye Space', right: '2024 — 2025' }),
-    body: `Can a space-tech startup sell satellite data to insurers? A 30-page product strategy on
-      multimodal imagery, disaster intelligence and geospatial analytics as a new B2B line — plus the
-      drone SAR analytics taken from concept through government trials.`,
+    body: `Insurers verify a flood claim by sending an assessor to a site the flood has just made hard to
+      reach, and satellite operators sell almost exclusively to governments. A 30-page product
+      strategy on multimodal imagery, disaster intelligence and geospatial analytics as a new B2B
+      line, plus the drone SAR analytics taken from concept through government trials.`,
     tagList: ['Product strategy', 'Market research', 'B2B SaaS', 'SpaceTech'],
     cta: 'Read the case study',
   },
@@ -89,9 +95,10 @@ const PROJECTS = [
     href: '../projects/lila-games/', tags: ['assessment'],
     badge: 'Assessment · LILA Games', title: 'Systems thinking for free-to-play games',
     cover: slide({ kicker: 'Take-home assessment', title: 'Systems thinking<br />for free-to-play', left: 'LILA Games', right: 'Game economy' }),
-    body: `How do you design progression systems that keep millions of players engaged? Crafting
-      economies, staffing models, feature analysis and monetisation mechanics for a mobile
-      free-to-play shooter, worked through structured modelling.`,
+    body: `A free-to-play game earns nothing at the moment a player is enjoying it most, and progression,
+      crafting and monetisation are one system rather than three independent levers. Crafting
+      economies, staffing models, feature analysis and monetisation mechanics for a mobile shooter,
+      worked through structured modelling.`,
     tagList: ['Gaming', 'Game economy', 'Monetisation', 'Systems design'],
     cta: 'Read the assessment',
   },
@@ -140,8 +147,8 @@ export default {
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
     <span class="label rise">Work · <span data-result-count>${PROJECTS.length}</span> shown</span>
-    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
-      Everything, in one place.
+    <h1 class="display rise" style="--i:1; margin:22px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
+      Everything, in<br />one <span class="serif accent">place</span>.
     </h1>
     <p class="lead rise" style="--i:2; margin-top:22px">
       Two products I designed, built and shipped on my own, and seven case studies where I worked

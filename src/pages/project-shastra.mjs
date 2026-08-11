@@ -18,7 +18,7 @@ export default {
       <span class="badge">2026</span>
     </div>
 
-    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.4rem,6vw,4.2rem)">
+    <h1 class="display rise" style="--i:1; margin:24px 0 0; font-size:clamp(2.4rem,7.5vw,5.4rem)">
       Shastra
     </h1>
     <p class="lead rise" style="--i:2; margin-top:22px; font-size:clamp(1.1rem,1.8vw,1.35rem)">
@@ -41,6 +41,7 @@ export default {
   <div class="wrap">
     <table class="spec rise">
       <tbody>
+        <tr><th>Problem</th><td><strong>Online Vedic astrology is sold by the minute, and it sells relief from fears it manufactured a paragraph earlier.</strong> Someone who wants a reading has no way to check whether the astronomy underneath it is real, so the only thing left to judge is how confident the copy sounds.</td></tr>
         <tr><th>Role</th><td><strong>Everything.</strong> Positioning, ephemeris engine, prompt architecture, ethics enforcement, pricing structure, SEO strategy, site, deploy.</td></tr>
         <tr><th>The wedge</th><td><strong>Trust.</strong> Free daily reading over a WhatsApp ritual the user starts; paid one-time reports over UPI. No per-minute meters, no auto-renew.</td></tr>
         <tr><th>Stack</th><td>Node + Express · Swiss Ephemeris (Moshier mode) · React 19 + Vite + Tailwind v4 · Postgres · Claude Haiku · Static site on GitHub Pages</td></tr>

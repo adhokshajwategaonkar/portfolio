@@ -19,7 +19,7 @@ export default {
       <span class="badge">2026</span>
     </div>
 
-    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.4rem,6vw,4.2rem)">
+    <h1 class="display rise" style="--i:1; margin:24px 0 0; font-size:clamp(2.4rem,7.5vw,5.4rem)">
       Animus
     </h1>
     <p class="lead rise" style="--i:2; margin-top:22px; font-size:clamp(1.1rem,1.8vw,1.35rem)">
@@ -47,6 +47,7 @@ export default {
   <div class="wrap">
     <table class="spec rise">
       <tbody>
+        <tr><th>Problem</th><td><strong>People with ADHD lose thoughts, links and tasks in the seconds between having them and finding somewhere to put them.</strong> Every tool built to catch those thoughts asks for upkeep they cannot sustain, so they abandon it and go back to losing things.</td></tr>
         <tr><th>Role</th><td><strong>Everything.</strong> Product, positioning, design system, prompt architecture, backend, frontend, pricing model, landing page, deploy.</td></tr>
         <tr><th>Who it's for</th><td><strong>Adults with ADHD and executive-dysfunction traits.</strong> Not "busy professionals". Every copy and product decision resolves against that person.</td></tr>
         <tr><th>Stack</th><td>Node + Express · React + Vite + Tailwind + Framer Motion · Supabase Postgres · Meta WhatsApp Cloud API (direct) · Claude Haiku 4.5 · Render</td></tr>

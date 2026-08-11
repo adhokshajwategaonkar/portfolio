@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Work — Adhokshaj Wategaonkar</title>
 <meta name="description" content="Shipped products and product case studies: Animus, Shastra, BookMyShow, Zomato, YouTube Music, Shopsy, GalaxEye Space, a Beacon.li × Deel agentic-AI assessment and a LILA Games take-home. Every case study lives on this site." />
-<meta name="theme-color" content="#08080A" />
+<meta name="theme-color" content="#0A0A0B" />
 <link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/work/" />
 
 <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
   } catch (e) {}
 </script>
 </head>
@@ -47,7 +47,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="../"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
+    <a class="brand" href="../"><span class="dot"></span>Adhokshaj<span class="sur">Wategaonkar</span></a>
     <nav class="tabs" aria-label="Primary">
       <a href="../">Home</a>
       <a href="../work/" aria-current="page">Work</a>
@@ -60,8 +60,12 @@
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <span>Search</span><kbd>⌘K</kbd>
       </button>
-      <button class="icon-btn" data-theme-btn aria-label="Change theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      <!-- Three icons, one visible. data-pref defaults to system so the button
+           isn't blank before site.js corrects it. See [data-theme-btn] in site.css. -->
+      <button class="icon-btn" data-theme-btn data-pref="system" aria-label="Theme: system. Switch to light.">
+        <svg data-icon="system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4m0 15.2V22M4.2 4.2l1.7 1.7m12.2 12.2 1.7 1.7M2 12h2.4m15.2 0H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg data-icon="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
       </button>
       <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -84,8 +88,8 @@
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
     <span class="label rise">Work · <span data-result-count>9</span> shown</span>
-    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
-      Everything, in one place.
+    <h1 class="display rise" style="--i:1; margin:22px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
+      Everything, in<br />one <span class="serif accent">place</span>.
     </h1>
     <p class="lead rise" style="--i:2; margin-top:22px">
       Two products I designed, built and shipped on my own, and seven case studies where I worked
@@ -132,10 +136,10 @@
               <h3 style="margin-top:12px">Animus</h3>
             </div>
           </div>
-          <p>WhatsApp is the capture surface; a PWA is where the value lives. Claude Haiku parses a raw
-      message into structured items, the feed ranks them by what's closest to rotting, and a nudge
-      engine brings the right one back. Designed for adults with ADHD — where every mechanic that
-      punishes absence is the mechanic that loses the user.</p>
+          <p>People with ADHD lose a thought in the seconds between having it and finding somewhere to
+      put it, and every tool built to catch those thoughts asks for upkeep they cannot sustain.
+      Animus makes capture a WhatsApp message. Claude Haiku parses it into structured items, the
+      feed ranks them by what is closest to rotting, and a nudge engine brings the right one back.</p>
           <div class="proj-foot">
             <div class="tags"><span>Node + Express</span><span>React</span><span>Supabase</span><span>WhatsApp Cloud API</span><span>Claude Haiku</span></div>
             <span class="arrow-link">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -170,10 +174,11 @@
               <h3 style="margin-top:12px">Shastra</h3>
             </div>
           </div>
-          <p>Vedic astrology built on a verifiable ephemeris rather than vibes. Swiss Ephemeris computes;
-      the LLM only narrates, and never sees a birth date, place, email or phone. The ethics rules —
-      no fear-selling, no remedies, no health predictions — are asserted in the test suite, so a
-      prompt that drops them fails the build.</p>
+          <p>Online Vedic astrology runs on per-minute meters and sells remedies for the fear it just
+      manufactured, and a reader has no way to check whether the maths underneath is real. Shastra
+      computes every position with Swiss Ephemeris and lets the model narrate rather than predict.
+      It never sees a birth date, place, email or phone. The restraint rules are asserted in the
+      test suite, so a prompt that drops them fails the build.</p>
           <div class="proj-foot">
             <div class="tags"><span>Swiss Ephemeris</span><span>Node</span><span>Prompt architecture</span><span>Programmatic SEO</span></div>
             <span class="arrow-link">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -197,9 +202,9 @@
               <h3 style="margin-top:12px">"The Weekend Conundrum"</h3>
             </div>
           </div>
-          <p>People want to go out. They just don't know what to do with the weekend — a decision problem,
-      not a catalogue problem. Persona, journey map, weighted prioritisation and a "plan your weekend"
-      feature. Full deck on the page.</p>
+          <p>People want to go out and cannot decide what to do, so BookMyShow only gets the booking once
+      the hard part is already over. Persona, journey map, weighted prioritisation and a
+      plan-your-weekend feature. Full deck on the page.</p>
           <div class="proj-foot">
             <div class="tags"><span>Discovery</span><span>Consumer</span><span>UX</span><span>Journey mapping</span></div>
             <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -223,9 +228,10 @@
               <h3 style="margin-top:12px">Improving the food ordering experience</h3>
             </div>
           </div>
-          <p>Revenue = frequency × order value × orders — which of the three you pick decides the whole
-      solution. Journey mapping, RICE scoring of four problems, and two features designed against the
-      two that survived. Full deck on the page.</p>
+          <p>A Zomato customer cannot compare what an order will really cost until the last screen, so the
+      cart is where the money leaks. Revenue = frequency × order value × orders, and which term you
+      attack decides the whole solution. Journey mapping, RICE scoring of four problems, and two
+      features designed against the two that survived. Full deck on the page.</p>
           <div class="proj-foot">
             <div class="tags"><span>Growth</span><span>RICE</span><span>Funnel</span><span>Monetisation</span></div>
             <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -249,9 +255,10 @@
               <h3 style="margin-top:12px">Driving engagement in YouTube Music</h3>
             </div>
           </div>
-          <p>How do you grow weekly active users against a competitor at catalogue parity? Segmentation,
-      engagement loops, social network effects and RICE prioritisation across activation, sharing and
-      retention — with a written PRD behind it.</p>
+          <p>Two music apps with the same catalogue give a listener no reason to open one rather than the
+      other, and recommendations alone do not build a weekly habit. Segmentation, engagement loops,
+      social network effects and RICE prioritisation across activation, sharing and retention, with
+      a written PRD behind it.</p>
           <div class="proj-foot">
             <div class="tags"><span>Consumer</span><span>Growth</span><span>Product metrics</span><span>PRD</span></div>
             <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -275,9 +282,10 @@
               <h3 style="margin-top:12px">Growing the next 200 million e-commerce users</h3>
             </div>
           </div>
-          <p>Growth for India's fastest-growing social commerce platform. Segmentation, behavioural
-      analysis and experimentation aimed at acquisition, trust and referral-driven growth among
-      Tier-2 and Tier-3 consumers — with a written PRD behind it.</p>
+          <p>A first-time shopper in tier-2 or tier-3 India abandons the order before paying, because they
+      doubt the parcel will arrive and the browsing itself costs mobile data. Segmentation,
+      behavioural analysis and experiments aimed at acquisition, trust and referral-driven growth,
+      with a written PRD behind it.</p>
           <div class="proj-foot">
             <div class="tags"><span>Growth PM</span><span>User research</span><span>Experimentation</span><span>PRD</span></div>
             <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -301,9 +309,10 @@
               <h3 style="margin-top:12px">Agentic AI for an AI-native prospect</h3>
             </div>
           </div>
-          <p>The brief was deliberately awkward — show how an AI orchestration platform adds value to a
-      prospect that already ships mature AI. Two gaps found in Deel from public G2 evidence, two
-      agentic solutions, each with wireframes, a north-star metric and a rollout plan.</p>
+          <p>An enterprise AI assistant only answers questions a user knows how to ask, and the expensive
+      failures in payroll and compliance are the ones nobody thought to ask about. Two gaps found in
+      Deel from public G2 evidence, two agentic solutions, each with wireframes, a north-star metric
+      and a rollout plan.</p>
           <div class="proj-foot">
             <div class="tags"><span>Enterprise AI</span><span>Agentic</span><span>Wireframes</span><span>GTM</span></div>
             <span class="arrow-link">Read the assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -327,9 +336,10 @@
               <h3 style="margin-top:12px">Building a new market for satellite intelligence</h3>
             </div>
           </div>
-          <p>Can a space-tech startup sell satellite data to insurers? A 30-page product strategy on
-      multimodal imagery, disaster intelligence and geospatial analytics as a new B2B line — plus the
-      drone SAR analytics taken from concept through government trials.</p>
+          <p>Insurers verify a flood claim by sending an assessor to a site the flood has just made hard to
+      reach, and satellite operators sell almost exclusively to governments. A 30-page product
+      strategy on multimodal imagery, disaster intelligence and geospatial analytics as a new B2B
+      line, plus the drone SAR analytics taken from concept through government trials.</p>
           <div class="proj-foot">
             <div class="tags"><span>Product strategy</span><span>Market research</span><span>B2B SaaS</span><span>SpaceTech</span></div>
             <span class="arrow-link">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -353,9 +363,10 @@
               <h3 style="margin-top:12px">Systems thinking for free-to-play games</h3>
             </div>
           </div>
-          <p>How do you design progression systems that keep millions of players engaged? Crafting
-      economies, staffing models, feature analysis and monetisation mechanics for a mobile
-      free-to-play shooter, worked through structured modelling.</p>
+          <p>A free-to-play game earns nothing at the moment a player is enjoying it most, and progression,
+      crafting and monetisation are one system rather than three independent levers. Crafting
+      economies, staffing models, feature analysis and monetisation mechanics for a mobile shooter,
+      worked through structured modelling.</p>
           <div class="proj-foot">
             <div class="tags"><span>Gaming</span><span>Game economy</span><span>Monetisation</span><span>Systems design</span></div>
             <span class="arrow-link">Read the assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -400,7 +411,7 @@
         <a class="brand" href="../"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          AI platforms by day; two products of my own the rest of the time.
+          Building with AI and LLMs, at work and on my own time.
         </p>
       </div>
       <div>

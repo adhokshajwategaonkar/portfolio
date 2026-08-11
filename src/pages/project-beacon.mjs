@@ -23,6 +23,7 @@ export default caseStudy({
     { text: 'Read the full submission (PDF)', href: `${A}/Beacon-Deel-APM-Assessment.pdf`, external: true },
   ],
   spec: [
+    ['Problem', '<strong>An enterprise AI assistant only helps with questions a user already knows how to ask.</strong> In payroll and compliance the expensive failures are the ones nobody thought to ask about, and a chat box cannot reach those.'],
     ['The brief', 'Design original, practical agentic AI features that add automation, efficiency or intelligence to an enterprise prospect — <strong>even inside an AI-native product</strong>.'],
     ['Prospect', 'Deel — global payroll, HR and compliance across 140+ countries. Owns its legal and payroll infrastructure. Already ships Deel AI.'],
     ['Method', 'Market and prospect research → gap analysis from public user evidence → two solutions, each with functionality, target roles, business outcomes, a north-star metric, UX flow, wireframes, validation, rollout, risks and mitigations.'],

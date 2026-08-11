@@ -8,8 +8,8 @@ export default {
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
     <span class="label rise">Trajectory · 2021 — present</span>
-    <h1 class="intro-name rise" style="--i:1; margin-top:20px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
-      Code, then product,<br />then AI platforms.
+    <h1 class="display rise" style="--i:1; margin:22px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
+      Code, then product,<br />then <span class="serif accent">AI platforms</span>.
     </h1>
     <p class="lead rise" style="--i:2; margin-top:24px">
       Not a straight line, but a consistent one. Every move traded a domain I understood for a
@@ -251,8 +251,9 @@ export default {
         What I'm looking for
       </h2>
       <p class="lead" style="margin-inline:auto">
-        AI platform or infrastructure product, in a team where a PM is expected to have an opinion
-        about the architecture. The résumé has the full version.
+        A product role where AI and LLMs are the material rather than the pitch, on a team that
+        expects a PM to have an opinion about the architecture. B2B or B2C. The résumé has the
+        full version.
       </p>
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:30px">
         <a class="btn btn--primary" href="../Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener">

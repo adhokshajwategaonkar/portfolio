@@ -28,6 +28,10 @@ export default caseStudy({
   ],
   "spec": [
     [
+      "Problem",
+      "<strong>A first-time shopper in tier-2 or tier-3 India abandons the order before paying.</strong> The doubts that stop them are whether the parcel will actually arrive, how much mobile data the browsing costs, and whether anyone they know has ordered online before."
+    ],
+    [
       "Format",
       "Case study plus a written PRD — problem statement, goals and non-goals, user stories, success metrics and acceptance criteria."
     ],

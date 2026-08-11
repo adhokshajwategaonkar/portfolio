@@ -39,6 +39,7 @@ export default caseStudy({
     { text: 'Download the PDF', href: `${A}BookMyShow-Case-Study.pdf`, external: true },
   ],
   spec: [
+    ['Problem', '<strong>People want to go out at the weekend and cannot decide what to do.</strong> BookMyShow is built to sell a ticket to something already chosen, so it becomes useful only after the hard part is over.'],
     ['Surface', 'BookMyShow — India’s leading out-of-home entertainment platform. <strong>95.2M daily visits, ₹302.9 Cr revenue (2022), 5:07 average visit, 49.48% bounce rate.</strong>'],
     ['The question', '<strong>What should a ticketing app do for a user who hasn’t decided anything yet?</strong>'],
     ['Method', 'Company and metric review → problem framing → persona → weighted cause prioritisation → current-state journey map → problem synthesis → solution → success metrics.'],

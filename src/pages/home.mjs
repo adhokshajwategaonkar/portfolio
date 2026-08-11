@@ -3,9 +3,9 @@ import { SITE, icon, mock, slide, coverMock } from '../layout.mjs';
 export default {
   dir: '',
   nav: 'home',
-  title: `Adhokshaj Wategaonkar — Product Manager, AI platforms`,
-  ogTitle: `Adhokshaj Wategaonkar — Product Manager, AI platforms`,
-  description: `Product Manager working on AI platforms — multi-provider LLM gateways, agent orchestration, and interfaces that make non-deterministic systems inspectable. Bengaluru.`,
+  title: `Adhokshaj Wategaonkar, Product Manager building with AI and LLMs`,
+  ogTitle: `Adhokshaj Wategaonkar, Product Manager building with AI and LLMs`,
+  description: `Product Manager, three years across enterprise AI, space tech and digital identity, plus two products designed, built and shipped solo. Open to any product role that works with AI and LLMs on real problems, B2B or B2C.`,
   head: `<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Adhokshaj Wategaonkar",
 "jobTitle":"Product Manager","email":"${SITE.email}",
@@ -18,25 +18,26 @@ export default {
 <!-- ======================================================= hero ======== -->
 <section class="hero" style="padding-bottom:clamp(40px,6vw,72px)">
   <div class="wrap">
-    <div class="intro-meta rise">
-      <span class="label">Product Manager</span>
-      <span class="label">Bengaluru, India</span>
-      <span class="label" style="display:flex;align-items:center;gap:8px;color:var(--live-ink)">
-        <span class="dot-live"></span>Open to roles
+    <div class="rise" style="--i:0">
+      <span class="availability">
+        <span class="beacon"><b></b><i></i></span>
+        Open to product roles working with AI and LLMs
       </span>
     </div>
 
-    <h1 class="intro-name rise" style="--i:1">Adhokshaj Wategaonkar</h1>
+    <h1 class="display rise" style="--i:1; margin:26px 0 0">
+      I turn ambiguous<br />AI problems into<br /><span class="serif accent">shipped</span> product.
+    </h1>
 
-    <p class="lead rise" style="--i:2; margin-top:24px; max-width:56ch">
-      I work on AI platforms — multi-provider LLM gateways, agent orchestration, and the
-      interfaces that make non-deterministic systems inspectable enough to trust. Three years
-      across enterprise AI, space tech and digital identity, and two products I designed,
-      built and shipped on my own.
+    <p class="lead rise" style="--i:2; margin-top:26px">
+      Product Manager, three years in. I have owned an LLM gateway across four model providers,
+      redesigned an agent chat down to its tool-call traces, and taken SAR analytics software
+      through government trials. On my own time I designed, built and shipped two consumer
+      products end to end, from database schema to landing page.
     </p>
 
     <div class="intro-links rise" style="--i:3">
-      <a class="btn btn--primary" href="work/">Selected work ${icon.arrow}</a>
+      <a class="btn btn--primary" href="work/">See the work ${icon.arrow}</a>
       <a class="btn btn--ghost" href="${SITE.resume}" target="_blank" rel="noopener">${icon.download} Résumé</a>
       <button class="btn btn--ghost" data-copy="${SITE.email}">${icon.copy} ${SITE.email}</button>
     </div>
@@ -66,10 +67,10 @@ export default {
             </div>
           </div>
           <p>
-            Capture to WhatsApp, and a PWA does the organising. Claude Haiku parses a raw message
-            into structured items; the feed ranks them by what's closest to rotting. Built for
-            adults with ADHD, where what you're actually selling is the absence of a system to
-            maintain.
+            People with ADHD lose a thought in the seconds between having it and finding somewhere
+            to put it, and the tools built to catch those thoughts ask for upkeep they cannot
+            sustain. Animus makes capture a WhatsApp message. Claude Haiku parses it into
+            structured items and the feed ranks them by what is closest to rotting.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Node</span><span>React</span><span>Supabase</span><span>WhatsApp API</span><span>Claude Haiku</span></div>
@@ -88,9 +89,9 @@ export default {
             </div>
           </div>
           <p>
-            Vedic astrology where the maths is verifiable and the ethics are executable. Swiss
-            Ephemeris computes every position; the model only narrates, and never sees a birth
-            date or a phone number. The restraint rules are asserted in the test suite, so a
+            Online Vedic astrology runs on per-minute meters and sells remedies for the fear it
+            just manufactured. Shastra computes every position with Swiss Ephemeris and lets the
+            model narrate rather than predict. The restraint rules live in the test suite, so a
             prompt that drops them fails the build.
           </p>
           <div class="proj-foot">
@@ -115,9 +116,9 @@ export default {
             </div>
           </div>
           <p>
-            People want to go out. They just don't know what to do with the weekend — a decision
-            problem, not a catalogue problem. Persona, journey map, weighted prioritisation and a
-            "plan your weekend" feature, with the full deck on the page.
+            People want to go out and cannot decide what to do, so BookMyShow only gets the
+            booking once the hard part is already over. Persona, journey map, weighted
+            prioritisation and a plan-your-weekend feature, with the full deck on the page.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Discovery</span><span>Consumer</span><span>Journey mapping</span></div>
@@ -141,9 +142,10 @@ export default {
             </div>
           </div>
           <p>
-            Revenue = frequency × order value × orders — which of the three you pick decides the
-            whole solution. Journey mapping, RICE scoring, and two features designed against the two
-            problems that survived it.
+            A Zomato customer cannot see what an order will really cost until the last screen, so
+            the cart is where the money leaks. Revenue = frequency × order value × orders, and
+            which term you attack decides the whole solution. Journey mapping, RICE scoring, and
+            two features designed against the two problems that survived it.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Growth</span><span>RICE</span><span>Funnel</span><span>Monetisation</span></div>
@@ -221,8 +223,10 @@ export default {
         Looking for the next hard product problem.
       </h2>
       <p class="lead" style="margin-inline:auto">
-        Ideally AI platform or infrastructure, on a team where a PM is expected to have an opinion
-        about the architecture. Bengaluru or remote.
+        Any product role where I get to work on real problems with AI and LLMs. B2B or B2C both
+        count. My employed work has been enterprise; Animus and Shastra are consumer products I
+        built and shipped on my own, so the range is on this site rather than in a claim about
+        myself.
       </p>
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px">
         <a class="btn btn--primary" href="mailto:${SITE.email}">${icon.mail} Get in touch</a>

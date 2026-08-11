@@ -3,16 +3,16 @@ export default {
   nav: 'contact',
   title: `Contact — Adhokshaj Wategaonkar`,
   ogTitle: `Contact — Adhokshaj Wategaonkar`,
-  description: `Get in touch with Adhokshaj Wategaonkar — Product Manager, Bengaluru. Email, LinkedIn, X, and résumé.`,
+  description: `Get in touch with Adhokshaj Wategaonkar, Product Manager in Bengaluru. Open to product roles working with AI and LLMs, B2B or B2C. Email, LinkedIn, X and résumé.`,
   body: `
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
     <span class="availability rise">
       <span class="beacon"><b></b><i></i></span>
-      Open to Product Manager roles — AI &amp; platform
+      Open to product roles working with AI and LLMs
     </span>
-    <h1 class="intro-name rise" style="--i:1; margin-top:22px; font-size:clamp(2.2rem,5.6vw,3.8rem)">
-      Let's talk about<br />something hard.
+    <h1 class="display rise" style="--i:1; margin:26px 0 0; font-size:clamp(2.4rem,7vw,5rem)">
+      Let's talk about<br />something <span class="serif accent">hard</span>.
     </h1>
     <p class="lead rise" style="--i:2; margin-top:24px">
       Hiring, collaborating, or you've got an AI product problem you want a second opinion on —
@@ -87,7 +87,7 @@ export default {
           </div>
           <div class="kv-row" style="padding:13px 0">
             <span class="label">Open to</span>
-            <span class="v">Full-time PM roles, on-site in Bengaluru or remote</span>
+            <span class="v">Full-time product roles, B2B or B2C. Bengaluru, remote, or relocation</span>
           </div>
           <div class="kv-row" style="padding:13px 0; border-bottom:0">
             <span class="label">Résumé</span>

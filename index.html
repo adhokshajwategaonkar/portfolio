@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Adhokshaj Wategaonkar — Product Manager, AI platforms</title>
-<meta name="description" content="Product Manager working on AI platforms — multi-provider LLM gateways, agent orchestration, and interfaces that make non-deterministic systems inspectable. Bengaluru." />
-<meta name="theme-color" content="#08080A" />
+<title>Adhokshaj Wategaonkar, Product Manager building with AI and LLMs</title>
+<meta name="description" content="Product Manager, three years across enterprise AI, space tech and digital identity, plus two products designed, built and shipped solo. Open to any product role that works with AI and LLMs on real problems, B2B or B2C." />
+<meta name="theme-color" content="#0A0A0B" />
 <link rel="canonical" href="https://adhokshajwategaonkar.github.io/portfolio/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://adhokshajwategaonkar.github.io/portfolio/" />
-<meta property="og:title" content="Adhokshaj Wategaonkar — Product Manager, AI platforms" />
-<meta property="og:description" content="Product Manager working on AI platforms — multi-provider LLM gateways, agent orchestration, and interfaces that make non-deterministic systems inspectable. Bengaluru." />
+<meta property="og:title" content="Adhokshaj Wategaonkar, Product Manager building with AI and LLMs" />
+<meta property="og:description" content="Product Manager, three years across enterprise AI, space tech and digital identity, plus two products designed, built and shipped solo. Open to any product role that works with AI and LLMs on real problems, B2B or B2C." />
 <meta property="og:image" content="https://adhokshajwategaonkar.github.io/portfolio/assets/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@AdhokshajW" />
@@ -35,7 +35,7 @@
     var p = localStorage.getItem('aw.theme') || 'system';
     var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
     document.documentElement.dataset.theme = t;
-    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAFB';
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
   } catch (e) {}
 </script>
 <script type="application/ld+json">
@@ -54,7 +54,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="./"><span class="dot"></span>Adhokshaj&nbsp;<span class="sur">Wategaonkar</span></a>
+    <a class="brand" href="./"><span class="dot"></span>Adhokshaj<span class="sur">Wategaonkar</span></a>
     <nav class="tabs" aria-label="Primary">
       <a href="./" aria-current="page">Home</a>
       <a href="./work/">Work</a>
@@ -67,8 +67,12 @@
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <span>Search</span><kbd>⌘K</kbd>
       </button>
-      <button class="icon-btn" data-theme-btn aria-label="Change theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      <!-- Three icons, one visible. data-pref defaults to system so the button
+           isn't blank before site.js corrects it. See [data-theme-btn] in site.css. -->
+      <button class="icon-btn" data-theme-btn data-pref="system" aria-label="Theme: system. Switch to light.">
+        <svg data-icon="system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4m0 15.2V22M4.2 4.2l1.7 1.7m12.2 12.2 1.7 1.7M2 12h2.4m15.2 0H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg data-icon="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
       </button>
       <button class="icon-btn menu-toggle" data-menu aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -91,25 +95,26 @@
 <!-- ======================================================= hero ======== -->
 <section class="hero" style="padding-bottom:clamp(40px,6vw,72px)">
   <div class="wrap">
-    <div class="intro-meta rise">
-      <span class="label">Product Manager</span>
-      <span class="label">Bengaluru, India</span>
-      <span class="label" style="display:flex;align-items:center;gap:8px;color:var(--live-ink)">
-        <span class="dot-live"></span>Open to roles
+    <div class="rise" style="--i:0">
+      <span class="availability">
+        <span class="beacon"><b></b><i></i></span>
+        Open to product roles working with AI and LLMs
       </span>
     </div>
 
-    <h1 class="intro-name rise" style="--i:1">Adhokshaj Wategaonkar</h1>
+    <h1 class="display rise" style="--i:1; margin:26px 0 0">
+      I turn ambiguous<br />AI problems into<br /><span class="serif accent">shipped</span> product.
+    </h1>
 
-    <p class="lead rise" style="--i:2; margin-top:24px; max-width:56ch">
-      I work on AI platforms — multi-provider LLM gateways, agent orchestration, and the
-      interfaces that make non-deterministic systems inspectable enough to trust. Three years
-      across enterprise AI, space tech and digital identity, and two products I designed,
-      built and shipped on my own.
+    <p class="lead rise" style="--i:2; margin-top:26px">
+      Product Manager, three years in. I have owned an LLM gateway across four model providers,
+      redesigned an agent chat down to its tool-call traces, and taken SAR analytics software
+      through government trials. On my own time I designed, built and shipped two consumer
+      products end to end, from database schema to landing page.
     </p>
 
     <div class="intro-links rise" style="--i:3">
-      <a class="btn btn--primary" href="work/">Selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--primary" href="work/">See the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn--ghost" href="Adhokshaj-Wategaonkar-Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Résumé</a>
       <button class="btn btn--ghost" data-copy="adhokshaj.pande@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> adhokshaj.pande@gmail.com</button>
     </div>
@@ -153,10 +158,10 @@
             </div>
           </div>
           <p>
-            Capture to WhatsApp, and a PWA does the organising. Claude Haiku parses a raw message
-            into structured items; the feed ranks them by what's closest to rotting. Built for
-            adults with ADHD, where what you're actually selling is the absence of a system to
-            maintain.
+            People with ADHD lose a thought in the seconds between having it and finding somewhere
+            to put it, and the tools built to catch those thoughts ask for upkeep they cannot
+            sustain. Animus makes capture a WhatsApp message. Claude Haiku parses it into
+            structured items and the feed ranks them by what is closest to rotting.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Node</span><span>React</span><span>Supabase</span><span>WhatsApp API</span><span>Claude Haiku</span></div>
@@ -193,9 +198,9 @@
             </div>
           </div>
           <p>
-            Vedic astrology where the maths is verifiable and the ethics are executable. Swiss
-            Ephemeris computes every position; the model only narrates, and never sees a birth
-            date or a phone number. The restraint rules are asserted in the test suite, so a
+            Online Vedic astrology runs on per-minute meters and sells remedies for the fear it
+            just manufactured. Shastra computes every position with Swiss Ephemeris and lets the
+            model narrate rather than predict. The restraint rules live in the test suite, so a
             prompt that drops them fails the build.
           </p>
           <div class="proj-foot">
@@ -222,9 +227,9 @@
             </div>
           </div>
           <p>
-            People want to go out. They just don't know what to do with the weekend — a decision
-            problem, not a catalogue problem. Persona, journey map, weighted prioritisation and a
-            "plan your weekend" feature, with the full deck on the page.
+            People want to go out and cannot decide what to do, so BookMyShow only gets the
+            booking once the hard part is already over. Persona, journey map, weighted
+            prioritisation and a plan-your-weekend feature, with the full deck on the page.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Discovery</span><span>Consumer</span><span>Journey mapping</span></div>
@@ -250,9 +255,10 @@
             </div>
           </div>
           <p>
-            Revenue = frequency × order value × orders — which of the three you pick decides the
-            whole solution. Journey mapping, RICE scoring, and two features designed against the two
-            problems that survived it.
+            A Zomato customer cannot see what an order will really cost until the last screen, so
+            the cart is where the money leaks. Revenue = frequency × order value × orders, and
+            which term you attack decides the whole solution. Journey mapping, RICE scoring, and
+            two features designed against the two problems that survived it.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Growth</span><span>RICE</span><span>Funnel</span><span>Monetisation</span></div>
@@ -330,8 +336,10 @@
         Looking for the next hard product problem.
       </h2>
       <p class="lead" style="margin-inline:auto">
-        Ideally AI platform or infrastructure, on a team where a PM is expected to have an opinion
-        about the architecture. Bengaluru or remote.
+        Any product role where I get to work on real problems with AI and LLMs. B2B or B2C both
+        count. My employed work has been enterprise; Animus and Shastra are consumer products I
+        built and shipped on my own, so the range is on this site rather than in a claim about
+        myself.
       </p>
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px">
         <a class="btn btn--primary" href="mailto:adhokshaj.pande@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> Get in touch</a>
@@ -350,7 +358,7 @@
         <a class="brand" href="./"><span class="dot"></span>Adhokshaj Wategaonkar</a>
         <p class="muted" style="margin-top:14px; font-size:14px; max-width:34ch">
           Product Manager. Bengaluru, India.<br />
-          AI platforms by day; two products of my own the rest of the time.
+          Building with AI and LLMs, at work and on my own time.
         </p>
       </div>
       <div>
