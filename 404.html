@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Not found — Adhokshaj Wategaonkar</title>
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Fonts load ASYNCHRONOUSLY. A render-blocking third-party stylesheet means a
+     blank screen for as long as that CDN is slow — which on a portfolio is the
+     difference between a first impression and a bounce. Text paints immediately
+     in the system fallback and swaps when Geist arrives. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" media="print" onload="this.media='all';this.onload=null" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" /></noscript>
+<!-- This page is deliberately SELF-CONTAINED. GitHub Pages serves it for any
+     unknown path, and on a project site the real root is /<repo>/ — so an
+     absolute /assets/site.css link would 404 and the error page would render
+     unstyled. Everything it needs is inline. -->
+<style>
+  :root {
+    --bg:#0A0A0B; --bg-2:#0F0F12; --bg-3:#16161A; --bg-wash:rgba(255,255,255,.028);
+    --line:rgba(255,255,255,.10); --line-3:rgba(255,255,255,.028);
+    --ink:#EDEDEF; --ink-2:#A2A2AA; --ink-3:#6E6E78;
+    --accent:#FF4D1C; --accent-ink:#FF6B3D; --on-accent:#0A0A0B; --accent-glow:rgba(255,77,28,.20);
+    --spring:cubic-bezier(.22,1,.36,1);
+    --font-sans:"Geist","Inter",ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    --font-serif:"Instrument Serif",ui-serif,Georgia,serif;
+    color-scheme: dark;
+  }
+  [data-theme="light"] {
+    --bg:#FAFAF7; --bg-2:#FFFFFF; --bg-3:#F2F2ED; --bg-wash:rgba(10,10,11,.030);
+    --line:rgba(10,10,11,.13); --line-3:rgba(10,10,11,.04);
+    --ink:#121215; --ink-2:#55555E; --ink-3:#86868F;
+    --accent-ink:#C43A0E; --accent-glow:rgba(255,77,28,.16);
+    color-scheme: light;
+  }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    background:var(--bg); color:var(--ink); font-family:var(--font-sans);
+    min-height:100vh; display:grid; place-items:center; text-align:center;
+    padding:32px; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  }
+  body::before {
+    content:""; position:fixed; z-index:0; top:-10%; left:50%; transform:translateX(-50%);
+    width:min(900px,120vw); aspect-ratio:2/1; pointer-events:none;
+    background:radial-gradient(ellipse at center,var(--accent-glow),transparent 66%);
+    filter:blur(40px);
+  }
+  .rules { position:fixed; inset:0; z-index:0; pointer-events:none; max-width:1200px;
+           margin-inline:auto; padding-inline:clamp(20px,5vw,48px);
+           display:grid; grid-template-columns:repeat(4,1fr); }
+  .rules span { border-left:1px solid var(--line-3); }
+  .rules span:last-child { border-right:1px solid var(--line-3); }
+  main { position:relative; z-index:1; max-width:640px; }
+  .label { font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase;
+           letter-spacing:.14em; color:var(--ink-3); }
+  h1 { font-weight:620; letter-spacing:-.045em; line-height:.95;
+       font-size:clamp(2.8rem,10vw,5.4rem); margin:22px 0 0; }
+  h1 em { font-family:var(--font-serif); font-style:italic; font-weight:400; color:var(--accent-ink); }
+  p { color:var(--ink-2); font-size:clamp(1rem,1.5vw,1.15rem); line-height:1.65;
+      margin:24px auto 0; max-width:52ch; }
+  .row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:34px; }
+  a.btn {
+    display:inline-flex; align-items:center; gap:9px; height:44px; padding:0 20px;
+    border-radius:11px; font-size:14.5px; font-weight:500; text-decoration:none;
+    border:1px solid transparent; transition:transform .22s var(--spring), box-shadow .3s, border-color .2s;
+  }
+  a.btn:active { transform:scale(.975); }
+  .p1 { background:var(--accent); color:var(--on-accent); font-weight:560; }
+  .p1:hover { box-shadow:0 10px 30px -10px var(--accent-glow); transform:translateY(-1px); }
+  .p2 { border-color:var(--line); color:var(--ink); background:var(--bg-wash); }
+  .p2:hover { border-color:var(--ink-3); }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+
+<script>
+  try {
+    var p = localStorage.getItem('aw.theme') || 'system';
+    var t = p === 'system' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : p;
+    document.documentElement.dataset.theme = t;
+    if (t === 'light') document.querySelector('meta[name=theme-color]').content = '#FAFAF7';
+  } catch (e) {}
+</script>
+</head>
+
+<body>
+<div class="rules" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<main>
+  <span class="label">Error 404</span>
+  <h1>Nothing here.<br /><em>Yet.</em></h1>
+  <p>
+    This page doesn't exist, or it moved. The work, the career timeline and the contact
+    details are all still where you'd expect them.
+  </p>
+  <div class="row">
+    <a class="btn p1" data-home href="/">Back to the start</a>
+    <a class="btn p2" data-work href="/work/">See the work</a>
+  </div>
+</main>
+
+<script>
+  // On a GitHub Pages *project* site the real root is /<repo>/, so absolute
+  // links would leave the site entirely. Compute the root from the URL.
+  (function () {
+    var seg = location.pathname.split('/').filter(Boolean);
+    var isProject = /\.github\.io$/i.test(location.hostname) && seg.length > 0;
+    var root = isProject ? '/' + seg[0] + '/' : '/';
+    var h = document.querySelector('[data-home]'); if (h) h.href = root;
+    var w = document.querySelector('[data-work]'); if (w) w.href = root + 'work/';
+  })();
+</script>
+</body>
+</html>

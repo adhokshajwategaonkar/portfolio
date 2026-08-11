@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adhokshajwategaonkar.github.io/portfolio/sitemap.xml
