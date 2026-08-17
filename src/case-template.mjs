@@ -1,10 +1,10 @@
 /* Shared shell for a case-study page. Keeps every case visually identical so
    the differences a reader notices are in the thinking, not the layout. */
-import { icon } from './layout.mjs';
+import { icon, glance as glanceStrip } from './layout.mjs';
 
 export const caseStudy = ({
   dir, title, ogTitle, description, kicker, heading, lead,
-  badges = [], links = [], spec = [], sections = [], next,
+  badges = [], links = [], glance = [], spec = [], sections = [], next,
 }) => ({
   dir, nav: 'work', title, ogTitle: ogTitle || title, description,
   body: `
@@ -27,6 +27,12 @@ export const caseStudy = ({
     </div>` : ''}
   </div>
 </section>
+
+${glance.length ? `<section class="section section--tight">
+  <div class="wrap">
+    ${glanceStrip(glance)}
+  </div>
+</section>` : ''}
 
 ${spec.length ? `<section class="section section--tight">
   <div class="wrap">

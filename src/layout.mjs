@@ -224,6 +224,41 @@ export const mock = {
       </div>`,
 };
 
+/* ------------------------------------------------ case-study reading layer
+   Three helpers with one job between them: let a reader who gives the page
+   ninety seconds leave knowing the problem, the calls and the current state.
+   Styling sits next to .glance / .dec / .more in site.css. */
+
+/** The 90-second strip under a case-study hero. `cells` is [{k, v, sub}]. */
+export const glance = cells => `<div class="glance rise">
+      ${cells.map(c => `<div>
+        <span class="label">${c.k}</span>
+        <p>${c.v}</p>${c.sub ? `
+        <p class="sub">${c.sub}</p>` : ''}
+      </div>`).join('\n      ')}
+    </div>`;
+
+/** Decisions, each next to the option it beat. `rows` is [{call, instead, why}].
+    The "instead of" column is the point: a case study with no rejected option
+    gives the reader nothing to disagree with. */
+export const decisions = rows => `<div class="dec">
+      ${rows.map(r => `<div class="dec-row rise">
+        <h3>${r.call}</h3>
+        <div class="dec-body">
+          <div><span class="label">Instead of</span><p>${r.instead}</p></div>
+          <div class="dec-why"><span class="label">Because</span><p>${r.why}</p></div>
+        </div>
+      </div>`).join('\n      ')}
+    </div>`;
+
+/** Collapsed detail. Native <details>, so it still opens with JS off. */
+export const more = (label, text, body) => `<details class="more">
+      <summary><span class="label">${label}</span>${text}${icon.chevron}</summary>
+      <div class="more-body">
+        ${body}
+      </div>
+    </details>`;
+
 /** A miniature of a case study's opening slide — used as the card cover. */
 export const slide = ({ kicker, title, left, right }) => `<div class="cover">
       <span class="halo"></span>

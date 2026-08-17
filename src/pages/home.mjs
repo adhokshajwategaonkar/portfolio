@@ -26,14 +26,14 @@ export default {
     </div>
 
     <h1 class="display rise" style="--i:1; margin:26px 0 0">
-      I turn ambiguous<br />AI problems into<br /><span class="serif accent">shipped</span> product.
+      Product manager.<br />I build <span class="serif accent">what I spec</span>.
     </h1>
 
     <p class="lead rise" style="--i:2; margin-top:26px">
-      Product Manager, three years in. I have owned an LLM gateway across four model providers,
-      redesigned an agent chat down to its tool-call traces, and taken SAR analytics software
-      through government trials. On my own time I designed, built and shipped two consumer
-      products end to end, from database schema to landing page.
+      Three years in. I have owned an LLM gateway across four model providers, redesigned an agent
+      chat down to its tool-call traces, and taken SAR analytics software through government trials.
+      Outside work I designed, built and shipped two consumer products end to end, from database
+      schema to landing page.
     </p>
 
     <div class="intro-links rise" style="--i:3">
@@ -67,10 +67,10 @@ export default {
             </div>
           </div>
           <p>
-            People with ADHD lose a thought in the seconds between having it and finding somewhere
-            to put it, and the tools built to catch those thoughts ask for upkeep they cannot
-            sustain. Animus makes capture a WhatsApp message. Claude Haiku parses it into
-            structured items and the feed ranks them by what is closest to rotting.
+            A capture tool for adults with ADHD, who abandon these products over upkeep rather than
+            features. Capture is a WhatsApp message, Claude Haiku sorts it into structured items, and
+            the feed ranks by what is closest to rotting. I picked the audience over three others,
+            then priced it against a cost model I rebuilt from the real prompt.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Node</span><span>React</span><span>Supabase</span><span>WhatsApp API</span><span>Claude Haiku</span></div>
@@ -89,10 +89,10 @@ export default {
             </div>
           </div>
           <p>
-            Online Vedic astrology runs on per-minute meters and sells remedies for the fear it
-            just manufactured. Shastra computes every position with Swiss Ephemeris and lets the
-            model narrate rather than predict. The restraint rules live in the test suite, so a
-            prompt that drops them fails the build.
+            Online Vedic astrology runs on per-minute meters and sells remedies for the fear it just
+            manufactured. I took trust as the wedge, because the incumbents' revenue depends on the
+            mechanic they would have to drop to copy it. Swiss Ephemeris computes every position and
+            the model only narrates.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Swiss Ephemeris</span><span>Node</span><span>Prompt architecture</span><span>SEO</span></div>
@@ -116,9 +116,10 @@ export default {
             </div>
           </div>
           <p>
-            People want to go out and cannot decide what to do, so BookMyShow only gets the
-            booking once the hard part is already over. Persona, journey map, weighted
-            prioritisation and a plan-your-weekend feature, with the full deck on the page.
+            People want to go out and cannot decide what to do, so BookMyShow only gets the booking
+            once the hard part is over. I weighted four causes instead of solving all four: two carry
+            70% and are fixable in the existing product, two would need a social network. Full deck
+            on the page.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Discovery</span><span>Consumer</span><span>Journey mapping</span></div>
@@ -142,10 +143,10 @@ export default {
             </div>
           </div>
           <p>
-            A Zomato customer cannot see what an order will really cost until the last screen, so
-            the cart is where the money leaks. Revenue = frequency × order value × orders, and
-            which term you attack decides the whole solution. Journey mapping, RICE scoring, and
-            two features designed against the two problems that survived it.
+            A customer cannot compare what an order will really cost until the last screen, so the
+            cart is where the money leaks. Revenue = frequency × order value × orders, and which term
+            you attack decides the whole solution. RICE across four problems, two features, and the
+            two ideas that lost are still on the deck with their scores.
           </p>
           <div class="proj-foot">
             <div class="tags"><span>Growth</span><span>RICE</span><span>Funnel</span><span>Monetisation</span></div>
@@ -163,20 +164,20 @@ export default {
   <div class="wrap">
     <div class="stats rise">
       <div class="stat">
+        <div class="n"><span data-count="4">4</span></div>
+        <div class="k label">Model providers behind one LLM gateway I owned requirements for</div>
+      </div>
+      <div class="stat">
         <div class="n"><span data-count="85">85</span><em>%+</em></div>
-        <div class="k label">Request completion across a four-provider LLM gateway</div>
+        <div class="k label">Request completion held on that gateway, across enterprise workloads</div>
       </div>
       <div class="stat">
-        <div class="n"><span data-count="95">95</span><em>%</em></div>
-        <div class="k label">On-time delivery across 15 sprints</div>
-      </div>
-      <div class="stat">
-        <div class="n"><span data-count="60">60</span><em>%</em></div>
-        <div class="k label">Faster concept → prototype with AI tooling</div>
+        <div class="n"><span data-count="15">15</span></div>
+        <div class="k label">Sprints delivered from a standing start, 95% of them on time</div>
       </div>
       <div class="stat">
         <div class="n"><span data-count="2">2</span></div>
-        <div class="k label">Products designed, built and shipped solo</div>
+        <div class="k label">Products designed, built and shipped solo. Both are linked above</div>
       </div>
     </div>
   </div>
@@ -208,7 +209,7 @@ export default {
       </div>
       <div class="kv-row">
         <span class="label">2021 — 2022 · L&amp;T Technology Services</span>
-        <span class="v"><strong>Software Engineer.</strong> ML models on Azure for power-plant operations. The engineering half of how I read a system.</span>
+        <span class="v"><strong>Software Engineer.</strong> ML models on Azure for power-plant operations, and the year that taught me how a system fails in production.</span>
       </div>
     </div>
   </div>
@@ -224,9 +225,8 @@ export default {
       </h2>
       <p class="lead" style="margin-inline:auto">
         Any product role where I get to work on real problems with AI and LLMs. B2B or B2C both
-        count. My employed work has been enterprise; Animus and Shastra are consumer products I
-        built and shipped on my own, so the range is on this site rather than in a claim about
-        myself.
+        count. My employed work has been enterprise and my own two products are consumer, so the
+        range is on this site for you to check rather than in a claim about myself.
       </p>
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px">
         <a class="btn btn--primary" href="mailto:${SITE.email}">${icon.mail} Get in touch</a>

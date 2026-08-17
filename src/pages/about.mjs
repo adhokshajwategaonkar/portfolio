@@ -18,71 +18,71 @@ export default {
   <div class="wrap" style="display:grid; gap:56px; grid-template-columns:1fr">
     <div class="prose rise">
       <p>
-        I'm a Product Manager in Bengaluru, three-plus years in. What I want to work on is
-        products where AI and LLMs do real work, B2B or B2C. My employed roles have all been
-        enterprise; Animus and Shastra, the two I built on my own, are consumer, and I would
-        take either. I started as an engineer: a CS degree specialised in machine
-        learning, then a year building and deploying models on Azure for power-plant operations
-        at L&amp;T. That half hasn't gone anywhere. It's the reason I can sit in an architecture
-        review and have an opinion about tenant isolation rather than a question about it.
+        I'm a Product Manager in Bengaluru, three-plus years in, and what I want to work on is
+        products where AI and LLMs do real work. B2B or B2C. My employed roles have all been
+        enterprise, and Animus and Shastra, the two I built alone, are consumer. I would take either.
       </p>
       <p>
-        What I've gravitated to since is a specific kind of problem: systems where the
-        requirement isn't discoverable by asking users, because nobody — including the team
-        building it — knows yet what the thing should do when it goes wrong. What should a
-        multi-provider LLM gateway do when the primary model returns a malformed tool call?
-        How much of an agent's reasoning should a user be allowed to see, and when does more
-        transparency start reading as noise? What's a fair way to attribute inference spend to a
+        I started as an engineer: a CS degree specialised in machine learning, then a year building
+        and deploying models on Azure for power-plant operations at L&amp;T. That half has not gone
+        anywhere. It is why I can sit in an architecture review and have an opinion about tenant
+        isolation rather than a question about it.
+      </p>
+      <p>
+        What I've gravitated to since is a specific kind of problem: systems where the requirement
+        isn't discoverable by asking users, because nobody on the team knows yet what the thing should
+        do when it goes wrong. What should a multi-provider LLM gateway do when the primary model
+        returns a malformed tool call? How much of an agent's reasoning should a user see before
+        transparency starts reading as noise? What's a fair way to attribute inference spend to a
         tenant when the same workflow costs different amounts on different days?
       </p>
       <p>
-        None of those have a reference implementation. You write the requirement by deciding what
-        failure is acceptable, and then you defend that decision to engineering, to a client, and
-        to yourself six weeks later when it turns out to have been slightly wrong.
+        None of those have a reference implementation. You write the requirement by deciding which
+        failure is acceptable, then you defend that decision to engineering, to a client, and to
+        yourself six weeks later when it turns out to have been slightly wrong.
       </p>
-
-      <blockquote>
-        The polish is not decoration on top of the product. Very often it <em>is</em> the product.
-      </blockquote>
 
       <h2>Why I build things myself</h2>
       <p>
-        Animus and Shastra are mine end to end — schema, prompts, spend caps, design language,
-        landing page, deploy pipeline. Not because a PM should be an engineer, but because owning
-        the whole thing forces you to make the trade-offs you'd otherwise be handing to someone else
-        with a shrug.
+        Animus and Shastra are mine end to end: schema, prompts, spend caps, design language, landing
+        page, deploy pipeline. A PM doesn't need to be an engineer. Owning the whole thing does force
+        you to make the trade-offs you would otherwise hand to someone else and stop thinking about.
       </p>
       <p>
-        Concretely: I've had to decide whether a failed LLM parse should drop a user's capture or
-        save it degraded, and live with the consequence. I've had to price a feature against a real
-        token bill and discover the number I'd been quoting was 71% too low. I've had to design a
-        streak mechanic, realise it would punish exactly the users the product exists for, and
-        <strong>delete it after building it</strong>. Those are product decisions. Having made them
-        with my own hands makes me faster and more specific when I'm making them with a team.
+        Concretely, I've had to decide whether a failed LLM parse drops a user's capture or saves it
+        degraded, and then live with that choice. I've priced a feature against a real token bill and
+        found the number I'd been quoting was 71% too low. I designed a streak mechanic, realised it
+        would punish exactly the users the product exists for, and <strong>deleted it after building
+        it</strong>. Making those calls with my own hands makes me faster and more specific about them
+        with a team.
       </p>
 
       <h2>How I work</h2>
       <ul>
         <li>
-          <strong>Write the decision down, with the reasoning.</strong> "We use one service" is
-          nearly useless. "One service, because two domains make the session cookie third-party and
-          Safari blocks those in an installed PWA, which breaks sign-in for exactly the users who
-          liked it enough to install it" tells the next person whether it's safe to change.
+          <strong>Write the decision down, with the reasoning.</strong> "We use one service" is close
+          to useless six months later. The version that says why, and what would break if you changed
+          it, is the one that saves the next person a week.
         </li>
         <li>
-          <strong>Enforce the important rules in code, not in a document.</strong> If a constraint
-          only lives in a doc, it degrades. In Shastra the ethics rules are asserted in the test
-          suite, so a prompt that ships without them fails the build. In Animus the schema simply
-          doesn't collect the data you'd need to shame a user with.
+          <strong>Put the important rules where they can't rot.</strong> A constraint that lives only
+          in a document degrades the first time somebody is in a hurry. In Shastra the ethics rules
+          are asserted in the test suite. In Animus the schema doesn't collect the data you'd need to
+          shame a user with.
         </li>
         <li>
           <strong>Design the failure mode before the happy path.</strong> Most of what's interesting
-          in an AI product is what happens when the model is wrong, slow, or expensive.
+          in an AI product happens when the model is wrong, slow or expensive.
         </li>
         <li>
-          <strong>Use AI tooling seriously.</strong> Embedding Claude, Cursor and ChatGPT into PRD
-          drafting, UX iteration and engineering handoff cut concept-to-prototype from multiple weeks
-          to under one, per feature. This site is a product of that workflow too.
+          <strong>Measure the non-deterministic parts instead of testing them.</strong> A single pass
+          against an LLM tells you what happened once. I run fixtures N times and read the stability
+          percentage.
+        </li>
+        <li>
+          <strong>Use AI tooling seriously.</strong> Claude, Cursor and ChatGPT sit inside my PRD
+          drafting, UX iteration and engineering handoff, which cut concept-to-prototype from multiple
+          weeks to under one per feature. This site came out of that workflow too.
         </li>
       </ul>
     </div>
@@ -160,7 +160,7 @@ export default {
       </div>
       <div class="kv-row">
         <span class="label">Building</span>
-        <span class="v"><strong>Animus</strong> — the nudge engine and channel-agnostic capture. <strong>Shastra</strong> — the API deploy and the WhatsApp daily ritual.</span>
+        <span class="v"><strong>Animus</strong>, on capture beyond WhatsApp and the template path for nudges. <strong>Shastra</strong>, on the WhatsApp daily ritual now that the API is live.</span>
       </div>
       <div class="kv-row">
         <span class="label">Thinking about</span>

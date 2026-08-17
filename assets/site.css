@@ -1012,3 +1012,82 @@ html:not(.js) .rise { opacity: 1; transform: none; }
 .deck-rail button:hover { opacity: .85; }
 .deck-rail button[aria-current="true"] { opacity: 1; border-color: var(--accent); transform: translateY(-1px); }
 @media (max-width: 600px) { .deck-rail button { width: 62px; } }
+
+/* ============================================================================
+   CASE-STUDY READING LAYER
+
+   A hiring PM gives a case study ninety seconds before deciding whether to
+   read it. These three components exist so that ninety seconds is enough:
+   .glance carries the problem, the role and the state; .dec puts each call
+   next to the alternative it beat; .more hides the engineering behind a
+   click so it is available without being in the way.
+   ========================================================================= */
+
+/* -------------------------------------------------------------- at a glance */
+.glance {
+  display: grid; gap: 0;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.glance > div { padding: 19px 0; border-bottom: 1px solid var(--line-2); }
+.glance > div:last-child { border-bottom: 0; }
+.glance p { margin-top: 9px; font-size: 15px; line-height: 1.55; color: var(--ink); }
+.glance p strong { font-weight: 550; }
+.glance .sub { margin-top: 6px; font-size: 13.4px; color: var(--ink-3); line-height: 1.5; }
+@media (min-width: 780px) {
+  .glance { grid-template-columns: repeat(3, 1fr); }
+  .glance > div { padding: 24px 26px; border-bottom: 0; border-left: 1px solid var(--line-2); }
+  .glance > div:first-child { border-left: 0; padding-left: 0; }
+  .glance > div:last-child { padding-right: 0; }
+}
+
+/* ---------------------------------------------------------------- decisions
+   A decision is only legible when the option it beat is on the page next to
+   it. Without that column the reader has nothing to disagree with, and a
+   case study nobody can disagree with is a press release. */
+.dec { display: grid; gap: 14px; }
+.dec-row {
+  border: 1px solid var(--line-2); background: var(--bg-2);
+  border-radius: var(--r-xl); padding: 21px 23px;
+}
+.dec-row > h3 {
+  margin: 0; font-size: clamp(1.02rem, 1.5vw, 1.15rem); line-height: 1.38;
+  font-weight: 550; letter-spacing: -.012em; color: var(--ink);
+}
+.dec-body {
+  display: grid; gap: 15px;
+  margin-top: 17px; padding-top: 16px; border-top: 1px solid var(--line-2);
+}
+@media (min-width: 700px) { .dec-body { grid-template-columns: 1fr 1fr; gap: 26px; } }
+.dec-body .label { display: block; margin-bottom: 7px; }
+.dec-body p { margin: 0; font-size: 14.2px; line-height: 1.62; color: var(--ink-2); }
+.dec-body p strong { color: var(--ink); font-weight: 550; }
+.dec-why .label { color: var(--accent-ink); }
+
+/* --------------------------------------------------------------- disclosure
+   Native <details>, no JS. The engineering detail stays on the page for the
+   person who wants it and stops taxing the person who does not. */
+.more {
+  border: 1px solid var(--line-2); border-radius: var(--r-lg);
+  background: var(--bg-2); margin: 28px 0; overflow: hidden;
+}
+.more > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px;
+  padding: 15px 20px; font-size: 14.4px; color: var(--ink-2);
+  transition: color .22s, background .22s;
+}
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::marker { content: ''; }
+.more > summary:hover { color: var(--ink); background: var(--bg-wash); }
+.more > summary .label { flex: none; }
+.more > summary svg {
+  margin-left: auto; flex: none; width: 15px; height: 15px; color: var(--ink-3);
+  transition: transform .32s var(--spring);
+}
+.more[open] > summary { color: var(--ink); border-bottom: 1px solid var(--line-2); }
+.more[open] > summary svg { transform: rotate(180deg); }
+.more-body { padding: 4px 20px 20px; }
+.more-body > *:first-child { margin-top: 16px; }
+.more-body p, .more-body li { font-size: 14.2px; line-height: 1.68; color: var(--ink-2); }
+.more-body h4 { margin: 22px 0 7px; font-size: 14.4px; font-weight: 550; color: var(--ink); }
+.more-body ul { margin: 10px 0; padding-left: 19px; display: grid; gap: 7px; }
+.more-body strong { color: var(--ink); font-weight: 550; }
