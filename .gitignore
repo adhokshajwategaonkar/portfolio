@@ -1,2 +1,8 @@
 .DS_Store
 *.log
+# local only: experiments and drafts. Anything committed here is published by GitHub Pages.
+.claude/
+next/
+v2/
+desk/
+resume/

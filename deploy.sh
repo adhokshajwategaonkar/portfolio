@@ -22,9 +22,12 @@ fi
 # Sanity check: Pages will silently mangle the site without this file.
 [ -f .nojekyll ] || { echo "!! .nojekyll is missing — recreate it before deploying."; exit 1; }
 
-# Always rebuild first — the committed HTML is generated from src/, and a
-# deploy that skipped this would ship stale pages that look fine locally.
-node build.js
+# The site is plain static files: no build step. Check the basics before pushing.
+[ -f index.html ] || { echo "!! index.html is missing."; exit 1; }
+[ -f Adhokshaj-Wategaonkar-Resume.pdf ] || { echo "!! the résumé PDF is missing; the site links to it."; exit 1; }
+for d in next v2 desk resume; do
+  if git ls-files --error-unmatch "$d" >/dev/null 2>&1; then echo "!! $d/ is tracked; it would go public. Remove it from git first."; exit 1; fi
+done
 
 if [ -z "$(git status --porcelain)" ]; then
   echo "Nothing to commit."

@@ -1,0 +1,110 @@
+// Baked by Shastra/site/tools/bake-sky.js: the sky computed 2026-11-05T04:01Z for Ujjain.
+// Drawn first so the wheel appears instantly, then replaced by the live sky.
+export const SNAPSHOT = {
+  "at": "2026-11-05T04:01:12.501Z",
+  "ayanamsa": 24.232,
+  "reference": {
+    "place": "Ujjain",
+    "lat": 23.1765,
+    "lon": 75.7885
+  },
+  "grahas": {
+    "sun": {
+      "lon": 198.515,
+      "signIndex": 6,
+      "sign": "libra",
+      "degInSign": 18.515,
+      "degInSignStr": "18°30'55\"",
+      "nakshatra": "swati",
+      "retrograde": false
+    },
+    "moon": {
+      "lon": 149.968,
+      "signIndex": 4,
+      "sign": "leo",
+      "degInSign": 29.968,
+      "degInSignStr": "29°58'03\"",
+      "nakshatra": "uttara phalguni",
+      "retrograde": false
+    },
+    "mars": {
+      "lon": 116.457,
+      "signIndex": 3,
+      "sign": "cancer",
+      "degInSign": 26.457,
+      "degInSignStr": "26°27'26\"",
+      "nakshatra": "ashlesha",
+      "retrograde": false
+    },
+    "mercury": {
+      "lon": 197.208,
+      "signIndex": 6,
+      "sign": "libra",
+      "degInSign": 17.208,
+      "degInSignStr": "17°12'30\"",
+      "nakshatra": "swati",
+      "retrograde": true
+    },
+    "jupiter": {
+      "lon": 120.575,
+      "signIndex": 4,
+      "sign": "leo",
+      "degInSign": 0.575,
+      "degInSignStr": "0°34'30\"",
+      "nakshatra": "magha",
+      "retrograde": false
+    },
+    "venus": {
+      "lon": 180.223,
+      "signIndex": 6,
+      "sign": "libra",
+      "degInSign": 0.223,
+      "degInSignStr": "0°13'23\"",
+      "nakshatra": "chitra",
+      "retrograde": true
+    },
+    "saturn": {
+      "lon": 344.8,
+      "signIndex": 11,
+      "sign": "pisces",
+      "degInSign": 14.8,
+      "degInSignStr": "14°47'58\"",
+      "nakshatra": "uttara bhadrapada",
+      "retrograde": true
+    },
+    "rahu": {
+      "lon": 301.618,
+      "signIndex": 10,
+      "sign": "aquarius",
+      "degInSign": 1.618,
+      "degInSignStr": "1°37'07\"",
+      "nakshatra": "dhanishta",
+      "retrograde": false
+    },
+    "ketu": {
+      "lon": 121.618,
+      "signIndex": 4,
+      "sign": "leo",
+      "degInSign": 1.618,
+      "degInSignStr": "1°37'07\"",
+      "nakshatra": "magha",
+      "retrograde": false
+    }
+  },
+  "lagna": {
+    "lon": 236.546,
+    "signIndex": 7,
+    "sign": "scorpio",
+    "degInSign": 26.546,
+    "degInSignStr": "26°32'46\"",
+    "nakshatra": "jyeshtha"
+  },
+  "panchanga": {
+    "nakshatra": "uttara phalguni",
+    "tithi": {
+      "name": "ekadashi",
+      "paksha": "krishna"
+    },
+    "vara": "thursday"
+  }
+};
