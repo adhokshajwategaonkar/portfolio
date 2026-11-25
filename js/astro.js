@@ -17,7 +17,7 @@ export function sky(date) {
   const g = norm(357.529 + 0.98560028 * n), L = norm(280.459 + 0.98564736 * n);
   const sun = L + 1.915 * Math.sin(g * rad) + 0.020 * Math.sin(2 * g * rad);
   const Lm = norm(218.3165 + 13.17639648 * n), D = norm(297.8502 + 12.19074912 * n), Mm = norm(134.9634 + 13.06499295 * n), F = norm(93.2721 + 13.22935024 * n);
-  const moon = Lm + 6.289 * Math.sin(Mm * rad) - 1.274 * Math.sin((2 * D - Mm) * rad) + 0.658 * Math.sin(2 * D * rad) + 0.214 * Math.sin(2 * Mm * rad) - 0.186 * Math.sin(g * rad) - 0.114 * Math.sin(2 * F * rad);
+  const moon = Lm + 6.289 * Math.sin(Mm * rad) + 1.274 * Math.sin((2 * D - Mm) * rad) + 0.658 * Math.sin(2 * D * rad) + 0.214 * Math.sin(2 * Mm * rad) - 0.186 * Math.sin(g * rad) - 0.114 * Math.sin(2 * F * rad);
   const aya = 23.85306 + (T * 100) * 0.013972;
   return { sun: norm(sun - aya), moon: norm(moon - aya) };
 }
